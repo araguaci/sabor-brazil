@@ -18,7 +18,8 @@ export type TopicIconName =
   | 'gavel'
   | 'search'
   | 'plus'
-  | 'globe';
+  | 'globe'
+  | 'cloud';
 
 /** Ícone por assunto (tags/id), com fallback da trilha. */
 export function topicIconForEntry(entry: Entry): TopicIconName {
@@ -104,6 +105,14 @@ export const ecosystemLinks = [
     description:
       'Publicação de análises, dossiês investigativos e insights sobre Brasil, geopolítica, crime organizado, lawfare e economia.',
     icon: 'globe' as TopicIconName,
+    current: false,
+  },
+  {
+    href: 'https://geoengenharia.vercel.app/',
+    title: 'Geoengenharia',
+    description:
+      'Patentes, linha do tempo e análises sobre modificação climática, vigilância e full-spectrum dominance.',
+    icon: 'cloud' as TopicIconName,
     current: false,
   },
 ] as const;
