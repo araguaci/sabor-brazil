@@ -1,0 +1,614 @@
+{
+  "version": 1,
+  "generated_at": "2026-07-29T18:04:00.301Z",
+  "site": "https://sabor-brazil.vercel.app",
+  "schema": "schema/entry-schema.md",
+  "endpoint": "/catalog.json",
+  "counts": {
+    "total": 14,
+    "por_trilha": {
+      "institucional": 2,
+      "regulatorio": 1,
+      "rotulagem": 11
+    },
+    "por_status": {
+      "argumento_juridico_fundamentado": 2,
+      "contestado_judicialmente": 1,
+      "verificado": 11
+    }
+  },
+  "entradas": [
+    {
+      "id": "IN-0001",
+      "trilha": "institucional",
+      "titulo": "Despacho de Moraes sobre vídeo de IA na convenção do PL (28/07/2026) e a tese viral de 'três recordes mundiais'",
+      "resumo_neutro": "Despacho de 28/07/2026 dá 48h para Bolsonaro esclarecer autorização de vídeo de IA na convenção do PL; a entrada documenta fatos do despacho e avalia uma tese viral associada.",
+      "status": "argumento_juridico_fundamentado",
+      "data_entrada": "Tue Jul 28 2026 21:00:00 GMT-0300 (Horário Padrão de Brasília)",
+      "dispositivo_legal": "Restrição judicial imposta a Jair Bolsonaro em 17/07/2026 (proibição de divulgar manifestos político-eleitorais por qualquer meio, inclusive por terceiros); vedação eleitoral a conteúdo sintético (deepfake) sem autorização, citada por Moraes com base em precedente do TSE de maio/2026",
+      "fatos_checaveis": [
+        "25/07/2026 (sábado): convenção nacional do PL exibe vídeo gerado por IA simulando pronunciamento de Jair Bolsonaro em apoio à pré-candidatura de Flávio Bolsonaro à Presidência",
+        "28/07/2026 (terça-feira): Moraes profere despacho dando 48h para a defesa de Bolsonaro esclarecer se houve autorização para uso de sua imagem e voz",
+        "O despacho vincula a resposta a uma restrição anterior, de 17/07/2026, que já proibia Bolsonaro de divulgar manifestos político-eleitorais por qualquer meio, inclusive por terceiros",
+        "Moraes cita precedente do TSE de maio/2026: multa de R$ 15 mil contra candidato a prefeito de Fortaleza por vídeo manipulado por IA sugerindo apoio de personalidades internacionais",
+        "PT já acionou STF e TSE contra o vídeo, alegando propaganda eleitoral irregular"
+      ],
+      "fontes": [
+        {
+          "titulo": "Moraes dá 48h para defesa esclarecer se Bolsonaro autorizou vídeo por IA",
+          "url": "https://www.cnnbrasil.com.br/politica/moraes-da-48h-para-defesa-esclarecer-se-bolsonaro-autorizou-video-por-ia/",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "Moraes deixa Jair e Flávio Bolsonaro sem saída: ou pai volta para cadeia ou filho fica inelegível",
+          "url": "https://revistaforum.com.br/politica/moraes-jair-flavio-cadeia-inelegivel/",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "A decisão de Moraes que coloca Bolsonaro e Flávio em uma sinuca de bico",
+          "url": "https://www.cnnbrasil.com.br/blogs/teo-cury/politica/a-decisao-de-moraes-que-coloca-bolsonaro-e-flavio-em-uma-sinuca-de-bico/",
+          "tipo": "reportagem"
+        }
+      ],
+      "argumento_juridico": {
+        "autor": "Postagem em rede social de autoria não identificada — NÃO é petição, parecer ou manifestação processual. Tratada aqui como objeto de análise, não como fonte jurídica primária.",
+        "tese": "O texto original sustenta três 'recordes mundiais': (1) Bolsonaro seria a primeira pessoa impedida de ter sua imagem usada por IA por terceiros; (2) Flávio seria o primeiro político ameaçado de inelegibilidade por descumprir cautelar não imposta a ele; (3) Moraes seria o primeiro juiz de execução penal a decidir sobre propaganda eleitoral de terceiros — concluindo que a situação equivale a fechamento do processo eleitoral, comparável à Nicarágua."
+      },
+      "contraponto": {
+        "existe": true,
+        "resumo": "A própria decisão de Moraes descreve dois cenários distintos, não uma penalização automática de Flávio por descumprimento de restrição alheia: se Bolsonaro autorizou o vídeo, a violação é dele mesmo, da restrição de 17/07 que já pesava sobre sua própria conduta; se não autorizou, a tese contra Flávio e o PL é a de produção de deepfake sem consentimento — uma vedação eleitoral geral (aplicada a qualquer candidato, não específica a Bolsonaro), sustentada por precedente do TSE de maio/2026 aplicado a um candidato sem qualquer relação com o caso Bolsonaro. A sanção de inelegibilidade, além disso, não seria automática: exigiria investigação, provas, direito de defesa e decisão da Justiça Eleitoral. Quanto à competência, o fulcro da decisão é verificar se o próprio Bolsonaro — sob jurisdição de execução penal de Moraes — violou uma restrição que o mesmo juízo já lhe impusera; a repercussão sobre Flávio é derivada desse fato, não o objeto central da decisão.",
+        "fonte": "CNN Brasil (Teo Cury) e Revista Fórum, ambas de 28-29/07/2026 — ver campo fontes acima"
+      },
+      "teste_generalizacao": "REPROVA neste formato. 'Primeira pessoa do mundo a X' é superlativo retórico não verificável, não uma questão de direito processual em abstrato. A pergunta que sobrevive à filtragem — 'um juízo de execução penal deve ter competência para avaliar fato que toca propaganda eleitoral de terceiro quando o fato envolve verificar se o próprio executado violou restrição que o mesmo juízo já impôs?' — é genuinamente debatível em abstrato, mas não é a formulação apresentada no texto original, que mistura essa questão legítima com conclusão política não sustentada pelos fatos (o comparativo com a Nicarágua e o apelo a 'apoiar o fim das eleições').",
+      "tags": [
+        "stf",
+        "moraes",
+        "deepfake",
+        "eleitoral",
+        "competencia",
+        "template-reformado"
+      ],
+      "slug": "in-0001",
+      "path": "data/institucional/IN-0001-video-ia-convencao-pl.md",
+      "url": "/entrada/in-0001",
+      "body": "# Despacho de 28/07/2026 — vídeo de IA na convenção do PL\n\n## Por que esta entrada existe apesar de reprovar no teste de generalização\n\nO texto original não seria aceito nesta trilha em sua forma bruta — falha em autoria identificada, dispositivo legal específico, e no teste de generalização (ver campo acima). Esta entrada existe para documentar **o que é fato checável** (o despacho, suas datas, seu conteúdo, a restrição anterior, o precedente citado) separado **da interpretação retórica** que circulou nas redes, permitindo que quem ler compare as duas coisas lado a lado — que é justamente o serviço que este projeto se propõe a prestar.\n\n## O que fica de fora\n\nNão incluí a comparação com a Nicarágua nem a conclusão sobre \"fim das eleições\" como fato ou como argumento jurídico — são retórica política, não elemento verificável, e sua inclusão aqui seria o projeto endossando uma tese partidária sem lastro processual, o que viola a regra de ouro do Sabor Brazil.\n\n## Atualização pendente\n\nEsta entrada deve ser atualizada quando: (a) a defesa de Bolsonaro responder ao despacho dentro do prazo de 48h; (b) o TSE ou STF se manifestarem sobre a ação do PT; (c) houver decisão sobre eventual reversão da domiciliar ou processo de inelegibilidade contra Flávio."
+    },
+    {
+      "id": "IN-0002",
+      "trilha": "institucional",
+      "titulo": "Controvérsia sobre atuação da AGU (Jorge Messias) na apuração dos descontos do INSS",
+      "status": "argumento_juridico_fundamentado",
+      "data_entrada": "Tue Jul 28 2026 21:00:00 GMT-0300 (Horário Padrão de Brasília)",
+      "resumo_neutro": "Oposição aciona PGR, TCU e CEP pedindo investigação de Jorge Messias por suposta omissão em alertas internos da AGU sobre fraudes do INSS desde 2024; AGU defende estratégia de ressarcimento administrativo para evitar judicialização massiva.",
+      "dispositivo_legal": "Alegação de prevaricação (art. 319 do Código Penal) e/ou omissão de dever funcional — dispositivo específico a confirmar na petição formal encaminhada à PGR/TCU/CEP antes de elevar o status desta entrada",
+      "fatos_checaveis": [
+        "Processo interno da AGU de abril de 2024 listou nove entidades com aumento significativo de reclamações sobre descontos não autorizados, incluindo o Sindnapi",
+        "Em maio de 2025, ao pedir bloqueio judicial de bens, a AGU teria deixado de fora seis das nove entidades citadas no levantamento interno de 2024",
+        "STF (ministro André Mendonça) determinou bloqueio de aproximadamente R$ 390 milhões em bens do Sindnapi",
+        "José Ferreira da Silva ('Frei Chico'), irmão do presidente Lula, integra a diretoria do Sindnapi como vice-presidente; não consta como investigado pela Polícia Federal",
+        "CPMI do INSS rejeitou, por 19 votos a 11, requerimento de convocação de Frei Chico",
+        "Em manifestação pública, Jorge Messias afirmou que R$ 2,8 bilhões em bens já estavam bloqueados judicialmente para garantir o ressarcimento, e defendeu a via administrativa para evitar repetir casos históricos de judicialização de décadas (citando FGTS e planos econômicos)"
+      ],
+      "argumento_juridico": {
+        "autor": "Oposição no Congresso, liderada pelo senador Rogério Marinho (PL-RN), em representação à PGR, TCU e Conselho de Ética Público",
+        "tese": "Jorge Messias teria incorrido em prevaricação/omissão ao não agir sobre alertas internos da AGU desde 2024, e ao excluir entidades citadas nesses alertas do pedido de bloqueio judicial de 2025."
+      },
+      "contraponto": {
+        "existe": true,
+        "resumo": "A AGU, pela voz do próprio Messias, defende publicamente que a prioridade foi construir uma via de ressarcimento administrativo rápido (sem exigir ação judicial individual de cada segurado), citando o salto de 400 para 11 mil novas ações mensais contra o INSS após a operação como argumento para conter a judicialização massiva. A instituição também aponta R$ 2,8 bilhões já bloqueados judicialmente como evidência de que agiu contra o esquema, incluindo os R$ 390 milhões do Sindnapi. Não localizei, até a data desta entrada, resposta formal e específica da AGU sobre por que as seis entidades citadas no levantamento de 2024 ficaram fora do pedido de bloqueio de 2025 — esse ponto específico permanece sem contraponto direto localizado.",
+        "fonte": "JOTA (via Harvard TagTeam) e Gazeta do Povo — ver campo fontes"
+      },
+      "teste_generalizacao": "PARCIAL. A pergunta 'um órgão pode ser cobrado por agir de forma incompleta sobre alertas internos próprios?' é uma questão de dever funcional genuinamente debatível em abstrato. Mas a tese tal como veiculada frequentemente vem acompanhada da ligação com Frei Chico/Lula como insinuação de proteção política — essa parte específica NÃO passa no teste, porque depende inteiramente da relação familiar para ter força retórica, e o próprio fato checável (Frei Chico não é investigado pela PF) não implica, por si só, omissão deliberada da AGU; são fatos que podem coexistir com explicações não politizadas (critério técnico de instrução processual, por exemplo).",
+      "fontes": [
+        {
+          "titulo": "Fraude no INSS: governo diz que pode ressarcir 1,8 milhão de aposentados até julho",
+          "url": "https://tagteam.harvard.edu/hub_feeds/3884/feed_items/14317977",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "Fraudes no INSS: oposição quer Jorge Messias investigado por prevaricação",
+          "url": "https://www.gazetadopovo.com.br/republica/fraudes-no-inss-oposicao-quer-jorge-messias-investigado-por-prevaricacao/",
+          "tipo": "reportagem"
+        }
+      ],
+      "tags": [
+        "inss",
+        "agu",
+        "messias",
+        "sindnapi",
+        "template-reformado"
+      ],
+      "slug": "in-0002",
+      "path": "data/institucional/IN-0002-agu-messias-inss.md",
+      "url": "/entrada/in-0002",
+      "body": "# Controvérsia sobre atuação da AGU no caso INSS\n\n## Por que esta entrada não conclui nada sobre culpa ou inocência\n\nOs fatos checáveis (o levantamento interno de 2024, a exclusão de seis entidades do pedido de bloqueio de 2025, o bloqueio do Sindnapi, a não-investigação de Frei Chico) são reportados de forma consistente por mais de uma fonte jornalística. A conclusão de que isso configura prevaricação, porém, é tese da oposição — não um fato estabelecido, e não uma conclusão deste projeto. O contraponto da própria AGU existe para a estratégia administrativa geral, mas não localizei, até a data desta entrada, uma resposta específica sobre a exclusão das seis entidades — esse é o ponto que mais precisa de atualização.\n\n## O que fica de fora, por reprovar no teste de generalização\n\nA insinuação de proteção política via parentesco com Lula não é tratada como fato ou como argumento jurídico válido nesta entrada — é retórica que se apoia na relação familiar em si, não em um dispositivo ou procedimento verificável que ligue a atuação da AGU à omissão deliberada. Ver campo `teste_generalizacao`.\n\n## Ver também\n\n[`RT-0008`](../rotulagem/desconto-associativo-inss.md) — os fatos verificados sobre o próprio esquema de descontos indevidos, tratados separadamente por serem fato de rotulagem/fraude, não disputa institucional.\n\n## Atualização pendente\n\nLocalizar resposta específica da AGU sobre a exclusão das seis entidades do pedido de bloqueio de 2025; acompanhar desfecho da representação na PGR/TCU/CEP."
+    },
+    {
+      "id": "RG-0001",
+      "trilha": "regulatorio",
+      "titulo": "Gasolina comum — elevação do teor de etanol para 32% (E32)",
+      "resumo_neutro": "CNPE elevou o etanol na gasolina comum para 32% (E32); há Ação Civil Pública do MPF em Uberlândia questionando a suficiência dos testes de durabilidade.",
+      "apresentacao_comercial": "Gasolina comum, vendida sem distinção de rótulo em relação ao E30 anterior",
+      "denominacao_oficial": "Gasolina C com 32% de etanol anidro, especificação tolerando até 34%",
+      "orgao_regulador": "CNPE (Conselho Nacional de Política Energética) / ANP",
+      "status": "contestado_judicialmente",
+      "data_entrada": "Tue Jul 28 2026 21:00:00 GMT-0300 (Horário Padrão de Brasília)",
+      "fontes": [
+        {
+          "titulo": "MPF aciona a Justiça para suspender aumento de etanol na gasolina",
+          "url": "https://www.mpf.mp.br/o-mpf/unidades/pr-mg/noticias/mpf-aciona-a-justica-para-suspender-aumento-de-etanol-na-gasolina-ate-comprovacao-da-seguranca-tecnica-da-mistura",
+          "tipo": "orgao_oficial"
+        },
+        {
+          "titulo": "Gasolina E32 faz mal ao motor? Estudo de 356 páginas traz respostas",
+          "url": "https://gurudoscarros.com.br/2026/07/15/gasolina-e32-faz-mal-ao-motor-estudo-de-356-paginas-traz-respostas/",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "Lei nº 14.993/2024 — Combustível do Futuro",
+          "url": "https://www12.senado.leg.br/noticias/materias/2024/10/10/lei-que-incentiva-combustiveis-do-futuro-e-sancionada-com-vetos",
+          "tipo": "norma"
+        }
+      ],
+      "tags": [
+        "combustivel",
+        "etanol",
+        "cnpe",
+        "mpf"
+      ],
+      "processo_judicial": {
+        "numero": "não localizado publicamente até a data desta entrada",
+        "vara": "4ª Vara Federal de Uberlândia (MG)",
+        "autor": "Ministério Público Federal (procurador Cleber Eustáquio Neves)",
+        "pedidos": [
+          "suspensão imediata do E32",
+          "perícia técnica multidisciplinar e independente",
+          "protocolo obrigatório de testes de longa duração para futuras mudanças de composição",
+          "R$ 500 milhões por danos morais coletivos"
+        ],
+        "status": "em curso"
+      },
+      "divergencia_tecnica": {
+        "estudo_oficial": "Instituto Mauá de Tecnologia testou 16 veículos leves (1994–2024) e 13 motocicletas, concluindo ausência de alteração significativa de funcionamento em motores flex e gasolina moderna no curto prazo.",
+        "contraponto": "Anfavea, Fecombustíveis e o engenheiro Gerson Borini (ex-GM, 30 anos de teste de veículos) apontam ausência de teste pareado com linha de base própria, duração de apenas 3 meses contra os 18–24 meses padrão da indústria, e teste de partida a frio sem simulação real de altitude.",
+        "lacuna_reconhecida": "O próprio relatório do IMT afirma que seus resultados cobrem funcionamento imediato, mas não a durabilidade de componentes ao longo dos anos — bombas, injetores, vedações, catalisadores — deixando essa avaliação para um capítulo futuro."
+      },
+      "slug": "rg-0001",
+      "path": "data/regulatorio/combustivel-e32.md",
+      "url": "/entrada/rg-0001",
+      "body": "# Gasolina comum — E32\n\n## Por que esta entrada é Trilha 2, não Trilha 1\n\nEsta não é uma entrada de rotulagem enganosa. A gasolina comum brasileira sempre teve etanol anidro em sua composição por lei — isso não é escondido, é especificação pública desde 1993. A mudança de 30% para 32% foi votada, nomeada e publicada por resolução do CNPE. **O que está em disputa não é se o consumidor foi enganado sobre o que está comprando, mas se o processo que autorizou a mudança testou o que precisava testar antes de tornar a mistura obrigatória para toda a frota nacional.**\n\n## Estado atual (29/07/2026)\n\nAção Civil Pública do MPF em curso, pedindo liminar de suspensão. UNICA (setor sucroalcooleiro) já apresentou réplica defendendo a suficiência dos estudos. Dossiê técnico completo com todas as fontes cruzadas: [`/dossies/combustivel-e32.html`](/dossies/combustivel-e32.html).\n\n## O que fica de fora desta entrada\n\nAlegações de sintomas específicos por marca/modelo de veículo importado (ex: \"Porsche sofre X, BMW sofre Y\") circulam publicamente mas não têm fonte técnica independente identificada até a data desta entrada. Ficam registradas como `hipotese` no dossiê estendido, não nesta entrada de status `contestado_judicialmente`."
+    },
+    {
+      "id": "RT-0001",
+      "trilha": "rotulagem",
+      "titulo": "Linguiça tipo calabresa (vs. linguiça calabresa)",
+      "resumo_neutro": "O RTIQ do MAPA distingue Linguiça Calabresa (só carne suína) de Linguiça Tipo Calabresa, que no cozido pode levar até 20% de CMS com declaração no rótulo.",
+      "apresentacao_comercial": "Embalagem, cor e formato de linguiça calabresa tradicional, na mesma seção de frios",
+      "denominacao_oficial": "Linguiça Tipo Calabresa — categoria distinta da Linguiça Calabresa no RTIQ; no tipo cozido, permite até 20% de CMS (carne mecanicamente separada), com declaração obrigatória no rótulo",
+      "orgao_regulador": "MAPA (SDA)",
+      "status": "verificado",
+      "data_entrada": "Tue Jul 28 2026 21:00:00 GMT-0300 (Horário Padrão de Brasília)",
+      "fontes": [
+        {
+          "titulo": "Instrução Normativa SDA nº 4/2000 — RTIQ de linguiça (gov.br PDF)",
+          "url": "https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-animal/legislacao/IN042000salsichamortadelalinguia.pdf",
+          "tipo": "norma"
+        },
+        {
+          "titulo": "IN SDA nº 4/2000 — LegisWeb (texto consolidado)",
+          "url": "https://www.legisweb.com.br/legislacao/?id=453107",
+          "tipo": "norma"
+        },
+        {
+          "titulo": "RTIQ de linguiça — texto com distinção Calabresa / Tipo Calabresa (Agais)",
+          "url": "https://www.agais.com/normas/carne/carnes_linguica.htm",
+          "tipo": "norma"
+        }
+      ],
+      "tags": [
+        "embutidos",
+        "carnes",
+        "tipo",
+        "rotulagem-enganosa"
+      ],
+      "slug": "rt-0001",
+      "path": "data/rotulagem/embutido-tipo-calabresa.md",
+      "url": "/entrada/rt-0001",
+      "body": "# Linguiça tipo calabresa\n\n## Parece × é\n\nA **Linguiça Calabresa**, no Regulamento Técnico de Identidade e Qualidade (IN SDA nº 4/2000), é produto **exclusivamente de carne suína**, com sabor característico de pimenta calabresa.\n\nA **Linguiça Tipo Calabresa** é denominação de venda **separada** no mesmo regulamento. Nas linguiças *tipo* calabresa / portuguesa e no paio **cozidos**, a norma **permite até 20% de CMS**, desde que o rótulo declare de forma clara a presença de carne mecanicamente separada.\n\n## O que isso muda na gôndola\n\nVisualmente, os dois produtos competem na mesma seção. A diferença regulatória está na palavra **tipo** e, quando houver CMS, na declaração obrigatória — frequentemente em letra menor que o nome comercial.\n\n## O que fica de fora\n\nEsta entrada documenta a **distinção normativa** entre as duas denominações. Não afirma que toda marca de “tipo calabresa” use o máximo de CMS, nem compara marcas específicas sem rótulo auditado."
+    },
+    {
+      "id": "RT-0002",
+      "trilha": "rotulagem",
+      "titulo": "Barra / produto \"sabor chocolate\" (vs. chocolate)",
+      "resumo_neutro": "A RDC 723/2022 exige no mínimo 25% de sólidos totais de cacau para a denominação chocolate; abaixo disso o produto não usa esse nome sozinho.",
+      "apresentacao_comercial": "Embalagem e gôndola sugerem chocolate tradicional",
+      "denominacao_oficial": "Produto que não atinge o mínimo de sólidos de cacau para a denominação \"chocolate\" — frequentemente rotulado como \"sabor chocolate\" ou equivalente; RDC 723/2022 exige no mínimo 25% de sólidos totais de cacau para chocolate",
+      "orgao_regulador": "ANVISA",
+      "status": "verificado",
+      "data_entrada": "Tue Jul 28 2026 21:00:00 GMT-0300 (Horário Padrão de Brasília)",
+      "fontes": [
+        {
+          "titulo": "RDC nº 723/2022 — chocolate e produtos de cacau (ANVISA)",
+          "url": "https://anvisalegis.datalegis.net/action/ActionDatalegis.php?acao=detalharAto&tipo=RDC&numeroAto=00000723&seqAto=002&valorAno=2022&orgao=RDC/DC/ANVISA/MS&nomeTitulo=codigos&desItem=&desItemFim=&cod_modulo=310&cod_menu=9882",
+          "tipo": "norma"
+        },
+        {
+          "titulo": "Voto ANVISA 243/2024 — reforça mínimo de 25% de sólidos totais de cacau",
+          "url": "https://www.gov.br/anvisa/pt-br/composicao/diretoria-colegiada/reunioes-da-diretoria/votos-dos-circuitos-deliberativos-1/2024/cd-1375-2024-voto.pdf",
+          "tipo": "orgao_oficial"
+        },
+        {
+          "titulo": "Demarest — Lei do Chocolate e regras de composição/rotulagem",
+          "url": "https://www.demarest.com.br/lei-do-chocolate-quantidades-minimas-de-cacau-em-chocolates-e-derivados-e-novas-regras-para-rotulacao-desses-produtos/",
+          "tipo": "reportagem"
+        }
+      ],
+      "tags": [
+        "chocolate",
+        "cacau",
+        "sabor",
+        "confeitaria",
+        "rotulagem-enganosa"
+      ],
+      "slug": "rt-0002",
+      "path": "data/rotulagem/sabor-chocolate.md",
+      "url": "/entrada/rt-0002",
+      "body": "# Sabor chocolate × chocolate\n\n## Parece × é\n\nQuando o produto **não** alcança o mínimo legal de **sólidos totais de cacau** para usar a palavra **chocolate** sozinha, a indústria costuma recorrer a formulações e nomes do tipo **“sabor chocolate”**. A RDC nº 723/2022 estabelece que o chocolate deve conter, no mínimo, **25%** de sólidos totais de cacau.\n\n## O que fica de fora\n\nRedução de peso da barra (reduflação) e preço do cacau em 2025 são contexto de mercado, não a prova desta entrada. Alegações sobre marcas específicas exigem foto/rótulo auditado e entram como atualização futura, não como fato genérico aqui."
+    },
+    {
+      "id": "RT-0003",
+      "trilha": "rotulagem",
+      "titulo": "Mistura láctea condensada (vs. leite condensado)",
+      "resumo_neutro": "ANVISA, em audiência na Câmara, afirmou que mistura láctea condensada não é um tipo de leite condensado e exige denominação de venda distinta.",
+      "apresentacao_comercial": "Lata/embalagem e prateleira sugerem leite condensado clássico (leite + açúcar)",
+      "denominacao_oficial": "Mistura láctea condensada — denominação de venda distinta; não é um tipo de leite condensado, conforme posicionamento da ANVISA em audiência na Câmara",
+      "orgao_regulador": "ANVISA / MAPA",
+      "status": "verificado",
+      "data_entrada": "Tue Jul 28 2026 21:00:00 GMT-0300 (Horário Padrão de Brasília)",
+      "fontes": [
+        {
+          "titulo": "Agência Câmara — ANVISA: mistura láctea condensada não é leite condensado",
+          "url": "https://www.camara.leg.br/noticias/927918-consumidor-deve-ser-informado-sobre-presenca-de-produto-lacteo-modificado,-alertam-especialistas",
+          "tipo": "orgao_oficial"
+        },
+        {
+          "titulo": "O Joio e O Trigo — misturas lácteas e soluções à base de soro na gôndola",
+          "url": "https://ojoioeotrigo.com.br/2023/09/parece-queijo-mas-nao-e-solucoes-lacteas/",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "Jusbrasil / O Globo — versão econômica apresentada como alternativa ao leite condensado",
+          "url": "https://www.jusbrasil.com.br/noticias/parece-mas-nao-e-leite-condensado-ganha-versao-mais-economica-de-composto-lacteo/1499755608",
+          "tipo": "reportagem"
+        }
+      ],
+      "tags": [
+        "laticinios",
+        "mistura-lactea",
+        "leite-condensado",
+        "soro",
+        "rotulagem-enganosa"
+      ],
+      "slug": "rt-0003",
+      "path": "data/rotulagem/mistura-lactea-condensada.md",
+      "url": "/entrada/rt-0003",
+      "body": "# Mistura láctea condensada\n\n## Parece × é\n\nO leite condensado clássico é associado a **leite + açúcar**. Produtos de **mistura láctea condensada** (com soro e/ou outros componentes) ocupam a mesma gôndola com visual próximo, mas são outra categoria de venda.\n\nEm audiência na Câmara (2022), a gerente-geral de Alimentos da ANVISA afirmou que a **mistura láctea condensada não é um tipo de leite condensado** e precisa de **denominação de venda diferente**, clara nas prateleiras e nos rótulos.\n\n## O que fica de fora\n\nValores de processos judiciais citados em redes/painéis sem número de processo público verificado nesta entrada ficam como **contexto não confirmado aqui**. A alegação central é a diferença de denominação, com fonte regulatória e jornalística cruzadas."
+    },
+    {
+      "id": "RT-0004",
+      "trilha": "rotulagem",
+      "titulo": "Preparado alimentício sabor queijo (vs. queijo)",
+      "resumo_neutro": "Queijo com RTIQ (ex.: prato) e produtos \"sabor queijo\" / preparados são categorias distintas; reportagens documentam soluções industriais com pouca ou nenhuma base de queijo.",
+      "apresentacao_comercial": "Embalagem e uso em pizzas/lanches sugerem queijo prato, mussarela ou similar",
+      "denominacao_oficial": "Preparado alimentício / cobertura / solução \"sabor\" queijo — formulação com amido, gordura vegetal, aromas e menor (ou nenhum) percentual de queijo; queijo prato propriamente dito tem RTIQ próprio (Portaria 358/1997)",
+      "orgao_regulador": "MAPA / ANVISA",
+      "status": "verificado",
+      "data_entrada": "Tue Jul 28 2026 21:00:00 GMT-0300 (Horário Padrão de Brasília)",
+      "fontes": [
+        {
+          "titulo": "O Joio e O Trigo — parece queijo, mas não é: soluções lácteas",
+          "url": "https://ojoioeotrigo.com.br/2023/09/parece-queijo-mas-nao-e-solucoes-lacteas/",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "MAPA — Portaria nº 358/1997 (RTIQ Queijo Prato) na lista de legislação",
+          "url": "https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-animal/legislacao",
+          "tipo": "norma"
+        },
+        {
+          "titulo": "PEGN — viralização do debate sobre rotulagem \"sabor prato\"",
+          "url": "https://revistapegn.globo.com/google/amp/redes-sociais/noticia/2026/04/post-sobre-queijo-sabor-prato-viraliza-e-acende-debate-sobre-rotulagem-e-descricao-de-sabores.ghtml",
+          "tipo": "reportagem"
+        }
+      ],
+      "tags": [
+        "laticinios",
+        "queijo",
+        "sabor",
+        "preparado",
+        "rotulagem-enganosa"
+      ],
+      "slug": "rt-0004",
+      "path": "data/rotulagem/preparado-sabor-queijo.md",
+      "url": "/entrada/rt-0004",
+      "body": "# Preparado sabor queijo\n\n## Parece × é\n\n**Queijo prato** (e outros queijos com RTIQ) tem definição normativa própria. Já produtos vendidos como **preparado alimentício sabor queijo**, coberturas “sabor mussarela” ou misturas com fécula/amido e aroma **não** cumprem a identidade do queijo — imitam sabor e função (derreter, gratinar) com outra composição.\n\nReportagem do Joio documenta “soluções lácteas” industriais e de food service que chegam a ter **pouco ou nenhum leite**, enquanto a apresentação comercial empurra a leitura de “queijo”.\n\n## O que fica de fora\n\nNão endossamos listas de marcas sem rótulo auditado. A entrada fixa a **categoria regulatória/jornalística** da diferença “queijo” × “sabor queijo / preparado”."
+    },
+    {
+      "id": "RT-0005",
+      "trilha": "rotulagem",
+      "titulo": "Bebida láctea (vs. iogurte)",
+      "resumo_neutro": "Bebida láctea e iogurte são categorias distintas no MAPA; regras de 2024–2025 passam a exigir aviso no sentido de que bebida láctea não é iogurte.",
+      "apresentacao_comercial": "Potinho na geladeira, mesma seção e visual de iogurte / sobremesa láctea",
+      "denominacao_oficial": "Bebida láctea — produto distinto do iogurte; Portaria SDA/MAPA nº 1.174/2024 e regras de rotulagem exigem advertência no sentido de que bebida láctea não é iogurte",
+      "orgao_regulador": "MAPA",
+      "status": "verificado",
+      "data_entrada": "Tue Jul 28 2026 21:00:00 GMT-0300 (Horário Padrão de Brasília)",
+      "fontes": [
+        {
+          "titulo": "Portaria SDA/MAPA nº 1.174/2024 — RTIQ de bebida láctea (WikiSDA)",
+          "url": "https://wikisda.agricultura.gov.br/dipoa_baselegal/port_1174-2024_rt_bebida_l%C3%A1ctea.pdf",
+          "tipo": "norma"
+        },
+        {
+          "titulo": "ASSERJ — novas regras: \"bebida láctea não é iogurte\" / \"composto lácteo não é leite em pó\"",
+          "url": "https://asserj.com.br/en/w/novas-regras-para-rotulagem-de-bebidas-e-compostos-l%C3%A1cteos-entram-em-vigor.-asserj-orienta-sobre-transi%C3%A7%C3%A3o",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "Semear — Portaria para bebidas lácteas e critérios de composição/rotulagem",
+          "url": "https://semearfoodsafetyculture.com.br/portaria-para-bebidas-lacteas/",
+          "tipo": "reportagem"
+        }
+      ],
+      "tags": [
+        "laticinios",
+        "iogurte",
+        "bebida-lactea",
+        "mapa",
+        "rotulagem-enganosa"
+      ],
+      "slug": "rt-0005",
+      "path": "data/rotulagem/bebida-lactea-vs-iogurte.md",
+      "url": "/entrada/rt-0005",
+      "body": "# Bebida láctea × iogurte\n\n## Parece × é\n\n**Iogurte** e **bebida láctea** são categorias diferentes. A bebida láctea admite formulação com leite e outros ingredientes (incluindo soro e não lácteos, nos limites do RTIQ), e historicamente ocupou a mesma geladeira com visual de iogurte.\n\nAs regras de rotulagem associadas à Portaria SDA/MAPA nº 1.174/2024 e orientações setoriais passaram a exigir avisos explícitos no sentido de **“bebida láctea não é iogurte”** (com prazos de adequação/prorrogação reportados pelo setor).\n\n## O que fica de fora\n\n“Sabor baunilha” sem baunilha natural é padrão de aromatização separado; entra aqui só como ilustração da lógica “sabor”, não como alegação verificada por marca."
+    },
+    {
+      "id": "RT-0006",
+      "trilha": "rotulagem",
+      "titulo": "Composto lácteo (vs. leite em pó)",
+      "resumo_neutro": "Composto lácteo não se confunde com leite em pó; orientações do MAPA/setor exigem advertência no painel principal deixando a diferença explícita.",
+      "apresentacao_comercial": "Embalagem e uso culinário sugerem leite em pó tradicional",
+      "denominacao_oficial": "Composto lácteo — produto com leite e outros ingredientes (óleos etc.); rotulagem passa a exigir advertência no sentido de que composto lácteo não é leite em pó (Portaria SDA/MAPA nº 1.170/2024 e orientações setoriais)",
+      "orgao_regulador": "MAPA",
+      "status": "verificado",
+      "data_entrada": "Tue Jul 28 2026 21:00:00 GMT-0300 (Horário Padrão de Brasília)",
+      "fontes": [
+        {
+          "titulo": "ASSERJ — \"composto lácteo não é leite em pó\" (painel principal)",
+          "url": "https://asserj.com.br/en/w/novas-regras-para-rotulagem-de-bebidas-e-compostos-l%C3%A1cteos-entram-em-vigor.-asserj-orienta-sobre-transi%C3%A7%C3%A3o",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "Gepec — novas regras para rotulagem de bebidas e compostos lácteos",
+          "url": "https://gepec.com.br/blog/novas-regras-para-rotulagem-de-bebidas-e-compostos-lacteos/",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "Portaria SDA/MAPA nº 1.174/2024 — pacote regulatório de bebidas lácteas (contexto MAPA 2024)",
+          "url": "https://wikisda.agricultura.gov.br/dipoa_baselegal/port_1174-2024_rt_bebida_l%C3%A1ctea.pdf",
+          "tipo": "norma"
+        }
+      ],
+      "tags": [
+        "laticinios",
+        "composto-lacteo",
+        "leite-em-po",
+        "mapa",
+        "rotulagem-enganosa"
+      ],
+      "slug": "rt-0006",
+      "path": "data/rotulagem/composto-lacteo-vs-leite-em-po.md",
+      "url": "/entrada/rt-0006",
+      "body": "# Composto lácteo × leite em pó\n\n## Parece × é\n\n**Leite em pó** e **composto lácteo** não são a mesma denominação. O composto admite formulação com leite e outros ingredientes (incluindo óleos vegetais, conforme a regra do produto), e a confusão na gôndola levou o regulador/setor a exigir frase de advertência no painel principal: **composto lácteo não é leite em pó**.\n\n## Nota de fonte\n\nA Portaria específica de compostos lácteos citada pelo setor é a **SDA/MAPA nº 1.170/2024**. O PDF primário dessa portaria deve ser linkado em atualização futura quando localizado no portal gov.br; esta entrada já cruza reportagem setorial independente com o pacote MAPA 2024 de lácteos."
+    },
+    {
+      "id": "RT-0007",
+      "trilha": "rotulagem",
+      "titulo": "Doce de soro de leite sabor doce de leite (vs. doce de leite)",
+      "resumo_neutro": "Existe a categoria doce de soro de leite sabor doce de leite, à base de soro, distinta do doce de leite clássico à base de leite.",
+      "apresentacao_comercial": "Embalagem e seção de doces sugerem doce de leite tradicional",
+      "denominacao_oficial": "Doce de soro de leite sabor doce de leite — produto à base de soro (subproduto da fabricação de queijos), legalmente distinto do doce de leite clássico à base de leite",
+      "orgao_regulador": "MAPA / ANVISA",
+      "status": "verificado",
+      "data_entrada": "Tue Jul 28 2026 21:00:00 GMT-0300 (Horário Padrão de Brasília)",
+      "fontes": [
+        {
+          "titulo": "MilkPoint / PPGCTL-UFJF — doce de leite e doce de soro: tradição versus inovação",
+          "url": "https://www.milkpoint.com.br/colunas/ppgctldufjf/doce-de-leite-e-doce-de-soro-de-leite-tradicao-versus-inovacao-239063/",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "IAL-SP — discussão sobre padrão de identidade do doce de leite e uso de soro",
+          "url": "http://www.ial.sp.gov.br/resources/insituto-adolfo-lutz/publicacoes/rial/10/rial73_3_completa/artigos-separados/1620.pdf",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "O Joio e O Trigo — misturas e produtos à base de soro na prateleira",
+          "url": "https://ojoioeotrigo.com.br/2023/09/parece-queijo-mas-nao-e-solucoes-lacteas/",
+          "tipo": "reportagem"
+        }
+      ],
+      "tags": [
+        "laticinios",
+        "doce-de-leite",
+        "soro",
+        "sabor",
+        "rotulagem-enganosa"
+      ],
+      "slug": "rt-0007",
+      "path": "data/rotulagem/doce-soro-sabor-doce-de-leite.md",
+      "url": "/entrada/rt-0007",
+      "body": "# Doce de soro sabor doce de leite\n\n## Parece × é\n\nO **doce de leite** tradicional tem base em leite. O **doce de soro de leite sabor doce de leite** é categoria/produto que usa **soro** (subproduto da produção de queijos) como base e aromatização/formulação para lembrar doce de leite — com denominação que, lida com atenção, já admite não ser o produto clássico.\n\nA literatura técnica e a imprensa especializada do setor lácteo descrevem essa linha como produto **legalmente fabricado**, porém nutricionalmente e economicamente distinto do doce de leite tradicional — e visualmente capaz de ocupar o mesmo espaço de decisão do consumidor.\n\n## O que fica de fora\n\nComparações de preço por kg sem nota fiscal auditada e julgamentos morais (“crime alimentar”) não entram como fato. A entrada fixa a diferença de denominação e a existência documentada da categoria."
+    },
+    {
+      "id": "RT-0008",
+      "trilha": "rotulagem",
+      "titulo": "Desconto associativo em benefício do INSS",
+      "apresentacao_comercial": "Linha no extrato do benefício rotulada como 'contribuição associativa' ou 'mensalidade associativa/sindical', sugerindo adesão voluntária do segurado a uma associação ou sindicato",
+      "denominacao_oficial": "Em milhões de casos, desconto processado sem autorização válida do titular — apuração da Operação Sem Desconto (PF/CGU) estima R$ 6,3 bilhões descontados de forma não autorizada entre 2019 e 2024",
+      "orgao_regulador": "INSS / CGU / Polícia Federal — base normativa: IN PRES/INSS nº 128/2022 (desconto associativo como faculdade do beneficiário, com autorização); Lei 15.327/2026 passou a proibir descontos associativos na folha",
+      "status": "verificado",
+      "data_entrada": "Tue Jul 28 2026 21:00:00 GMT-0300 (Horário Padrão de Brasília)",
+      "resumo_neutro": "Descontos rotulados como contribuição associativa voluntária foram identificados, em milhões de casos, como não autorizados pelo titular do benefício; governo federal já devolveu bilhões a milhões de segurados.",
+      "fontes": [
+        {
+          "titulo": "Folha — Operação Sem Desconto mira descontos não autorizados no INSS",
+          "url": "https://www1.folha.uol.com.br/mercado/2025/04/presidente-do-inss-e-afastado-apos-operacao-da-pf-e-cgu-sobre-descontos-nao-autorizados-em-beneficios.shtml",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "DIAP — Operação Sem Desconto e IN 128/2022 (autorização do beneficiário)",
+          "url": "https://www.diap.org.br/index.php/noticias/agencia-diap/92232-a-operacao-sem-desconto-e-o-ressarcimento-aos-aposentados-comocao-interna-e-credito-extraordinario",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "Agência Câmara — Lei 15.327/26 proíbe descontos associativos em benefícios do INSS",
+          "url": "https://www.camara.leg.br/noticias/1237183-nova-lei-proibe-descontos-associativos-em-beneficios-do-inss",
+          "tipo": "orgao_oficial"
+        },
+        {
+          "titulo": "INSS — relatório de apuração de descontos associativos (gov.br PDF)",
+          "url": "https://www.gov.br/inss/pt-br/acesso-a-informacao/auditoria/Relatorio_de_Apuracao___Descontos_Associativos_Comprimido.pdf",
+          "tipo": "orgao_oficial"
+        }
+      ],
+      "tags": [
+        "inss",
+        "aposentadoria",
+        "desconto-indevido",
+        "operacao-sem-desconto"
+      ],
+      "slug": "rt-0008",
+      "path": "data/rotulagem/desconto-associativo-inss.md",
+      "url": "/entrada/rt-0008",
+      "body": "# Desconto associativo em benefício do INSS\n\n## Fatos verificados\n\nA Operação Sem Desconto (Polícia Federal + CGU, deflagrada em abril de 2025) apurou cobranças de mensalidades associativas sem autorização válida em escala nacional. A IN PRES/INSS nº 128/2022 já tratava o desconto associativo como **faculdade do beneficiário** condicionada a autorização; a apuração mostrou o descompasso entre o rótulo da linha no extrato (“contribuição associativa”) e a ausência de consentimento válido em massa.\n\nO governo suspendeu descontos e lançou programa de ressarcimento; reportagens e órgãos oficiais documentam devoluções em larga escala. Em 2026, a Lei 15.327/26 passou a **proibir** descontos associativos diretamente nos benefícios previdenciários.\n\n## Por que é Trilha 1, não Trilha 2 ou 3\n\nO elemento central é a diferença auditável entre o que a linha do extrato dizia (contribuição associativa voluntária) e o que ocorreu (desconto sem autorização válida), já reconhecida pelo Estado via operação, ressarcimento e mudança legislativa.\n\n## O que fica de fora desta entrada\n\nA controvérsia sobre a atuação da AGU é tratada em [`IN-0002`](../institucional/IN-0002-agu-messias-inss.md).\n\n## Atualização pendente\n\nLinkar o texto integral da IN 128/2022 e o PDF da Lei 15.327/2026 quando disponíveis em URL estável no gov.br/legislação."
+    },
+    {
+      "id": "RT-0009",
+      "trilha": "rotulagem",
+      "titulo": "Pó para preparo de bebida sabor café (vs. café)",
+      "resumo_neutro": "Produtos denominados pó para preparo de bebida sabor café não são café torrado/moído nem necessariamente café solúvel; a ANVISA já recolheu marcas por confusão de natureza no rótulo e irregularidades sanitárias.",
+      "apresentacao_comercial": "Embalagem e prateleira sugerem café tradicional (pó ou solúvel)",
+      "denominacao_oficial": "Pó para preparo de bebida sabor café — categoria distinta de café torrado e moído / café solúvel; regulamentada como mistura para preparo de bebidas (ex.: RDC 719/2022 citada por fabricante), não como café",
+      "orgao_regulador": "ANVISA / MAPA",
+      "status": "verificado",
+      "data_entrada": "Tue Jul 28 2026 21:00:00 GMT-0300 (Horário Padrão de Brasília)",
+      "fontes": [
+        {
+          "titulo": "Estadão — café fake: diferença entre pó sabor café, solúvel e café",
+          "url": "https://www.estadao.com.br/brasil/cafe-fake-como-diferenciar-po-para-preparo-de-bebida-soluvel-e-cafe-nprm/",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "Diário do Comércio — ANVISA proíbe três marcas de pó sabor café",
+          "url": "https://dcomercio.com.br/publicacao/s/anvisa-proibe-venda-de-tres-marcas-de-cafe-fake-improprio-para-o-consumo",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "ABIC — legislação básica do café (Portaria SDA nº 570/2022 — café torrado)",
+          "url": "https://www.abic.com.br/institucional/legislacao/",
+          "tipo": "norma"
+        }
+      ],
+      "tags": [
+        "cafe",
+        "sabor",
+        "anvisa",
+        "cafake",
+        "rotulagem-enganosa"
+      ],
+      "slug": "rt-0009",
+      "path": "data/rotulagem/po-sabor-cafe.md",
+      "url": "/entrada/rt-0009",
+      "body": "# Pó sabor café × café\n\n## Parece × é\n\n**Café** (torrado e moído, ou solúvel dentro do padrão) tem identidade própria. O **pó para preparo de bebida sabor café** é outra denominação: mistura aromatizada que pode ocupar a mesma gôndola com visual semelhante.\n\nEm 2025, a ANVISA determinou recolhimento de marcas dessa categoria após inspeção do MAPA, citando, além de irregularidades sanitárias, rótulos e imagens capazes de induzir o consumidor a entender o produto como **café**.\n\n## O que fica de fora\n\nContaminação por ocratoxina e impurezas em lotes específicos é fato sanitário das ações de recolhimento — documentado nas reportagens — mas não é o núcleo desta entrada. O núcleo é a **diferença de denominação** entre “café” e “sabor café”."
+    },
+    {
+      "id": "RT-0010",
+      "trilha": "rotulagem",
+      "titulo": "Néctar / refresco (vs. suco)",
+      "resumo_neutro": "Suco, néctar e refresco são categorias legais distintas de bebidas de fruta, com percentuais mínimos diferentes de polpa/suco; a confusão na gôndola é sistêmica.",
+      "apresentacao_comercial": "Embalagem e refrigerador sugerem suco de fruta",
+      "denominacao_oficial": "Néctar ou refresco/bebida de fruta — percentuais de fruta inferiores ao suco; legislação de bebidas (Lei 8.918/1994 e normas MAPA, ex. IN 49/2018) distingue as categorias",
+      "orgao_regulador": "MAPA / ANVISA",
+      "status": "verificado",
+      "data_entrada": "Tue Jul 28 2026 21:00:00 GMT-0300 (Horário Padrão de Brasília)",
+      "fontes": [
+        {
+          "titulo": "Instrução Normativa MAPA nº 49/2018 — sucos e polpas (LegisWeb)",
+          "url": "https://www.legisweb.com.br/legislacao/?legislacao=367750",
+          "tipo": "norma"
+        },
+        {
+          "titulo": "Lignum — o que diz a legislação sobre sucos, néctares e refrescos",
+          "url": "https://lignumconsultoria.com.br/2025/02/05/o-que-diz-a-legislacao-sobre-sucos-nectares-e-refrescos/",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "SciELO — avaliação crítica da legislação brasileira de sucos de fruta",
+          "url": "https://www.scielo.br/j/rn/a/wRSD87wfg8HDCzV46XZfkMQ/",
+          "tipo": "reportagem"
+        }
+      ],
+      "tags": [
+        "bebidas",
+        "suco",
+        "nectar",
+        "refresco",
+        "rotulagem-enganosa"
+      ],
+      "slug": "rt-0010",
+      "path": "data/rotulagem/nectar-refresco-vs-suco.md",
+      "url": "/entrada/rt-0010",
+      "body": "# Néctar / refresco × suco\n\n## Parece × é\n\n**Suco** (em regra, 100% da fruta/polpa no sentido da categoria) não é o mesmo que **néctar** (percentual intermediário de fruta + água/açúcar) nem **refresco/bebida de fruta** (percentual ainda menor). As três denominações convivem em embalagens semelhantes; a diferença está no nome legal e na composição mínima.\n\n## O que fica de fora\n\nMarcas e percentuais pontuais citados em redes (ex.: “néctar com X%”) exigem rótulo auditado por produto. Esta entrada fixa a **taxonomia regulatória**, não um ranking de marcas."
+    },
+    {
+      "id": "RT-0011",
+      "trilha": "rotulagem",
+      "titulo": "Creme vegetal / margarina sabor manteiga (vs. manteiga)",
+      "resumo_neutro": "Manteiga tem RTIQ próprio (produto lácteo); cremes vegetais e margarinas \"sabor manteiga\" são gorduras vegetais com aromatização, categoria distinta na gôndola de tabletes.",
+      "apresentacao_comercial": "Tablete amarelo na mesma seção da manteiga, com apelo de sabor manteiga",
+      "denominacao_oficial": "Creme vegetal ou margarina sabor manteiga — base em óleos/gorduras vegetais; manteiga é produto do creme de leite conforme RTIQ do MAPA",
+      "orgao_regulador": "MAPA / ANVISA",
+      "status": "verificado",
+      "data_entrada": "Tue Jul 28 2026 21:00:00 GMT-0300 (Horário Padrão de Brasília)",
+      "fontes": [
+        {
+          "titulo": "ANVISA — perguntas e respostas sobre óleos e gorduras vegetais (cremes vegetais / MAPA)",
+          "url": "https://www.gov.br/anvisa/pt-br/centraisdeconteudo/publicacoes/alimentos/perguntas-e-respostas-arquivos/perguntas-e-respostas-sobre-oleos-e-gorduras-vegetais-gepar-120122.pdf",
+          "tipo": "orgao_oficial"
+        },
+        {
+          "titulo": "RTIQ de manteiga — Portaria MAPA / texto Agais",
+          "url": "https://www.agais.com/normas/leite/manteiga.htm",
+          "tipo": "norma"
+        },
+        {
+          "titulo": "BVS — análise crítica de rotulagem de margarinas \"cremes vegetais sabor manteiga\"",
+          "url": "https://fi-admin.bvsalud.org/document/view/c9bkk",
+          "tipo": "reportagem"
+        }
+      ],
+      "tags": [
+        "manteiga",
+        "creme-vegetal",
+        "sabor",
+        "gorduras",
+        "rotulagem-enganosa"
+      ],
+      "slug": "rt-0011",
+      "path": "data/rotulagem/creme-vegetal-sabor-manteiga.md",
+      "url": "/entrada/rt-0011",
+      "body": "# Sabor manteiga × manteiga\n\n## Parece × é\n\n**Manteiga** é produto lácteo com identidade e qualidade próprias. **Creme vegetal** / **margarina sabor manteiga** usa base vegetal e aromatização para lembrar manteiga — denominação que, lida com atenção, já admite não ser o produto lácteo.\n\nA própria ANVISA, em material de Q&A sobre óleos e gorduras, situa cremes vegetais de uso similar à margarina no âmbito regulatório do MAPA — separado da manteiga clássica.\n\n## O que fica de fora\n\nAlegações nutricionais (“mais saudável”) sem estudo independente não entram. O núcleo é a diferença de **nome e base lipídica**."
+    }
+  ]
+}

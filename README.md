@@ -65,6 +65,14 @@ npm run dev            # http://localhost:4321
 
 O formulário em `/contribuir` chama `POST /api/sugerir`, que abre uma GitHub Issue com a label `nova-entrada`. Em produção (Vercel), configure as mesmas variáveis de ambiente. Deploy: conecte o repo à Vercel (adapter `@astrojs/vercel` já no projeto).
 
+### Catálogo em JSON (compartilhamento)
+
+```bash
+npm run sync   # regenera data/catalog.json e public/catalog.json
+```
+
+`predev` / `prebuild` já rodam o sync. Em produção: [`/catalog.json`](https://sabor-brazil.vercel.app/catalog.json). No repo: [`data/catalog.json`](data/catalog.json).
+
 ## Como uma entrada é aceita
 
 1. Fonte primária ou secundária de qualidade (norma, órgão regulador, associação, decisão judicial, ou reportagem que cite essas fontes).
