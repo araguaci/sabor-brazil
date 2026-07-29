@@ -32,6 +32,7 @@ const ogImage = image
     ? image
     : new URL(image, site).href
   : defaultOg;
+const isDefaultOg = ogImage === defaultOg;
 const pageTitle = title.includes('Sabor Brazil') ? title : `${title} — Sabor Brazil`;
 ---
 
@@ -62,8 +63,8 @@ const pageTitle = title.includes('Sabor Brazil') ? title : `${title} — Sabor B
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImage} />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    {isDefaultOg && <meta property="og:image:width" content="1200" />}
+    {isDefaultOg && <meta property="og:image:height" content="630" />}
     <meta property="og:image:alt" content={PROJECT_HERO.alt} />
 
     <!-- Twitter / X -->
