@@ -32,6 +32,42 @@
     overflow-x: hidden;
   }
 
+  .back-bar {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding: 14px 40px;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+  }
+  .back-bar a {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    text-decoration: none;
+  }
+  .back-bar a:hover { color: var(--text); }
+  .back-bar .back-brand {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.12em;
+    color: var(--text);
+  }
+  .footer a {
+    color: var(--accent-orange);
+    text-decoration: none;
+  }
+  .footer a:hover { text-decoration: underline; }
+  @media (max-width: 720px) {
+    .back-bar { padding: 12px 20px; }
+  }
+
   /* NOISE OVERLAY */
   body::before {
     content: '';
@@ -713,6 +749,11 @@
 </style>
 </head>
 <body>
+
+<div class="back-bar">
+  <a href="https://sabor-brazil.vercel.app/">← Voltar ao Sabor Brazil</a>
+  <a class="back-brand" href="https://sabor-brazil.vercel.app/">Sabor Brazil</a>
+</div>
 
 <!-- HERO -->
 <header class="hero">
@@ -1605,7 +1646,7 @@
 
 <!-- FOOTER -->
 <footer class="footer">
-  <div class="footer-brand">PAINEL DO CONSUMIDOR BRASILEIRO · 2026</div>
+  <div class="footer-brand">PAINEL DO CONSUMIDOR BRASILEIRO · 2026 · <a href="https://sabor-brazil.vercel.app/">← Voltar ao Sabor Brazil</a></div>
   <div class="footer-note">
     Dados compilados de: Procon-SP, CNJ (Relatório Justiça em Números 2024), IBGE, NIQ/NielsenIQ, CNN Brasil, Correio Braziliense, Infomoney, Diário do Nordeste, Michel Jasper, BM&C News, Click Petróleo e Gás. Atualização rotulagem: MAPA (portarias 2025 — bebida láctea / composto lácteo), categorização “parece vs. denominação” conforme painel fake-brasil.md. Fontes secundárias: Instagram reels virais (2025), posts Twitter/X, YouTube. Documento informativo / jornalismo de dados.
   </div>
