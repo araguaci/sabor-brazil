@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-07-29T18:04:00.301Z",
+  "generated_at": "2026-07-29T18:06:09.238Z",
   "site": "https://sabor-brazil.vercel.app",
   "schema": "schema/entry-schema.md",
   "endpoint": "/catalog.json",
