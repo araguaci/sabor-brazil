@@ -1,0 +1,58 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Sabor Brazil',
+  description = 'Catálogo aberto de produtos e políticas onde o nome não é a coisa. Nem tudo é o que parece.',
+} = Astro.props;
+
+const pathname = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap inner">
+        <a class="brand" href="/">SABOR <span>BRAZIL</span></a>
+        <nav class="nav" aria-label="Principal">
+          <a href="/" aria-current={pathname === '/' ? 'page' : undefined}>Início</a>
+          <a href="/trilha/rotulagem" aria-current={pathname.startsWith('/trilha/rotulagem') ? 'page' : undefined}>Rotulagem</a>
+          <a href="/trilha/regulatorio" aria-current={pathname.startsWith('/trilha/regulatorio') ? 'page' : undefined}>Regulatório</a>
+          <a href="/trilha/institucional" aria-current={pathname.startsWith('/trilha/institucional') ? 'page' : undefined}>Institucional</a>
+          <a href="/contribuir" aria-current={pathname.startsWith('/contribuir') ? 'page' : undefined}>Encontrei um sabor</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>
+          Conteúdo com fonte auditável. Hipótese nunca vira fato sem prova.
+          Sugestões passam por curadoria — <a href="/contribuir">envie um caso</a>.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

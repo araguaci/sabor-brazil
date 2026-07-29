@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E32 — A Mistura no Limite | Dossiê Técnico</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0c0b09; --bg-alt:#131110; --paper:#17140f; --line:#332c22;
+    --ink:#e8e0cf; --ink-dim:#a89e8a; --ink-faint:#6b6252;
+    --accent:#c99a3f; --accent-dim:#8a6a2c; --red:#a13c33; --green:#4a7a5c; --amber:#c99a3f;
+    --nav-h:56px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 20px);}
+  body{
+    margin:0;
+    background:
+      radial-gradient(ellipse at 20% 0%, rgba(201,154,63,0.06), transparent 45%),
+      radial-gradient(ellipse at 90% 80%, rgba(161,60,51,0.05), transparent 50%),
+      var(--bg);
+    color:var(--ink); font-family:'EB Garamond', serif; font-size:19px; line-height:1.7;
+  }
+  .wrap{max-width:820px;margin:0 auto;padding:0 32px 120px;}
+  a{color:var(--accent);text-decoration-color:rgba(201,154,63,0.4);}
+  a:hover{text-decoration-color:var(--accent);}
+
+  /* NAVBAR */
+  #navbar{
+    position:sticky;top:0;z-index:100;height:var(--nav-h);
+    background:rgba(12,11,9,0.92);backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+    display:flex;align-items:center;
+  }
+  .nav-inner{
+    max-width:820px;margin:0 auto;padding:0 32px;width:100%;
+    display:flex;align-items:center;gap:4px;overflow-x:auto;
+    scrollbar-width:none;
+  }
+  .nav-inner::-webkit-scrollbar{display:none;}
+  .nav-brand{
+    font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;
+    color:var(--accent);text-transform:uppercase;white-space:nowrap;
+    padding-right:16px;margin-right:8px;border-right:1px solid var(--line);
+    flex-shrink:0;
+  }
+  .nav-link{
+    font-family:'IBM Plex Mono',monospace;font-size:11.5px;
+    color:var(--ink-faint);white-space:nowrap;text-decoration:none;
+    padding:6px 10px;border-radius:3px;transition:all .15s;flex-shrink:0;
+  }
+  .nav-link:hover{color:var(--ink);background:rgba(201,154,63,0.08);}
+  .nav-link.active{color:var(--accent);background:rgba(201,154,63,0.1);}
+
+  /* GO TO TOP */
+  #gotop{
+    position:fixed;bottom:28px;right:28px;z-index:99;
+    width:46px;height:46px;border-radius:50%;
+    background:var(--paper);border:1px solid var(--accent-dim);
+    color:var(--accent);display:flex;align-items:center;justify-content:center;
+    cursor:pointer;opacity:0;pointer-events:none;transition:opacity .25s, transform .15s;
+    font-size:18px;box-shadow:0 4px 16px rgba(0,0,0,0.4);
+  }
+  #gotop.show{opacity:1;pointer-events:auto;}
+  #gotop:hover{transform:translateY(-3px);border-color:var(--accent);}
+
+  /* HEADER */
+  header{padding:56px 32px 40px;max-width:820px;margin:0 auto;border-bottom:1px solid var(--line);}
+  .kicker{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.25em;text-transform:uppercase;color:var(--accent);margin-bottom:18px;}
+  .kicker::before{content:"◆ ";}
+  h1{font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(2.2rem,5.5vw,3.6rem);line-height:1.05;margin:0 0 20px;letter-spacing:-0.01em;}
+  h1 em{color:var(--accent);font-style:italic;}
+  .subhead{font-size:1.15rem;color:var(--ink-dim);font-style:italic;max-width:70ch;margin:0 0 28px;}
+  .meta-row{display:flex;flex-wrap:wrap;gap:20px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.06em;}
+  .meta-row span b{color:var(--ink-dim);}
+
+  /* SECTION */
+  section{padding:52px 0;border-bottom:1px solid var(--line);scroll-margin-top:calc(var(--nav-h) + 16px);}
+  section:last-of-type{border-bottom:none;}
+  .sec-label{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent-dim);margin-bottom:10px;}
+  h2{font-family:'Playfair Display',serif;font-weight:700;font-size:1.75rem;margin:0 0 22px;color:var(--ink);}
+  h3{font-family:'Playfair Display',serif;font-weight:600;font-style:italic;font-size:1.25rem;color:var(--ink);margin:30px 0 10px;}
+  p{margin:0 0 18px;color:var(--ink);}
+  p.lead{font-size:1.1rem;color:var(--ink-dim);}
+  sup.ref{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--accent);}
+  sup.ref a{color:var(--accent);}
+
+  /* TIMELINE */
+  .timeline{position:relative;margin:28px 0;padding-left:26px;border-left:2px solid var(--line);}
+  .tl-item{position:relative;margin-bottom:24px;padding-left:18px;}
+  .tl-item::before{content:"";position:absolute;left:-35px;top:6px;width:11px;height:11px;border-radius:50%;background:var(--bg);border:2px solid var(--accent);}
+  .tl-date{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--accent);margin-bottom:3px;}
+  .tl-body{color:var(--ink-dim);font-size:16.5px;}
+  .tl-body b{color:var(--ink);font-weight:600;}
+
+  /* CALLOUT (used sparingly now — most content is running prose) */
+  .callout{background:var(--paper);border:1px solid var(--line);border-left:3px solid var(--amber);background:#1a1610;padding:20px 24px;margin:22px 0;border-radius:2px;}
+  .callout.legal{border-left-color:var(--red);background:var(--paper);}
+  .callout-tag{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--amber);margin-bottom:8px;display:block;}
+  .callout.legal .callout-tag{color:var(--red);}
+  .callout p:last-child{margin-bottom:0;}
+
+  table{width:100%;border-collapse:collapse;margin:22px 0;font-size:15.5px;}
+  th{font-family:'IBM Plex Mono',monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:0.09em;color:var(--accent-dim);text-align:left;padding:9px 12px;border-bottom:2px solid var(--line);}
+  td{padding:11px 12px;border-bottom:1px solid var(--line);color:var(--ink-dim);vertical-align:top;}
+  tr td:first-child{color:var(--ink);font-weight:600;}
+
+  .risk-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:22px 0;}
+  @media(max-width:640px){.risk-grid{grid-template-columns:1fr;}}
+  .risk{background:var(--bg-alt);border:1px solid var(--line);padding:18px;border-radius:2px;}
+  .risk .lvl{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;padding:3px 8px;border-radius:2px;display:inline-block;margin-bottom:8px;}
+  .lvl.alto{background:rgba(161,60,51,0.15);color:#d67a6f;border:1px solid rgba(161,60,51,0.4);}
+  .lvl.medio{background:rgba(201,154,63,0.15);color:var(--accent);border:1px solid rgba(201,154,63,0.4);}
+  .lvl.baixo{background:rgba(74,122,92,0.15);color:#7fb894;border:1px solid rgba(74,122,92,0.4);}
+  .risk h4{font-family:'Playfair Display',serif;font-size:1rem;margin:0 0 6px;color:var(--ink);}
+  .risk p{font-size:14.5px;color:var(--ink-dim);margin:0;}
+
+  .verdict{background:linear-gradient(135deg, rgba(201,154,63,0.08), transparent);border:1px solid var(--accent-dim);padding:28px;margin:28px 0;border-radius:2px;}
+  .verdict-row{display:flex;gap:14px;margin-bottom:14px;padding-bottom:14px;border-bottom:1px dashed var(--line);}
+  .verdict-row:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
+  .verdict-row .tag{flex-shrink:0;width:120px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.05em;padding-top:2px;}
+  .verdict-row .txt{color:var(--ink-dim);font-size:15.5px;}
+  .verdict-row .txt b{color:var(--ink);}
+
+  /* REFERENCES */
+  #referencias ol{padding-left:22px;}
+  #referencias li{margin-bottom:12px;font-size:16px;color:var(--ink-dim);}
+  #referencias li b{color:var(--ink);}
+  #referencias .refurl{font-family:'IBM Plex Mono',monospace;font-size:13px;word-break:break-all;}
+  #referencias .reftag{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:var(--bg);background:var(--accent);padding:1px 6px;border-radius:2px;margin-left:6px;}
+  #referencias .reftag.unverified{background:var(--ink-faint);}
+
+  footer{max-width:820px;margin:0 auto;padding:32px 32px 60px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--ink-faint);border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-inner" id="navInner">
+    <span class="nav-brand">E32 Dossiê</span>
+    <a class="nav-link" href="#timeline">Linha do Tempo</a>
+    <a class="nav-link" href="#estudo">Estudo IMT</a>
+    <a class="nav-link" href="#critica">Crítica de Método</a>
+    <a class="nav-link" href="#contraponto">Contraponto</a>
+    <a class="nav-link" href="#risco">Mapa de Risco</a>
+    <a class="nav-link" href="#quimica">Química</a>
+    <a class="nav-link" href="#campo">Campo</a>
+    <a class="nav-link" href="#popular">Debate Popular</a>
+    <a class="nav-link" href="#marcas">Marcas</a>
+    <a class="nav-link" href="#frota">Frota</a>
+    <a class="nav-link" href="#leitura">Leitura Analítica</a>
+    <a class="nav-link" href="#referencias">Referências</a>
+  </div>
+</nav>
+
+<button id="gotop" title="Voltar ao topo">↑</button>
+
+<header>
+  <div class="kicker">Lawfare-Timeline · Cluster Regulatório-Setorial</div>
+  <h1>A mistura no <em>limite</em></h1>
+  <p class="subhead">CNPE, Instituto Mauá e o motor que ninguém testou depois de dez anos rodando: o que os estudos oficiais provam, o que o setor contesta, o que o MPF já judicializou, e o que fica de fora do escopo.</p>
+  <div class="meta-row">
+    <span><b>Vigência E32:</b> 01/08/2026</span>
+    <span><b>Base legal:</b> Resolução CNPE, 180 dias, prorrogável 1x</span>
+    <span><b>Status:</b> fato consolidado + ACP em curso (4ª VF Uberlândia/MG)</span>
+  </div>
+</header>
+
+<div class="wrap">
+
+<section id="timeline">
+  <div class="sec-label">01 — Linha do Tempo</div>
+  <h2>Como se chegou ao E32</h2>
+  <p class="lead">A escalada não é um evento isolado — é uma sequência de resoluções dentro de uma margem que o próprio Congresso alargou em 2024.</p>
+
+  <div class="timeline">
+    <div class="tl-item"><div class="tl-date">1993</div><div class="tl-body"><b>Lei nº 8.723/1993.</b> Fixa a mistura de etanol anidro na gasolina em 22%, substituindo o chumbo tetraetila como antidetonante.<sup class="ref">[1]</sup></div></div>
+    <div class="tl-item"><div class="tl-date">Out/2024</div><div class="tl-body"><b>Lei nº 14.993/2024 — Combustível do Futuro.</b> O Congresso amplia a margem legal de variação da mistura de 22%–27% para o intervalo de 22% a 35%, abrindo espaço para o CNPE ajustar por resolução, sem nova lei a cada passo.<sup class="ref">[2]</sup></div></div>
+    <div class="tl-item"><div class="tl-date">Jun/2025</div><div class="tl-body"><b>Resolução CNPE nº 9/2025.</b> Eleva o percentual para 30% (E30) a partir de 01/08/2025, mantendo a gasolina Premium em 25%.</div></div>
+    <div class="tl-item"><div class="tl-date">14/07/2026</div><div class="tl-body"><b>Nova resolução CNPE.</b> Eleva de 30% para 32% (E32), vigência de 180 dias — prorrogável uma única vez por igual período — a partir de 01/08/2026.<sup class="ref">[3]</sup></div></div>
+    <div class="tl-item"><div class="tl-date">Jul/2026</div><div class="tl-body"><b>MPF aciona a Justiça.</b> Ação Civil Pública com pedido de liminar na 4ª Vara Federal de Uberlândia (MG), pedindo suspensão do E32, perícia técnica independente e R$ 500 milhões por danos morais coletivos.<sup class="ref">[4]</sup></div></div>
+    <div class="tl-item"><div class="tl-date">Em estudo</div><div class="tl-body"><b>E35 no horizonte.</b> Governo já avalia novo aumento, com possível implementação até 2029.</div></div>
+  </div>
+</section>
+
+<section id="estudo">
+  <div class="sec-label">02 — O Estudo Oficial</div>
+  <h2>O que o Instituto Mauá efetivamente testou</h2>
+  <p>O ensaio coordenado pelo Instituto Mauá de Tecnologia (IMT), a pedido do Ministério de Minas e Energia, cobriu praticamente toda a evolução tecnológica dos motores no Brasil — carburador, injeção monoponto, multiponto e direta — em veículos de ano-modelo 1994 a 2024, com hodômetros de poucos milhares até mais de 300 mil km, além de 13 motocicletas de diferentes classes e tecnologias.<sup class="ref">[5]</sup> Os testes compararam três misturas preparadas pelo próprio IMT a partir de uma gasolina C comercial E27: a própria E27 como referência-base, a E30 como mistura-alvo da regulamentação então vigente, usada em emissões e autonomia, e a E32 no limite superior de tolerância legal, usada em pista, partida a frio e dirigibilidade.<sup class="ref">[5]</sup></p>
+  <p>A conclusão divulgada foi tranquilizadora para o uso imediato: para quem já roda com a mistura de 30%, a transição para E32 tenderia a ser imperceptível no dia a dia, seja no carro mais novo, híbrido e turbo, seja na moto mais simples a carburador — com motores flex não sofrendo alteração significativa de funcionamento.<sup class="ref">[5]</sup></p>
+  <div class="callout">
+    <span class="callout-tag">⚠ Lacuna reconhecida pelo próprio estudo</span>
+    <p>O relatório afirma explicitamente que seus resultados servem para tranquilizar quanto ao funcionamento imediato dos veículos, mas não encerram a discussão técnica: a durabilidade de componentes ao longo dos anos — bombas de combustível, bicos injetores, vedações, catalisadores — segue fora do escopo do ensaio, sendo apontada como próximo capítulo natural caso a discussão avance para E35.<sup class="ref">[5]</sup> É o ponto central para qualquer avaliação séria: o estudo mede se o motor liga e roda bem hoje, não se ele resiste a anos de exposição acumulada — exatamente a categoria de dano relatada por operadores de uso intensivo, frotistas e veículos de alta quilometragem.</p>
+  </div>
+</section>
+
+<section id="critica">
+  <div class="sec-label">03 — Crítica Metodológica de Engenharia</div>
+  <h2>Um engenheiro de 30 anos de GM analisa o relatório linha a linha</h2>
+  <p>Gerson Borini, engenheiro com três décadas de carreira na General Motors em planejamento e execução de testes de veículos, obteve e leu o relatório completo do IMT via Ministério da Ciência e Tecnologia, e detalhou sua análise crítica em entrevista ao podcast Auto+ (Auto Entusiastas).<sup class="ref">[6]</sup> O ponto mais grave que ele aponta é a ausência de um teste pareado — o mesmo veículo rodando primeiro com E27 e depois com E30/E32 — o que teria permitido isolar o efeito da mistura. Em vez disso, os resultados foram comparados contra valores de homologação de fábrica, sem uma linha de base própria estabelecida pelo próprio ensaio.</p>
+  <p>A duração do teste também destoa do padrão da indústria: uma calibração nova de motor para lançamento no Brasil leva normalmente entre 18 e 24 meses, período que cobre dois ciclos completos de verão e inverno. O ensaio do E32 foi conduzido em apenas três meses, integralmente em laboratório. O teste de partida a frio, especificamente, foi realizado em contêineres refrigerados alugados em São Bernardo do Campo e São Caetano do Sul — não em condição real de altitude, como é praxe da indústria em locais como Campos do Jordão. Segundo Borini, o carro foi condicionado dentro da câmara fria e, ao ligar, saiu imediatamente para o ambiente externo a 25–30°C, o que invalida a simulação de partida a frio em condição real de inverno e altitude — que depende também da pressão atmosférica mais baixa, exigindo maior abertura da borboleta de admissão.</p>
+  <div class="callout">
+    <span class="callout-tag">⚠ Resultados desfavoráveis descartados como "irrelevantes"</span>
+    <p>Segundo Borini, alguns veículos apresentaram falha de partida ou de funcionamento durante os testes, e esses resultados foram justificados internamente como pouco relevantes por se tratar de carros muito usados — sem que uma linha de base tivesse sido estabelecida para sustentar esse descarte metodologicamente.</p>
+  </div>
+  <p>Ao mesmo tempo, Borini confirma de forma independente vários pontos já presentes neste dossiê: a certificação oficial de homologação de consumo e emissões permanece em 22% de etanol mesmo com a bomba já em 27%, 30% e agora 32% — uma defasagem regulatória de décadas, não uma novidade do E32; o consumo deve subir entre 3% e 4%, tendendo a anular a economia projetada em centavos por litro; motos sofrem mais que carros por terem sistemas de injeção mais simples, inclusive nos próprios testes do IMT; e motores flex nacionais realmente não devem sofrer alteração relevante de funcionamento — convergindo com a conclusão central do estudo, ainda que sob crítica severa de método.</p>
+</section>
+
+<section id="contraponto">
+  <div class="sec-label">04 — O Contraponto do Setor</div>
+  <h2>Anfavea, Fecombustíveis e agora o MPF</h2>
+  <p>Segundo a Associação Nacional dos Fabricantes de Veículos Automotores (Anfavea) e a Federação Nacional do Comércio de Combustíveis e de Lubrificantes (Fecombustíveis), não foram realizados estudos técnicos suficientes para garantir a compatibilidade da mistura de 32% com os motores atualmente em circulação — isso mesmo com o estudo do IMT em mãos.<sup class="ref">[7]</sup> Na mesma linha, o professor Marcio D'Agosto (Coppe/UFRJ) e a professora Lucimar Amaral (UniBH) convergem num ponto: carros flex nacionais não sentirão diferença mecânica relevante, mas veículos importados projetados para mercados de baixo teor de etanol — E5 na Europa, E10 nos Estados Unidos — e híbridos podem apresentar falhas, perda de rendimento e desgaste precoce em bicos e mangueiras, exigindo revisões e ajustes.<sup class="ref">[8]</sup></p>
+  <div class="callout legal">
+    <span class="callout-tag">⚖ Ação Civil Pública do MPF</span>
+    <p>O MPF ingressou com Ação Civil Pública, com pedido de liminar, na 4ª Vara Federal de Uberlândia (MG), movida pelo procurador da República Cleber Eustáquio Neves, para suspender a decisão do CNPE.<sup class="ref">[4]</sup> A ação argumenta que a União elevou a mistura sem estudos específicos sobre riscos para motores e meio ambiente; que os ensaios do IMT foram desenhados para validar o E30 usando uma margem de tolerância de 2% que chegava a 32%, não para autorizar de forma dedicada a adoção permanente do E32 como novo padrão obrigatório; que não há avaliação conclusiva de durabilidade de componentes, emissões ou autonomia para uso contínuo da nova mistura; e que a própria especificação do E32 tolera combustível com até 34% de etanol, patamar que não teria sido objeto de validação técnica específica.<sup class="ref">[9]</sup> O procurador argumenta que decisões regulatórias desse tipo exigem demonstração técnica clara e abrangente por parte do Estado, não presunção de segurança.<sup class="ref">[9]</sup> Os pedidos incluem suspensão imediata do E32, perícia técnica multidisciplinar independente, protocolo obrigatório de testes de longa duração para futuras mudanças de composição, e indenização de R$ 500 milhões por danos morais coletivos.<sup class="ref">[10]</sup></p>
+  </div>
+  <p>A UNICA, representando o setor sucroalcooleiro, rebateu afirmando que a decisão não decorreu de uma presunção de viabilidade, mas de ensaios especificamente estruturados para avaliar os efeitos do E32 na frota brasileira, com metodologia e protocolos definidos de forma colegiada, envolvendo governo federal, indústria automotiva, segmento de motocicletas, cadeia de combustíveis, academia e entidades do setor.<sup class="ref">[11]</sup></p>
+</section>
+
+<section id="risco">
+  <div class="sec-label">05 — Mapa de Risco por Categoria</div>
+  <h2>Quem sente, quem não sente</h2>
+  <div class="risk-grid">
+    <div class="risk"><span class="lvl baixo">Baixo</span><h4>Flex nacional (pós-2003)</h4><p>Sistema de injeção já reconhece variação de mistura por design. Estudo IMT confirma ausência de alteração significativa.</p></div>
+    <div class="risk"><span class="lvl medio">Médio</span><h4>Gasolina pura nacional, moderno (pós-2007)</h4><p>Injeção eletrônica absorve parte da variação, mas sonda lambda e catalisador ficam mais expostos; recomenda-se gasolina premium (E25).</p></div>
+    <div class="risk"><span class="lvl alto">Alto</span><h4>Importado / híbrido não-flex</h4><p>Calibração de fábrica pensada para E5–E10. Risco de falha de partida, perda de rendimento, desgaste de bicos e mangueiras.</p></div>
+    <div class="risk"><span class="lvl alto">Alto</span><h4>Carburado / uso intensivo e rodado</h4><p>Sem injeção eletrônica para compensar (último modelo nacional: Kombi, 1997). Corrosão por higroscopia afeta bicos e válvulas ao longo do tempo.</p></div>
+  </div>
+</section>
+
+<section id="quimica">
+  <div class="sec-label">06 — A Química da Corrosão</div>
+  <h2>O que de fato corrói, e o que é adulteração disfarçada</h2>
+  <p>O etanol anidro, aditivo da gasolina, tem menos de 1% de água por especificação da ANP e não é vendido diretamente ao consumidor. Já o etanol hidratado, vendido na bomba, tem entre 92,5% e 94,6% de teor alcoólico em massa — ou seja, até 5–6% de água já fazem parte da especificação legal, sem que isso configure adulteração.<sup class="ref">[12]</sup> Adicionar água além da especificação ao etanol anidro para obter um hidratado fora de norma é o que se chama de álcool molhado, uma forma de adulteração. O teste mais simples para o consumidor: etanol hidratado deve ser incolor por norma, e o anidro deve ter coloração laranja — qualquer coloração fora desse padrão na bomba é forte indício de fraude.<sup class="ref">[12]</sup></p>
+  <p>A corrosão por contato com etanol hidratado está associada tanto ao pH do combustível quanto à quantidade de contaminantes presentes — íons metálicos, cloreto e sulfato, além da própria água — de modo que quanto mais impuro o etanol, mais corrosivo ele é. A pureza da produção nas usinas é tão determinante quanto o teor de água em si.<sup class="ref">[12]</sup> É importante notar que mesmo etanol hidratado de boa qualidade pode desenvolver excesso de água como subproduto de armazenagem prolongada ou inadequada, decomposição térmica por superaquecimento, ação microbiológica ou hidrólise — nem toda contaminação por água encontrada num tanque é fruto de fraude deliberada; pode ser resultado de logística ou estocagem malfeita, categoria distinta tanto da adulteração intencional quanto do efeito regulatório do E32.</p>
+  <div class="callout">
+    <span class="callout-tag">⚠ Zamac — o material mais vulnerável</span>
+    <p>Componentes feitos de zamac, uma liga de zinco usada em carburadores, corpos de borboleta e bombas mecânicas, não atendem a todas as normas de resistência à corrosão por sua porosidade estrutural. Tratamentos de superfície como a eletrodeposição de níquel foram desenvolvidos justamente para veículos não projetados para gasolina com etanol — carros anteriores aos anos 90 e alguns importados não adaptados às condições brasileiras.<sup class="ref">[12]</sup> Isso reforça, com base técnica independente, por que a categoria "carburado/muito antigo" do mapa de risco é a mais exposta — não por acaso, mas por composição de material.</p>
+  </div>
+  <p>Um dado curioso e contraintuitivo: testes de 300 horas em bombas elétricas de combustível para motores flex mostraram maior desgaste e rugosidade em rotores quando a bomba recalcava apenas gasolina E22 — não etanol puro. Por outro lado, bombas operando só com etanol consumiram mais corrente elétrica que as que operaram com gasolina, com uma hipótese ainda não testada de ataque ao verniz isolante do enrolamento do motor da bomba como causa.<sup class="ref">[12]</sup></p>
+</section>
+
+<section id="campo">
+  <div class="sec-label">07 — Evidência de Campo</div>
+  <h2>O que aparece na bancada da oficina</h2>
+  <p>Um canal especializado em manutenção automotiva documentou vela e bobina de ignição com oxidação característica em veículo flex (Ford Ka 3 cilindros) apresentando falha de injeção, com diagnóstico visual apontando presença de água associada ao combustível e recomendação prática de inspeção de velas a cada 20.000 km — abaixo do intervalo de 50.000 a 60.000 km tradicionalmente considerado seguro.<sup class="ref">[13]</sup> O mesmo canal relatou substituição de bicos injetores em veículo com injeção direta por corrosão, com custo unitário superior a R$ 1.000, observando que a flauta de combustível metálica sofre o mesmo tipo de corrosão.<sup class="ref">[13]</sup></p>
+  <div class="callout">
+    <span class="callout-tag">⚠ Distinção causal necessária</span>
+    <p>O relato atribui a corrosão ao aumento regulatório do teor de etanol em si, o que mistura dois mecanismos distintos: a higroscopia do etanol, fenômeno físico real e gradual em que a diferença entre 30% e 32% é marginal; e a água como contaminante externo, entrando por armazenagem inadequada em posto, tanque mal vedado ou adulteração na cadeia de distribuição — problema de qualidade de combustível, não decorrente da resolução do CNPE. O grau de oxidação descrito no relato é mais compatível com a segunda hipótese, sugerindo que o caso pode refletir majoritariamente um problema pontual de qualidade na bomba, não necessariamente o E32 isoladamente.</p>
+  </div>
+  <p>Esse padrão de higroscopia se agrava especificamente em veículos parados por longos períodos com combustível no tanque, já que a umidade tem mais tempo para se acumular sem a renovação constante que o uso diário proporciona — o que, paradoxalmente, significa que um veículo de uso intensivo e diário (como o caso do prestador de serviço com o Subaru rodado) renova o combustível com mais frequência do que um carro parado na garagem, e pode estar menos exposto a esse mecanismo específico do que se imaginaria à primeira vista.</p>
+</section>
+
+<section id="popular">
+  <div class="sec-label">08 — O Debate Popular</div>
+  <h2>Três narrativas em circulação no YouTube</h2>
+  <p>O debate público sobre o etanol nos motores se divide, de forma consistente, em três linhas de argumento. A primeira, sobre higroscopia e oxidação, converge com o que já foi estabelecido: a distinção entre etanol hidratado de bomba, com água em sua composição por especificação, e etanol anidro da mistura na gasolina, sem água por especificação, reforça que quando aparece corrosão por excesso de água, a hipótese de adulteração ou contaminação na cadeia de distribuição merece tanto peso quanto o efeito higroscópico natural do etanol anidro.</p>
+  <p>A segunda linha argumenta que motores flex modernos são projetados de fábrica para o uso continuado de etanol, exigindo apenas manutenção preventiva num intervalo levemente menor — não uma falha estrutural. Essa posição é consistente com a conclusão central do estudo do IMT. Já a alegação de que a queima do etanol gera menos depósito de carbono que a gasolina é quimicamente plausível, mas não foi verificada aqui contra fonte técnica independente, e fica registrada como ponto a confirmar, não como fato estabelecido.</p>
+  <p>A terceira linha trata do hábito de misturar etanol e gasolina no tanque, e do funcionamento da central eletrônica (ECU), que ajusta a relação ar/combustível de acordo com a proporção detectada — abastecer sempre pela metade impede o motor de otimizar plenamente para qualquer uma das duas configurações. É um ponto de eficiência e desempenho, distinto da discussão de durabilidade e corrosão que é o eixo central deste dossiê.</p>
+</section>
+
+<section id="marcas">
+  <div class="sec-label">09 — Suscetibilidade por Marca e Modelo</div>
+  <h2>O recorte por marca importada — com uma ressalva grande</h2>
+  <div class="callout">
+    <span class="callout-tag">⚠ Proveniência não verificada — tratar como hipótese, não fato</span>
+    <p>A tabela abaixo entrou no dossiê sem que eu localizasse fonte técnica independente — fabricante, estudo ou associação — que sustente os sintomas específicos atribuídos a cada modelo, nem os códigos de falha citados. Ao contrário das seções 02 a 06 deste dossiê, este conteúdo entra como hipótese de trabalho plausível, não como fato auditável: a lógica geral, de que calibração de fábrica para E5/E10 europeu ou americano sofre mais com E32, é consistente com o que já está estabelecido nas seções 03 e 04, mas a atribuição modelo a modelo não deve ser tratada como diagnóstico confirmado para nenhum veículo específico.</p>
+  </div>
+  <table>
+    <tr><th>Categoria</th><th>Exemplos citados</th><th>Sintoma alegado (não verificado)</th></tr>
+    <tr><td>Premium alemã</td><td>BMW M2–X5M, Porsche 911/718/Macan/Panamera, Audi RS, Mercedes AMG</td><td>Luz de injeção por mistura pobre; desgaste de bomba de alta pressão; falha de partida a frio</td></tr>
+    <tr><td>Importação independente EUA</td><td>Mustang, Corvette, RAM 1500, Challenger</td><td>Hesitação em plena carga; ressecamento de vedações e anéis</td></tr>
+    <tr><td>Importação independente Japão/EUA</td><td>Toyota Tundra, Nissan Z</td><td>Ausência de banho anticorrosivo em bomba/bicos para biocombustível de alto teor</td></tr>
+    <tr><td>Híbrido PHEV importado</td><td>Volvo T8, Land Rover PHEV, chineses a gasolina</td><td>Combustível estagnado no modo elétrico prolongado; decantação de água por higroscopia</td></tr>
+  </table>
+  <p>O único ponto desta tabela com lastro técnico independente confirmado no dossiê é o mecanismo geral de combustível estagnado em híbridos PHEV, que converge com o que a seção 07 já documentou de forma mais cautelosa.</p>
+</section>
+
+<section id="frota">
+  <div class="sec-label">10 — Números da Frota</div>
+  <h2>Escala do problema — com o rigor que os dados permitem</h2>
+  <table>
+    <tr><th>Categoria</th><th>Participação</th><th>Observação</th></tr>
+    <tr><td>Flex</td><td>74,4%</td><td>Risco baixo, segundo estudo IMT</td></tr>
+    <tr><td>Diesel</td><td>11%</td><td>Fora do escopo da mistura de etanol</td></tr>
+    <tr><td>Gasolina pura</td><td>4,8%</td><td>Risco médio a alto conforme idade/origem</td></tr>
+    <tr><td>Híbrido / híbrido plugável</td><td>3,7% + 3,7%</td><td>Risco médio-alto</td></tr>
+    <tr><td>Elétrico</td><td>2,5%</td><td>Não aplicável</td></tr>
+  </table>
+  <p style="font-size:14.5px;color:var(--ink-faint);">Não existe estatística oficial pública (Senatran, Anfavea, Sindipeças) que isole frota importada não-flex por marca ou país de origem — qualquer número de "milhões de veículos japoneses afetados" seria extrapolação sem lastro na fonte. O fato sólido é a fatia de gasolina pura/híbrido, da ordem de milhões de unidades, sem quebra por marca.</p>
+</section>
+
+<section id="leitura">
+  <div class="sec-label">11 — Leitura Analítica</div>
+  <h2>Onde o argumento se sustenta e onde ele se rompe</h2>
+  <div class="verdict">
+    <div class="verdict-row"><div class="tag">Sustentável</div><div class="txt">O <b>processo decisório</b> é auditável: lei de 2024 ampliou a margem, CNPE decide por resolução técnica, com prazo de vigência e estudo de respaldo público.</div></div>
+    <div class="verdict-row"><div class="tag">Sustentável</div><div class="txt">A <b>divergência técnica é real, documentada e agora judicializada</b>: o próprio estudo admite não ter testado durabilidade de longo prazo, e o MPF formalizou a contestação em Ação Civil Pública com pedido de perícia independente.</div></div>
+    <div class="verdict-row"><div class="tag">Sustentável</div><div class="txt">A <b>crítica de método ao ensaio do IMT</b> tem lastro técnico concreto e checável ponto a ponto — vinda de um engenheiro com 30 anos de teste de veículos, não de um crítico genérico.</div></div>
+    <div class="verdict-row"><div class="tag">Não sustentável</div><div class="txt">Equiparar a mudança regulatória a <b>"adulteração"</b> ou fraude oculta. São categorias distintas — misturá-las enfraquece o argumento.</div></div>
+    <div class="verdict-row"><div class="tag">Não sustentável</div><div class="txt">Atribuir a medida a uma <b>frota específica por nacionalidade</b> sem dado que sustente esse recorte.</div></div>
+    <div class="verdict-row"><div class="tag">Hipótese aberta</div><div class="txt">Se a lacuna de durabilidade se confirmar em veículos de uso intensivo ao longo dos próximos 1–3 anos, isso constituiria o primeiro dado empírico pós-implementação capaz de testar a suficiência do estudo do IMT.</div></div>
+  </div>
+</section>
+
+<section id="referencias">
+  <div class="sec-label">12 — Referências</div>
+  <h2>Fontes citadas neste dossiê</h2>
+  <ol>
+    <li><b>Lei nº 8.723/1993</b> — fixação do teor de etanol anidro em 22%. <span class="reftag unverified">contexto histórico</span></li>
+    <li><b>Lei nº 14.993/2024 — Combustível do Futuro</b> (Senado Federal) — <a class="refurl" href="https://www12.senado.leg.br/noticias/materias/2024/10/10/lei-que-incentiva-combustiveis-do-futuro-e-sancionada-com-vetos" target="_blank">senado.leg.br</a></li>
+    <li><b>Orientações operacionais da ANP aos revendedores (E30)</b> — <a class="refurl" href="https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/revendedores-de-combustiveis-anp-divulga-orientacoes-devido-a-chegada-do-e30-e-b15" target="_blank">gov.br/anp</a></li>
+    <li><b>MPF aciona a Justiça para suspender aumento de etanol</b> (fonte primária, MPF-MG) — <a class="refurl" href="https://www.mpf.mp.br/o-mpf/unidades/pr-mg/noticias/mpf-aciona-a-justica-para-suspender-aumento-de-etanol-na-gasolina-ate-comprovacao-da-seguranca-tecnica-da-mistura" target="_blank">mpf.mp.br</a></li>
+    <li><b>Gasolina E32 faz mal ao motor? Estudo de 356 páginas traz respostas</b> — Guru dos Carros — <a class="refurl" href="https://gurudoscarros.com.br/2026/07/15/gasolina-e32-faz-mal-ao-motor-estudo-de-356-paginas-traz-respostas/" target="_blank">gurudoscarros.com.br</a></li>
+    <li><b>Podcast Auto+ / Auto Entusiastas</b>, entrevista com Gerson Borini — transcrição fornecida pelo usuário <span class="reftag unverified">não indexado</span></li>
+    <li><b>Gasolina 32% de etanol: impactos no consumo e motores</b> — ACIARA, citando Anfavea/Fecombustíveis — <a class="refurl" href="https://aciara.com.br/gasolina-32-etanol-impactos-consumo/" target="_blank">aciara.com.br</a></li>
+    <li><b>Gasolina com E30, carro carburado e moto</b> — Autopapo (posição D'Agosto/UniBH) — <a class="refurl" href="https://autopapo.com.br/noticia/gasolina-com-e30-carro-carburado-moto/" target="_blank">autopapo.com.br</a></li>
+    <li><b>MPF aciona Justiça e pede suspensão de aumento do etanol</b> — CNN Brasil — <a class="refurl" href="https://www.cnnbrasil.com.br/infra/mpf-aciona-justica-e-pede-suspensao-de-aumento-do-etanol-na-gasolina/" target="_blank">cnnbrasil.com.br</a></li>
+    <li><b>MPF pede suspensão da gasolina E32 e cobra R$ 500 milhões</b> — BPMoney — <a class="refurl" href="https://bpmoney.com.br/economia/mpf-suspensao-gasolina-e32-etanol-indenizacao/" target="_blank">bpmoney.com.br</a></li>
+    <li><b>MPF pede suspensão da mistura de 32% de etanol na gasolina</b> — Revista Oeste (posição UNICA) — <a class="refurl" href="https://revistaoeste.com/politica/mpf-pede-suspensao-da-mistura-de-32-de-etanol-na-gasolina/" target="_blank">revistaoeste.com</a></li>
+    <li><b>Efeitos corrosivos do etanol hidratado em motores ciclo Otto</b> — canal Auto Acadêmico (Prof. Landulfo) — transcrição fornecida pelo usuário <span class="reftag unverified">não indexado</span></li>
+    <li><b>Relato de oficina — Ford Ka 3 cilindros</b> — canal de manutenção automotiva — transcrição fornecida pelo usuário <span class="reftag unverified">caso único, sem amostra estatística</span></li>
+  </ol>
+</section>
+
+</div>
+
+<footer>
+  <span>Dossiê técnico · Cluster combustível/regulação · v2.1 — navegação e referências</span>
+  <span>12 fontes citadas · 4 categorias de evidência (institucional, judicial, técnica, campo)</span>
+</footer>
+
+<script>
+  // Active nav link on scroll
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
+  function onScroll(){
+    let current = '';
+    sections.forEach(sec=>{
+      const rect = sec.getBoundingClientRect();
+      if(rect.top <= 120) current = sec.id;
+    });
+    navLinks.forEach(link=>{
+      link.classList.toggle('active', link.getAttribute('href') === '#'+current);
+    });
+    const gotop = document.getElementById('gotop');
+    if(window.scrollY > 600){ gotop.classList.add('show'); } else { gotop.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll);
+  onScroll();
+
+  document.getElementById('gotop').addEventListener('click', ()=>{
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  // keep active nav link scrolled into view within the nav bar itself
+  navLinks.forEach(link=>{
+    link.addEventListener('click', ()=>{
+      setTimeout(()=>{
+        link.scrollIntoView({behavior:'smooth', inline:'center', block:'nearest'});
+      }, 300);
+    });
+  });
+</script>
+
+</body>
+</html>

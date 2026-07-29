@@ -1,0 +1,32 @@
+---
+import type { Entry } from '../lib/entries';
+import { statusClass, statusLabel, trilhaLabel } from '../lib/entries';
+
+interface Props {
+  entry: Entry;
+  delay?: number;
+}
+
+const { entry, delay = 0 } = Astro.props;
+const parece = entry.apresentacao_comercial;
+const e = entry.denominacao_oficial;
+---
+
+<a class="card" href={`/entrada/${entry.slug}`} style={`animation-delay:${delay}ms`}>
+  <div class="card-meta">
+    <span class="card-trilha">{trilhaLabel(entry.trilha)}</span>
+    <span class={`pill ${statusClass(entry.status)}`}>{statusLabel(entry.status)}</span>
+  </div>
+  <h3 class="card-title">{entry.titulo}</h3>
+  {parece && e && (
+    <div class="card-compare">
+      <span class="tag-before">{parece.length > 48 ? parece.slice(0, 48) + '…' : parece}</span>
+      <span class="tag-arrow">→</span>
+      <span class="tag-after">{e.length > 48 ? e.slice(0, 48) + '…' : e}</span>
+    </div>
+  )}
+  {!parece && entry.argumento_juridico?.tese && (
+    <p class="card-desc">{entry.argumento_juridico.tese}</p>
+  )}
+  {parece && !e && <p class="card-desc">{parece}</p>}
+</a>

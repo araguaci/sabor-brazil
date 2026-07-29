@@ -1,0 +1,127 @@
+---
+export const prerender = true;
+
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Encontrei um sabor — Sabor Brazil"
+  description="Sugira um produto ou caso em que o nome não é a coisa. A curadoria checa a fonte antes de publicar."
+>
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Contribuir</p>
+      <h1 class="hero-title" style="max-width: none; font-size: clamp(2.6rem, 8vw, 4.8rem);">
+        ENCONTREI<br />UM <span class="strike">SABOR</span>
+      </h1>
+      <p class="hero-sub">
+        Mandou o caso, a gente checa a fonte. Sem norma, resolução ou reportagem rastreável,
+        entra como hipótese — ou não entra.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <form class="form" id="sugerir-form">
+        <div class="field">
+          <label for="parece">O que parece ser</label>
+          <input id="parece" name="parece" required maxlength="200" placeholder="Ex.: linguiça calabresa" />
+        </div>
+
+        <div class="field">
+          <label for="realmente">O que o rótulo / fonte diz que é</label>
+          <textarea
+            id="realmente"
+            name="realmente"
+            required
+            maxlength="800"
+            placeholder="Ex.: embutido cárneo cozido tipo calabresa"
+          ></textarea>
+        </div>
+
+        <div class="field">
+          <label for="onde">Onde viu (opcional)</label>
+          <input id="onde" name="onde" maxlength="200" placeholder="Marca, mercado, cidade…" />
+        </div>
+
+        <div class="field">
+          <label for="fonte">Fonte (link ou descrição)</label>
+          <textarea
+            id="fonte"
+            name="fonte"
+            required
+            maxlength="600"
+            placeholder="URL da norma, reportagem, foto do rótulo descrita, etc."
+          ></textarea>
+        </div>
+
+        <div class="field">
+          <label for="trilha">Trilha sugerida</label>
+          <select id="trilha" name="trilha">
+            <option value="rotulagem" selected>Rotulagem (produto “sabor/tipo”)</option>
+            <option value="regulatorio">Regulatório (decisão pública contestada)</option>
+            <option value="institucional">Institucional (divergência procedural documentada)</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="email">E-mail (opcional, só para a curadoria)</label>
+          <input id="email" name="email" type="email" maxlength="120" placeholder="voce@email.com" />
+        </div>
+
+        <p class="form-note">
+          O envio abre uma issue no repositório do projeto. Nada vai ao ar sem checagem de fonte.
+        </p>
+
+        <button class="btn btn-primary" type="submit" id="submit-btn">Enviar sugestão</button>
+        <div id="form-feedback" hidden></div>
+      </form>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const form = document.getElementById('sugerir-form') as HTMLFormElement | null;
+  const feedback = document.getElementById('form-feedback');
+  const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement | null;
+
+  form?.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    if (!feedback || !submitBtn) return;
+
+    feedback.hidden = true;
+    feedback.className = 'form-msg';
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Enviando…';
+
+    const data = Object.fromEntries(new FormData(form).entries());
+
+    try {
+      const res = await fetch('/api/sugerir', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      const json = await res.json().catch(() => ({}));
+
+      if (!res.ok) {
+        throw new Error(json.error || 'Não foi possível enviar. Tente de novo.');
+      }
+
+      feedback.className = 'form-msg ok';
+      feedback.textContent = json.url
+        ? `Sugestão registrada. Issue: ${json.url}`
+        : 'Sugestão registrada. Obrigado — a curadoria vai checar.';
+      feedback.hidden = false;
+      form.reset();
+    } catch (err) {
+      feedback.className = 'form-msg err';
+      feedback.textContent = err instanceof Error ? err.message : 'Erro inesperado.';
+      feedback.hidden = false;
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Enviar sugestão';
+    }
+  });
+</script>

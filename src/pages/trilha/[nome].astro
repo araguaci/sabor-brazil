@@ -1,0 +1,54 @@
+---
+export const prerender = true;
+
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import EntryCard from '../../components/EntryCard.astro';
+import { getEntriesByTrilha, trilhaLabel, type Trilha } from '../../lib/entries';
+
+export function getStaticPaths() {
+  const trilhas: Trilha[] = ['rotulagem', 'regulatorio', 'institucional'];
+  return trilhas.map((nome) => ({ params: { nome } }));
+}
+
+const nome = Astro.params.nome as Trilha;
+const entries = getEntriesByTrilha(nome);
+const titulo = trilhaLabel(nome);
+
+const blurbs: Record<Trilha, string> = {
+  rotulagem:
+    'Apresentação comercial versus denominação oficial exigida por norma de identidade e qualidade.',
+  regulatorio:
+    'Decisões públicas cuja base técnica é contestada por entidades, especialistas ou pela Justiça.',
+  institucional:
+    'Casos individuais com diferença checável entre procedimento previsto em norma e o que ocorreu de fato.',
+};
+---
+
+<BaseLayout title={`${titulo} — Sabor Brazil`} description={blurbs[nome]}>
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Trilha · {nome}</p>
+      <h1 class="hero-title" style="max-width: none; font-size: clamp(2.8rem, 8vw, 5rem);">
+        {titulo.toUpperCase()}
+      </h1>
+      <p class="hero-sub">{blurbs[nome]}</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="section-tag">Catálogo</span>
+        <h2 class="section-title">Entradas</h2>
+        <span class="section-count">{entries.length}</span>
+      </div>
+      {entries.length === 0 ? (
+        <p class="form-note">Ainda sem entradas publicadas nesta trilha.</p>
+      ) : (
+        <div class="grid">
+          {entries.map((entry, i) => <EntryCard entry={entry} delay={i * 60} />)}
+        </div>
+      )}
+    </div>
+  </section>
+</BaseLayout>
