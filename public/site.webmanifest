@@ -1,0 +1,33 @@
+{
+  "name": "Sabor Brazil",
+  "short_name": "Sabor Brazil",
+  "description": "Catálogo aberto onde o nome não é a coisa — rotulagem, regulatório e institucional com fontes auditáveis.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0a0a08",
+  "theme_color": "#0a0a08",
+  "lang": "pt-BR",
+  "categories": ["news", "reference"],
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

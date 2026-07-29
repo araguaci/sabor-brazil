@@ -2,18 +2,37 @@
 import '../styles/global.css';
 import TopicIcon from '../components/TopicIcon.astro';
 import { ecosystemLinks } from '../lib/topic-icon';
+import { PROJECT_HERO } from '../lib/heroes';
 
 interface Props {
   title?: string;
   description?: string;
+  /** Absolute path or full URL for og:image / twitter:image */
+  image?: string;
+  /** open graph type — website | article */
+  ogType?: 'website' | 'article';
+  /** Prevent indexing when true */
+  noindex?: boolean;
 }
 
 const {
   title = 'Sabor Brazil',
   description = 'Catálogo aberto de produtos e políticas onde o nome não é a coisa. Nem tudo é o que parece.',
+  image,
+  ogType = 'website',
+  noindex = false,
 } = Astro.props;
 
 const pathname = Astro.url.pathname;
+const site = Astro.site ?? new URL('https://sabor-brazil.vercel.app');
+const canonical = new URL(pathname, site).href;
+const defaultOg = new URL('/og-default.png', site).href;
+const ogImage = image
+  ? image.startsWith('http')
+    ? image
+    : new URL(image, site).href
+  : defaultOg;
+const pageTitle = title.includes('Sabor Brazil') ? title : `${title} — Sabor Brazil`;
 ---
 
 <!doctype html>
@@ -21,8 +40,39 @@ const pathname = Astro.url.pathname;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{pageTitle}</title>
     <meta name="description" content={description} />
-    <title>{title}</title>
+    <meta name="theme-color" content="#0a0a08" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="author" content="Sabor Brazil" />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    <link rel="canonical" href={canonical} />
+
+    <!-- Favicon & PWA -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content={ogType} />
+    <meta property="og:site_name" content="Sabor Brazil" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={PROJECT_HERO.alt} />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content={PROJECT_HERO.alt} />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link

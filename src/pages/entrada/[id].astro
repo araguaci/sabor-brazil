@@ -32,7 +32,12 @@ const icon = topicIconForEntry(entry);
 const hero = heroForEntryId(entry.id);
 ---
 
-<BaseLayout title={`${entry.titulo} — Sabor Brazil`} description={entry.apresentacao_comercial || entry.titulo}>
+<BaseLayout
+  title={`${entry.titulo} — Sabor Brazil`}
+  description={entry.resumo_neutro || entry.apresentacao_comercial || entry.titulo}
+  image={hero?.src}
+  ogType="article"
+>
   {
     hero && (
       <div class="entry-hero-banner">
