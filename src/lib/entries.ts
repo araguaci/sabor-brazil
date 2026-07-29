@@ -17,6 +17,7 @@ export type Entry = {
   status: string;
   data_entrada: string;
   tags: string[];
+  resumo_neutro?: string;
   apresentacao_comercial?: string;
   denominacao_oficial?: string;
   orgao_regulador?: string;

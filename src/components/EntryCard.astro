@@ -10,6 +10,7 @@ interface Props {
 const { entry, delay = 0 } = Astro.props;
 const parece = entry.apresentacao_comercial;
 const e = entry.denominacao_oficial;
+const preview = entry.resumo_neutro?.trim();
 ---
 
 <a class="card" href={`/entrada/${entry.slug}`} style={`animation-delay:${delay}ms`}>
@@ -25,8 +26,5 @@ const e = entry.denominacao_oficial;
       <span class="tag-after">{e.length > 48 ? e.slice(0, 48) + '…' : e}</span>
     </div>
   )}
-  {!parece && entry.argumento_juridico?.tese && (
-    <p class="card-desc">{entry.argumento_juridico.tese}</p>
-  )}
-  {parece && !e && <p class="card-desc">{parece}</p>}
+  {preview && <p class="card-desc">{preview}</p>}
 </a>

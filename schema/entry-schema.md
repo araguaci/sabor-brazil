@@ -6,8 +6,8 @@ Toda entrada, em qualquer trilha, é um arquivo Markdown com o front-matter abai
 
 ```yaml
 ---
-id: RT-0001                 # RT = Rotulagem, RG = Regulatório. Sequencial, nunca reaproveitado.
-trilha: rotulagem            # "rotulagem" | "regulatorio"
+id: RT-0001                 # RT = Rotulagem, RG = Regulatório, IN = Institucional. Sequencial, nunca reaproveitado.
+trilha: rotulagem            # "rotulagem" | "regulatorio" | "institucional"
 titulo: "Preparado alimentício sabor queijo prato"
 apresentacao_comercial: "Embalagem, propaganda e prateleira sugerem queijo prato tradicional"
 denominacao_oficial: "Preparado alimentício à base de queijo, com substituição parcial de gordura láctea por gordura vegetal"
@@ -21,6 +21,17 @@ fontes:
 tags: [laticinios, rotulagem-enganosa]
 ---
 ```
+
+## Campo obrigatório em todas as trilhas — resumo_neutro
+
+```yaml
+resumo_neutro: "Uma frase factual, sem adjetivação e sem citar a tese contestada, usada exclusivamente como preview/card na listagem. Nunca reproduz o conteúdo de argumento_juridico.tese ou de qualquer alegação não verificada."
+```
+
+**Por que este campo existe:** o card de preview de uma entrada é a primeira coisa que alguém vê, muitas vezes sem clicar para ler a entrada inteira. Se o preview usar o campo `tese` (a alegação em disputa) como resumo, o site acaba repetindo com destaque exatamente o conteúdo que a curadoria classificou como não verificado — antes mesmo do contraponto aparecer. Isso vale sobretudo para a Trilha 3, mas é regra para as três: o card nunca é a alegação, é a descrição do caso.
+
+Exemplo — errado: usar `argumento_juridico.tese` ("Moraes seria o primeiro juiz do mundo a...") como preview.
+Exemplo — certo: `resumo_neutro: "Despacho de 28/07/2026 dá 48h para Bolsonaro esclarecer autorização de vídeo de IA na convenção do PL; entrada documenta fatos do despacho e avalia uma tese viral associada."`
 
 ## Campos exclusivos da trilha Regulatório
 

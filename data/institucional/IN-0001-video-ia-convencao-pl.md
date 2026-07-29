@@ -2,6 +2,7 @@
 id: IN-0001
 trilha: institucional
 titulo: "Despacho de Moraes sobre vídeo de IA na convenção do PL (28/07/2026) e a tese viral de 'três recordes mundiais'"
+resumo_neutro: "Despacho de 28/07/2026 dá 48h para Bolsonaro esclarecer autorização de vídeo de IA na convenção do PL; a entrada documenta fatos do despacho e avalia uma tese viral associada."
 status: argumento_juridico_fundamentado
 data_entrada: 2026-07-29
 dispositivo_legal: "Restrição judicial imposta a Jair Bolsonaro em 17/07/2026 (proibição de divulgar manifestos político-eleitorais por qualquer meio, inclusive por terceiros); vedação eleitoral a conteúdo sintético (deepfake) sem autorização, citada por Moraes com base em precedente do TSE de maio/2026"

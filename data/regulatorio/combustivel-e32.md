@@ -2,6 +2,7 @@
 id: RG-0001
 trilha: regulatorio
 titulo: "Gasolina comum — elevação do teor de etanol para 32% (E32)"
+resumo_neutro: "CNPE elevou o etanol na gasolina comum para 32% (E32); há Ação Civil Pública do MPF em Uberlândia questionando a suficiência dos testes de durabilidade."
 apresentacao_comercial: "Gasolina comum, vendida sem distinção de rótulo em relação ao E30 anterior"
 denominacao_oficial: "Gasolina C com 32% de etanol anidro, especificação tolerando até 34%"
 orgao_regulador: "CNPE (Conselho Nacional de Política Energética) / ANP"

@@ -2,6 +2,7 @@
 id: IN-0000
 trilha: institucional
 titulo: "[TEMPLATE — não publicar sem preencher e re-verificar todos os campos]"
+resumo_neutro: "Uma frase factual sobre o caso, sem adjetivação e sem repetir argumento_juridico.tese — só isso vai no card da listagem."
 status: argumento_juridico_fundamentado
 data_entrada: 2026-07-29
 dispositivo_legal: "ex: art. 318 do CPP (conversão de preventiva em domiciliar por doença grave)"

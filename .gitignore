@@ -10,3 +10,5 @@ dist/
 sabor-brazil*.zip
 
 .history/
+
+.firecrawl/
