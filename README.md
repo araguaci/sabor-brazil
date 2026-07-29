@@ -69,7 +69,7 @@ O formulário em `/contribuir` chama `POST /api/sugerir`, que abre uma GitHub Is
 
 1. Fonte primária ou secundária de qualidade (norma, órgão regulador, associação, decisão judicial, ou reportagem que cite essas fontes).
 2. Denominação oficial ou processo regulatório documentado — não boato, não captura de tela sem verificação.
-3. Classificação numa das três trilhas, nunca mais de uma, nunca nenhuma.
+3. Classificação numa das duas trilhas, nunca ambas, nunca nenhuma.
 4. Toda alegação técnica não verificada por fonte independente é marcada explicitamente como hipótese — segue o mesmo padrão de honestidade epistêmica do lawfare-timeline.
 
 Ver [`docs/metodologia.md`](docs/metodologia.md) e [`schema/entry-schema.md`](schema/entry-schema.md) para o detalhe de cada campo.

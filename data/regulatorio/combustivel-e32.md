@@ -43,7 +43,7 @@ Esta não é uma entrada de rotulagem enganosa. A gasolina comum brasileira semp
 
 ## Estado atual (29/07/2026)
 
-Ação Civil Pública do MPF em curso, pedindo liminar de suspensão. UNICA (setor sucroalcooleiro) já apresentou réplica defendendo a suficiência dos estudos. Dossiê técnico completo com todas as fontes cruzadas disponível em [`/dossies/combustivel-e32.html`](../../dossies/combustivel-e32.html) *(mover o dossiê HTML do lawfare-timeline para este caminho ao publicar)*.
+Ação Civil Pública do MPF em curso, pedindo liminar de suspensão. UNICA (setor sucroalcooleiro) já apresentou réplica defendendo a suficiência dos estudos. Dossiê técnico completo com todas as fontes cruzadas: [`/dossies/combustivel-e32.html`](/dossies/combustivel-e32.html).
 
 ## O que fica de fora desta entrada
 
