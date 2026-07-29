@@ -465,7 +465,62 @@ img { max-width: 100%; display: block; }
   font-size: 0.9rem;
 }
 
-.site-footer a { text-decoration: underline; text-underline-offset: 3px; }
+.site-footer a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footer-blurb {
+  max-width: 40rem;
+  margin-bottom: 1.75rem;
+}
+
+.footer-eco-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--dim);
+  margin-bottom: 0.85rem;
+}
+
+.flinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  max-width: 42rem;
+  margin-bottom: 1.75rem;
+}
+
+.flinks a {
+  color: var(--muted);
+  text-decoration: none;
+  line-height: 1.35;
+  transition: color 0.2s;
+}
+
+.flinks a:hover {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.flinks a[aria-current='page'] {
+  color: var(--text);
+}
+
+.footdev {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--dim);
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+}
+
+.footdev a {
+  color: var(--muted);
+}
 
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(14px); }
