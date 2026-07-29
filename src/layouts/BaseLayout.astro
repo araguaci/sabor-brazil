@@ -1,5 +1,7 @@
 ---
 import '../styles/global.css';
+import TopicIcon from '../components/TopicIcon.astro';
+import { ecosystemLinks } from '../lib/topic-icon';
 
 interface Props {
   title?: string;
@@ -33,11 +35,26 @@ const pathname = Astro.url.pathname;
       <div class="wrap inner">
         <a class="brand" href="/">SABOR <span>BRAZIL</span></a>
         <nav class="nav" aria-label="Principal">
-          <a href="/" aria-current={pathname === '/' ? 'page' : undefined}>Início</a>
-          <a href="/trilha/rotulagem" aria-current={pathname.startsWith('/trilha/rotulagem') ? 'page' : undefined}>Rotulagem</a>
-          <a href="/trilha/regulatorio" aria-current={pathname.startsWith('/trilha/regulatorio') ? 'page' : undefined}>Regulatório</a>
-          <a href="/trilha/institucional" aria-current={pathname.startsWith('/trilha/institucional') ? 'page' : undefined}>Institucional</a>
-          <a href="/contribuir" aria-current={pathname.startsWith('/contribuir') ? 'page' : undefined}>Encontrei um sabor</a>
+          <a href="/" aria-current={pathname === '/' ? 'page' : undefined}>
+            <TopicIcon name="home" size={13} />
+            Início
+          </a>
+          <a href="/trilha/rotulagem" aria-current={pathname.startsWith('/trilha/rotulagem') ? 'page' : undefined}>
+            <TopicIcon name="tag" size={13} />
+            Rotulagem
+          </a>
+          <a href="/trilha/regulatorio" aria-current={pathname.startsWith('/trilha/regulatorio') ? 'page' : undefined}>
+            <TopicIcon name="scroll" size={13} />
+            Regulatório
+          </a>
+          <a href="/trilha/institucional" aria-current={pathname.startsWith('/trilha/institucional') ? 'page' : undefined}>
+            <TopicIcon name="landmark" size={13} />
+            Institucional
+          </a>
+          <a href="/contribuir" aria-current={pathname.startsWith('/contribuir') ? 'page' : undefined}>
+            <TopicIcon name="plus" size={13} />
+            Encontrei um sabor
+          </a>
         </nav>
       </div>
     </header>
@@ -54,25 +71,26 @@ const pathname = Astro.url.pathname;
         </p>
 
         <p class="footer-eco-label">Este projeto faz parte do ecossistema</p>
-        <div class="flinks">
-          <a href="https://sabor-brazil.vercel.app/" aria-current="page">Sabor Brazil</a>
-          <a
-            href="https://republica-sequestrada-hub.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            ✦ A extração não muda de lado. Muda de nome.
-          </a>
-          <a href="https://lawfare-timeline.vercel.app/" target="_blank" rel="noopener noreferrer">
-            ⚖ Lawfare Timeline
-          </a>
-          <a href="https://observatorio-civil-br.vercel.app/" target="_blank" rel="noopener noreferrer">
-            👁 Observatório Civil BR
-          </a>
-          <a href="https://gosurf.site" target="_blank" rel="noopener noreferrer">
-            🌐 Publicação de análises, dossiês investigativos e insights sobre Brasil, geopolítica,
-            crime organizado, lawfare e economia
-          </a>
+        <div class="eco-grid">
+          {
+            ecosystemLinks.map((item) => (
+              <a
+                class="eco-card"
+                href={item.href}
+                target={item.current ? undefined : '_blank'}
+                rel={item.current ? undefined : 'noopener noreferrer'}
+                aria-current={item.current ? 'page' : undefined}
+              >
+                <span class="eco-icon">
+                  <TopicIcon name={item.icon} size={20} />
+                </span>
+                <span class="eco-copy">
+                  <span class="eco-title">{item.title}</span>
+                  <span class="eco-desc">{item.description}</span>
+                </span>
+              </a>
+            ))
+          }
         </div>
 
         <div class="footdev">

@@ -2,6 +2,7 @@
 export const prerender = true;
 
 import BaseLayout from '../layouts/BaseLayout.astro';
+import TopicIcon from '../components/TopicIcon.astro';
 ---
 
 <BaseLayout
@@ -10,7 +11,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 >
   <section class="hero">
     <div class="wrap">
-      <p class="eyebrow">Contribuir</p>
+      <p class="eyebrow">
+        <TopicIcon name="plus" size={12} />
+        Contribuir
+      </p>
       <h1 class="hero-title" style="max-width: none; font-size: clamp(2.6rem, 8vw, 4.8rem);">
         ENCONTREI<br />UM <span class="strike">SABOR</span>
       </h1>

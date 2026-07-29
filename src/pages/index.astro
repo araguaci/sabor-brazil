@@ -3,11 +3,14 @@ export const prerender = true;
 
 import BaseLayout from '../layouts/BaseLayout.astro';
 import EntryCard from '../components/EntryCard.astro';
+import TopicIcon from '../components/TopicIcon.astro';
 import { getAllEntries } from '../lib/entries';
+import { trilhaMeta } from '../lib/topic-icon';
 
 const entries = getAllEntries();
 const rotulagem = entries.filter((e) => e.trilha === 'rotulagem');
-const outras = entries.filter((e) => e.trilha !== 'rotulagem');
+const regulatorio = entries.filter((e) => e.trilha === 'regulatorio');
+const institucional = entries.filter((e) => e.trilha === 'institucional');
 ---
 
 <BaseLayout title="Sabor Brazil — Nem tudo é o que parece">
@@ -26,6 +29,20 @@ const outras = entries.filter((e) => e.trilha !== 'rotulagem');
         <a class="btn btn-primary" href="#catalogo">Explorar catálogo</a>
         <a class="btn" href="/contribuir">Encontrei um sabor</a>
       </div>
+
+      <div class="trilha-pills">
+        {
+          (['rotulagem', 'regulatorio', 'institucional'] as const).map((t) => (
+            <a class="trilha-pill" href={`/trilha/${t}`}>
+              <TopicIcon name={trilhaMeta[t].icon} size={16} />
+              <span>
+                <strong>{trilhaMeta[t].titulo}</strong>
+                <small>{trilhaMeta[t].descricao}</small>
+              </span>
+            </a>
+          ))
+        }
+      </div>
     </div>
     <div class="hero-stamp" aria-hidden="true">SELVA</div>
   </section>
@@ -33,7 +50,10 @@ const outras = entries.filter((e) => e.trilha !== 'rotulagem');
   <section class="section" id="catalogo">
     <div class="wrap">
       <div class="section-head">
-        <span class="section-tag">§ 01</span>
+        <span class="section-tag">
+          <TopicIcon name="tag" size={12} />
+          § 01
+        </span>
         <h2 class="section-title">Rotulagem</h2>
         <span class="section-count">{rotulagem.length} entradas</span>
       </div>
@@ -47,16 +67,21 @@ const outras = entries.filter((e) => e.trilha !== 'rotulagem');
     </div>
   </section>
 
-  {outras.length > 0 && (
+  {(regulatorio.length > 0 || institucional.length > 0) && (
     <section class="section">
       <div class="wrap">
         <div class="section-head">
-          <span class="section-tag">§ 02</span>
+          <span class="section-tag">
+            <TopicIcon name="scroll" size={12} />
+            § 02
+          </span>
           <h2 class="section-title">Regulatório & institucional</h2>
-          <span class="section-count">{outras.length} entradas</span>
+          <span class="section-count">{regulatorio.length + institucional.length} entradas</span>
         </div>
         <div class="grid">
-          {outras.map((entry, i) => <EntryCard entry={entry} delay={i * 60} />)}
+          {[...regulatorio, ...institucional].map((entry, i) => (
+            <EntryCard entry={entry} delay={i * 60} />
+          ))}
         </div>
       </div>
     </section>

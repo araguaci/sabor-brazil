@@ -1,0 +1,86 @@
+---
+import type { TopicIconName } from '../lib/topic-icon';
+import {
+  Tag,
+  ScrollText,
+  Landmark,
+  Beef,
+  Candy,
+  Milk,
+  Coffee,
+  CupSoda,
+  Droplets,
+  Wallet,
+  Fuel,
+  Dices,
+  Ticket,
+  Scale,
+  Gavel,
+  Search,
+  PlusCircle,
+  Globe,
+  Home,
+  BookOpen,
+} from '@lucide/astro';
+
+interface Props {
+  name: TopicIconName | 'home' | 'book' | 'globe';
+  size?: number;
+  class?: string;
+}
+
+const { name, size = 18, class: className = '' } = Astro.props;
+
+const props = {
+  size,
+  strokeWidth: 1.6,
+  class: `lucide-icon ${className}`.trim(),
+  'aria-hidden': true as const,
+};
+---
+
+{
+  name === 'tag' ? (
+    <Tag {...props} />
+  ) : name === 'scroll' ? (
+    <ScrollText {...props} />
+  ) : name === 'landmark' ? (
+    <Landmark {...props} />
+  ) : name === 'beef' ? (
+    <Beef {...props} />
+  ) : name === 'candy' ? (
+    <Candy {...props} />
+  ) : name === 'milk' ? (
+    <Milk {...props} />
+  ) : name === 'coffee' ? (
+    <Coffee {...props} />
+  ) : name === 'cup' ? (
+    <CupSoda {...props} />
+  ) : name === 'droplets' ? (
+    <Droplets {...props} />
+  ) : name === 'wallet' ? (
+    <Wallet {...props} />
+  ) : name === 'fuel' ? (
+    <Fuel {...props} />
+  ) : name === 'dices' ? (
+    <Dices {...props} />
+  ) : name === 'ticket' ? (
+    <Ticket {...props} />
+  ) : name === 'scale' ? (
+    <Scale {...props} />
+  ) : name === 'gavel' ? (
+    <Gavel {...props} />
+  ) : name === 'search' ? (
+    <Search {...props} />
+  ) : name === 'plus' ? (
+    <PlusCircle {...props} />
+  ) : name === 'globe' ? (
+    <Globe {...props} />
+  ) : name === 'home' ? (
+    <Home {...props} />
+  ) : name === 'book' ? (
+    <BookOpen {...props} />
+  ) : (
+    <Tag {...props} />
+  )
+}

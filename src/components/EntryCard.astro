@@ -1,6 +1,8 @@
 ---
 import type { Entry } from '../lib/entries';
 import { statusClass, statusLabel, trilhaLabel } from '../lib/entries';
+import { topicIconForEntry } from '../lib/topic-icon';
+import TopicIcon from './TopicIcon.astro';
 
 interface Props {
   entry: Entry;
@@ -11,14 +13,23 @@ const { entry, delay = 0 } = Astro.props;
 const parece = entry.apresentacao_comercial;
 const e = entry.denominacao_oficial;
 const preview = entry.resumo_neutro?.trim();
+const icon = topicIconForEntry(entry);
 ---
 
 <a class="card" href={`/entrada/${entry.slug}`} style={`animation-delay:${delay}ms`}>
   <div class="card-meta">
-    <span class="card-trilha">{trilhaLabel(entry.trilha)}</span>
+    <span class="card-trilha">
+      <TopicIcon name={icon} size={14} class="card-topic-icon" />
+      {trilhaLabel(entry.trilha)}
+    </span>
     <span class={`pill ${statusClass(entry.status)}`}>{statusLabel(entry.status)}</span>
   </div>
-  <h3 class="card-title">{entry.titulo}</h3>
+  <h3 class="card-title">
+    <span class="card-title-icon" aria-hidden="true">
+      <TopicIcon name={icon} size={22} />
+    </span>
+    {entry.titulo}
+  </h3>
   {parece && e && (
     <div class="card-compare">
       <span class="tag-before">{parece.length > 48 ? parece.slice(0, 48) + '…' : parece}</span>

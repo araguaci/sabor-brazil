@@ -3,7 +3,9 @@ export const prerender = true;
 
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import EntryCard from '../../components/EntryCard.astro';
-import { getEntriesByTrilha, trilhaLabel, type Trilha } from '../../lib/entries';
+import TopicIcon from '../../components/TopicIcon.astro';
+import { getEntriesByTrilha, type Trilha } from '../../lib/entries';
+import { trilhaMeta } from '../../lib/topic-icon';
 
 export function getStaticPaths() {
   const trilhas: Trilha[] = ['rotulagem', 'regulatorio', 'institucional'];
@@ -12,33 +14,30 @@ export function getStaticPaths() {
 
 const nome = Astro.params.nome as Trilha;
 const entries = getEntriesByTrilha(nome);
-const titulo = trilhaLabel(nome);
-
-const blurbs: Record<Trilha, string> = {
-  rotulagem:
-    'Apresentação comercial versus denominação oficial exigida por norma de identidade e qualidade.',
-  regulatorio:
-    'Decisões públicas cuja base técnica é contestada por entidades, especialistas ou pela Justiça.',
-  institucional:
-    'Casos individuais com diferença checável entre procedimento previsto em norma e o que ocorreu de fato.',
-};
+const meta = trilhaMeta[nome];
 ---
 
-<BaseLayout title={`${titulo} — Sabor Brazil`} description={blurbs[nome]}>
+<BaseLayout title={`${meta.titulo} — Sabor Brazil`} description={meta.descricao}>
   <section class="hero">
     <div class="wrap">
-      <p class="eyebrow">Trilha · {nome}</p>
+      <p class="eyebrow">
+        <TopicIcon name={meta.icon} size={12} />
+        Trilha · {nome}
+      </p>
       <h1 class="hero-title" style="max-width: none; font-size: clamp(2.8rem, 8vw, 5rem);">
-        {titulo.toUpperCase()}
+        {meta.titulo.toUpperCase()}
       </h1>
-      <p class="hero-sub">{blurbs[nome]}</p>
+      <p class="hero-sub">{meta.descricao}</p>
     </div>
   </section>
 
   <section class="section">
     <div class="wrap">
       <div class="section-head">
-        <span class="section-tag">Catálogo</span>
+        <span class="section-tag">
+          <TopicIcon name={meta.icon} size={12} />
+          Catálogo
+        </span>
         <h2 class="section-title">Entradas</h2>
         <span class="section-count">{entries.length}</span>
       </div>
