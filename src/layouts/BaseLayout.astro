@@ -75,15 +75,21 @@ const pathname = Astro.url.pathname;
           {
             ecosystemLinks.map((item) => (
               <a
-                class="eco-card"
+                class:list={['eco-card', 'image' in item && item.image && 'eco-card--media']}
                 href={item.href}
                 target={item.current ? undefined : '_blank'}
                 rel={item.current ? undefined : 'noopener noreferrer'}
                 aria-current={item.current ? 'page' : undefined}
               >
-                <span class="eco-icon">
-                  <TopicIcon name={item.icon} size={20} />
-                </span>
+                {'image' in item && item.image ? (
+                  <span class="eco-thumb">
+                    <img src={item.image} alt="" width="120" height="48" loading="lazy" />
+                  </span>
+                ) : (
+                  <span class="eco-icon">
+                    <TopicIcon name={item.icon} size={20} />
+                  </span>
+                )}
                 <span class="eco-copy">
                   <span class="eco-title">{item.title}</span>
                   <span class="eco-desc">{item.description}</span>

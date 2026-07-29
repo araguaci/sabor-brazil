@@ -1,6 +1,7 @@
 ---
 import type { Entry } from '../lib/entries';
 import { statusClass, statusLabel, trilhaLabel } from '../lib/entries';
+import { heroForEntryId } from '../lib/heroes';
 import { topicIconForEntry } from '../lib/topic-icon';
 import TopicIcon from './TopicIcon.astro';
 
@@ -14,28 +15,42 @@ const parece = entry.apresentacao_comercial;
 const e = entry.denominacao_oficial;
 const preview = entry.resumo_neutro?.trim();
 const icon = topicIconForEntry(entry);
+const hero = heroForEntryId(entry.id);
 ---
 
-<a class="card" href={`/entrada/${entry.slug}`} style={`animation-delay:${delay}ms`}>
-  <div class="card-meta">
-    <span class="card-trilha">
-      <TopicIcon name={icon} size={14} class="card-topic-icon" />
-      {trilhaLabel(entry.trilha)}
-    </span>
-    <span class={`pill ${statusClass(entry.status)}`}>{statusLabel(entry.status)}</span>
-  </div>
-  <h3 class="card-title">
-    <span class="card-title-icon" aria-hidden="true">
-      <TopicIcon name={icon} size={22} />
-    </span>
-    {entry.titulo}
-  </h3>
-  {parece && e && (
-    <div class="card-compare">
-      <span class="tag-before">{parece.length > 48 ? parece.slice(0, 48) + '…' : parece}</span>
-      <span class="tag-arrow">→</span>
-      <span class="tag-after">{e.length > 48 ? e.slice(0, 48) + '…' : e}</span>
+<a
+  class:list={['card', hero && 'card--has-hero']}
+  href={`/entrada/${entry.slug}`}
+  style={`animation-delay:${delay}ms`}
+>
+  {
+    hero && (
+      <div class="card-hero">
+        <img src={hero.src} alt={hero.alt} loading="lazy" width="640" height="256" />
+      </div>
+    )
+  }
+  <div class="card-body">
+    <div class="card-meta">
+      <span class="card-trilha">
+        <TopicIcon name={icon} size={14} class="card-topic-icon" />
+        {trilhaLabel(entry.trilha)}
+      </span>
+      <span class={`pill ${statusClass(entry.status)}`}>{statusLabel(entry.status)}</span>
     </div>
-  )}
-  {preview && <p class="card-desc">{preview}</p>}
+    <h3 class="card-title">
+      <span class="card-title-icon" aria-hidden="true">
+        <TopicIcon name={icon} size={22} />
+      </span>
+      {entry.titulo}
+    </h3>
+    {parece && e && (
+      <div class="card-compare">
+        <span class="tag-before">{parece.length > 48 ? parece.slice(0, 48) + '…' : parece}</span>
+        <span class="tag-arrow">→</span>
+        <span class="tag-after">{e.length > 48 ? e.slice(0, 48) + '…' : e}</span>
+      </div>
+    )}
+    {preview && <p class="card-desc">{preview}</p>}
+  </div>
 </a>

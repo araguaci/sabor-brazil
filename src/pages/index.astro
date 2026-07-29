@@ -6,6 +6,7 @@ import EntryCard from '../components/EntryCard.astro';
 import TopicIcon from '../components/TopicIcon.astro';
 import { getAllEntries } from '../lib/entries';
 import { trilhaMeta } from '../lib/topic-icon';
+import { PROJECT_HERO } from '../lib/heroes';
 
 const entries = getAllEntries();
 const rotulagem = entries.filter((e) => e.trilha === 'rotulagem');
@@ -14,8 +15,11 @@ const institucional = entries.filter((e) => e.trilha === 'institucional');
 ---
 
 <BaseLayout title="Sabor Brazil — Nem tudo é o que parece">
-  <section class="hero">
-    <div class="wrap">
+  <section class="hero hero--with-cover">
+    <div class="hero-cover" aria-hidden="true">
+      <img src={PROJECT_HERO.src} alt="" width="1200" height="480" />
+    </div>
+    <div class="wrap hero-foreground">
       <p class="eyebrow">Catálogo aberto · fontes auditáveis</p>
       <h1 class="hero-title">
         NADA É<br />

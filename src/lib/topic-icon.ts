@@ -75,6 +75,7 @@ export const ecosystemLinks = [
     description: 'Catálogo aberto onde o nome não é a coisa — rotulagem, regulatório e institucional.',
     icon: 'tag' as TopicIconName,
     current: true,
+    image: '/artigos/sabor-brazil-projeto-hero.png',
   },
   {
     href: 'https://republica-sequestrada-hub.vercel.app/',

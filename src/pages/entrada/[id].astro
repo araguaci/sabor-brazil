@@ -11,6 +11,7 @@ import {
   trilhaLabel,
 } from '../../lib/entries';
 import { topicIconForEntry } from '../../lib/topic-icon';
+import { heroForEntryId } from '../../lib/heroes';
 import TopicIcon from '../../components/TopicIcon.astro';
 
 export function getStaticPaths() {
@@ -28,9 +29,17 @@ if (!entry) {
 
 const html = marked.parse(entry.body, { async: false }) as string;
 const icon = topicIconForEntry(entry);
+const hero = heroForEntryId(entry.id);
 ---
 
 <BaseLayout title={`${entry.titulo} — Sabor Brazil`} description={entry.apresentacao_comercial || entry.titulo}>
+  {
+    hero && (
+      <div class="entry-hero-banner">
+        <img src={hero.src} alt={hero.alt} width="1200" height="480" />
+      </div>
+    )
+  }
   <section class="hero" style="padding-bottom: 2rem;">
     <div class="wrap">
       <p class="eyebrow">
