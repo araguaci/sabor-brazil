@@ -23,6 +23,7 @@ import {
   BookOpen,
   CloudRain,
   Earth,
+  ShieldAlert,
 } from '@lucide/astro';
 
 interface Props {
@@ -82,6 +83,8 @@ const props = {
     <CloudRain {...props} />
   ) : name === 'dragon' ? (
     <Earth {...props} />
+  ) : name === 'shield' ? (
+    <ShieldAlert {...props} />
   ) : name === 'home' ? (
     <Home {...props} />
   ) : name === 'book' ? (

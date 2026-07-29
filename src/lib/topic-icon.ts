@@ -20,7 +20,8 @@ export type TopicIconName =
   | 'plus'
   | 'globe'
   | 'cloud'
-  | 'dragon';
+  | 'dragon'
+  | 'shield';
 
 /** Ícone por assunto (tags/id), com fallback da trilha. */
 export function topicIconForEntry(entry: Entry): TopicIconName {
@@ -122,6 +123,13 @@ export const ecosystemLinks = [
     description:
       'Série Brasil × China: dossiês, timelines e X Articles sobre soberania, minerais e capítulos estaduais.',
     icon: 'dragon' as TopicIconName,
+    current: false,
+  },
+  {
+    href: 'https://abusosupremo.vercel.app/',
+    title: 'Abuso Supremo',
+    description: 'Censura no Brasil (2019–2025): documentação e cronologia do regime de restrições.',
+    icon: 'shield' as TopicIconName,
     current: false,
   },
 ] as const;
