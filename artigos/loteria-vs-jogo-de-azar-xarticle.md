@@ -15,6 +15,8 @@ A loteria estatal entra depois, em 1967, como serviço público exclusivo da Uni
 > Derrogação excepcional das normas de Direito Penal
 > — Decreto-Lei nº 204/1967, art. 1º
 
+
+
 ## O que a narrativa “só o governo pode” erra em 2026
 
 O quadro mudou. Em 2021, o STF (relator Gilmar Mendes) decidiu que estados também podem explorar loterias — o monopólio puramente federal deixou de ser o desenho absoluto. Reportagens posteriores documentaram estados e municípios explorando lacunas para modalidades próximas de caça-níqueis; a disputa federativa é pública.
@@ -55,4 +57,14 @@ Atualização pendente na ficha: cruzar jurisprudência recente do STF, mapear e
 
 *Entrada completa, fontes clicáveis e status no catálogo: [sabor-brazil.vercel.app/entrada/rg-0002](https://sabor-brazil.vercel.app/entrada/rg-0002)*
 
-*Hero share card: `artigos/rg-0002-loteria-jogo-azar-hero.png` (redimensionar para 1024×600 se o upload do X exigir)*
+*Hero share card:* `artigos/rg-0002-loteria-jogo-azar-hero.png` *(redimensionar para 1024×600 se o upload do X exigir)*
+
+---
+
+### **Plano de promoção (v2.1)**
+
+**Tweet de abertura** (sem isca genérica):
+
+> A lei não esconde a diferença entre cassino e loteria. O Decreto-Lei 204/1967 chama a loteria de “derrogação excepcional das normas de Direito Penal”. Em 2026 o quadro já inclui bets privadas licenciadas. O que a tese viral erra — e o que ainda é proibido.
+
+  
