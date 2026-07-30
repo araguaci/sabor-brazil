@@ -4,6 +4,21 @@
 
 **SELVA.** Sabor Brazil documenta, com fonte e denominação oficial cruzadas, os casos em que o que está no rótulo — ou na bomba — não é o que o nome sugere. O projeto nasceu do trabalho investigativo do [lawfare-timeline](https://lawfare-timeline.vercel.app) e segue a mesma disciplina: toda entrada tem fonte, toda fonte é auditável, e hipótese nunca vira fato sem prova.
 
+**Site:** [sabor-brazil.vercel.app](https://sabor-brazil.vercel.app) · **Catálogo JSON:** [`/catalog.json`](https://sabor-brazil.vercel.app/catalog.json)
+
+### Estado atual (jul/2026)
+
+| | |
+|---|---|
+| Entradas publicadas | **29** |
+| Rotulagem | 11 |
+| Regulatório | 3 |
+| Institucional | 10 |
+| Superfaturamento | 3 |
+| Correlação | 2 |
+
+Cada entrada da listagem e da página `/entrada/[id]` pode carregar **hero image** (capa editorial) ao lado do título; o mapeamento fica em `src/lib/heroes.ts` e os arquivos em `public/artigos/`.
+
 ---
 
 ## As trilhas
@@ -12,33 +27,44 @@ Este projeto **não mistura** categorias que parecem semelhantes mas são analit
 
 ### 🏷️ Trilha 1 — Rotulagem Enganosa (`data/rotulagem/`)
 
-Produtos que se apresentam visualmente como uma coisa, mas cuja **denominação oficial** — a que a norma de identidade e qualidade da ANVISA/MAPA exige, geralmente em letra miúda — revela outra composição. Aqui o critério de entrada é objetivo: existe uma diferença auditável entre a apresentação comercial e a denominação regulatória do próprio produto.
+Produtos que se apresentam visualmente como uma coisa, mas cuja **denominação oficial** — a que a norma de identidade e qualidade da ANVISA/MAPA exige, geralmente em letra miúda — revela outra composição. Critério objetivo: diferença auditável entre apresentação comercial e denominação regulatória.
 
-Exemplos: "preparado alimentício sabor queijo prato" (não é queijo prato), "embutido tipo calabresa" (não é linguiça calabresa), "álcool molhado" vendido como etanol hidratado dentro da norma (é adulteração, ANP tem especificação de cor e teor para isso).
+Exemplos: "preparado alimentício sabor queijo prato", "embutido tipo calabresa", desconto associativo no extrato do INSS (RT-0008).
 
 ### ⚖️ Trilha 2 — Mudanças Regulatórias Contestadas (`data/regulatorio/`)
 
-Decisões públicas, nomeadas, votadas ou assinadas por resolução — que **não** são fraude de rotulagem, mas cuja base técnica é contestada por entidades do setor, especialistas independentes, ou já judicializada. Aqui o critério de entrada também é objetivo: existe uma divergência técnica documentável entre o que o estudo oficial testou e o que a decisão exige, ou uma ação judicial em curso questionando a suficiência do processo.
-
-Exemplo inaugural: o aumento do teor de etanol na gasolina comum de 30% para 32% (E32, CNPE 2026) — não é rotulagem enganosa (a mudança é pública e nomeada), mas está sob Ação Civil Pública do MPF questionando a suficiência dos estudos de durabilidade. Ver [`data/regulatorio/combustivel-e32.md`](data/regulatorio/combustivel-e32.md).
+Decisões públicas nomeadas cuja base técnica é contestada ou já judicializada — **não** fraude de rótulo. Exemplos: E32 (RG-0001), loteria × jogo de azar (RG-0002), bets × Bolsa Família (RG-0003).
 
 ### 📑 Trilha 3 — Divergência Institucional Documentada (`data/institucional/`)
 
-Casos individuais, com ID e fonte primária, onde há uma **diferença checável** entre o procedimento previsto em norma (CF/88, CPP, CLT, regimentos internos, prazos legais) e o que ocorreu de fato num processo, decisão ou ato concreto. **Esta trilha não faz afirmação genérica sobre instituições** ("a Justiça brasileira é X", "a imprensa é Y") — cada entrada é um caso específico, com número de processo ou ato quando disponível, e status de confiança explícito, porque aqui a maior parte do conteúdo é argumento jurídico ou interpretação, não fato bruto como uma norma de rotulagem.
+Caso concreto: procedimento previsto em norma versus o que ocorreu de fato. Status típico: `argumento_juridico_fundamentado`. Ver [`docs/metodologia-trilha3.md`](docs/metodologia-trilha3.md).
 
-Diferença crucial em relação às Trilhas 1 e 2: nas outras trilhas, o padrão de comparação é objetivo e não-controverso (a norma do MAPA existe, a resolução do CNPE existe). Aqui, o "procedimento previsto" às vezes admite mais de uma leitura jurídica válida — por isso toda entrada desta trilha carrega o status `argumento_juridico_fundamentado` como categoria própria, distinta de `verificado`: significa que a alegação cita dispositivo legal específico e é checável quanto aos fatos (datas, número de pedidos, prazos decorridos), mas a conclusão jurídica em si é uma interpretação, não um fato como "o produto tem X% de gordura vegetal".
-
-Ver [`docs/metodologia-trilha3.md`](docs/metodologia-trilha3.md) para o detalhe de como uma entrada desta trilha é aceita sem virar peça de advocacy.
+Recortes atuais incluem vídeo de IA / despacho (IN-0001), AGU × INSS (IN-0002), acúmulo de funções no Inquérito 4781 (IN-0003), sigilos (IN-0004, IN-0008), soberania Brasil–China (IN-0005–0007), seletividade penal (IN-0009) e CPMI do INSS sem relatório (IN-0010 / padrão P06-B).
 
 ### 💰 Trilha 4 — Superfaturamento (`data/superfaturamento/`)
 
-Casos com **comparação de preço documentada**: valor contratado versus valor de referência (mercado, município vizinho, tribunal de contas), com proporção calculável, mecanismo jurídico identificado e órgão de controle nomeado.
+Comparação de preço documentada: valor contratado × referência, com proporção, mecanismo jurídico e órgão de controle. Exemplos: Sufotur/Bahia (SF-0001), merenda Ananindeua (SF-0002), merenda Piritiba com decisão do TCM-BA (SF-0003).
 
 ### 📊 Trilha 5 — Correlação (`data/correlacao/`)
 
-Alegações virais ancoradas em **dado real**, mas que acrescentam um salto causal não sustentado pelas fontes. A entrada isola o dado, marca a conclusão alegada e explica onde a causalidade quebra.
+Dado real isolado do salto causal da narrativa viral. Status típico da conclusão: `hipotese`. Exemplos: “pão e circo” no Nordeste (CR-0001), emendas × Farmácia Popular (CR-0002).
 
-**Regra de ouro do projeto:** se uma entrada não se encaixa claramente numa das cinco definições acima, ela não entra.
+**Regra de ouro:** se não cabe numa das cinco definições, não entra.
+
+---
+
+## Artigos X (X Articles)
+
+Textos longos em markdown para publicação no X Premium (`x.com/compose/article`), com hero share card. Fonte canônica em `artigos/`; capas também em `public/artigos/` para o site.
+
+| Arquivo | Entrada / tema | Ângulo |
+|---|---|---|
+| [`sabor-brazil-projeto-xarticle.md`](artigos/sabor-brazil-projeto-xarticle.md) | Projeto | O catálogo onde o nome não é a coisa — apresentação das trilhas |
+| [`combustivel-e32-xarticle.md`](artigos/combustivel-e32-xarticle.md) | [RG-0001](https://sabor-brazil.vercel.app/entrada/rg-0001) | E32: a mistura é pública; a disputa é se o teste bastou |
+| [`loteria-vs-jogo-de-azar-xarticle.md`](artigos/loteria-vs-jogo-de-azar-xarticle.md) | [RG-0002](https://sabor-brazil.vercel.app/entrada/rg-0002) | Cassino × loteria: a lei admite a exceção no próprio texto |
+| [`apostas-bets-bolsa-familia-xarticle.md`](artigos/apostas-bets-bolsa-familia-xarticle.md) | [RG-0003](https://sabor-brazil.vercel.app/entrada/rg-0003) | Bets legalizadas, dano medido pelo BC, freio parcial no STF |
+
+Heroes de capa do catálogo (IN/SF/CR/RG) não são artigos X por si — são imagens de entrada; só os quatro `.md` acima estão formatados como X Article.
 
 ---
 
@@ -49,49 +75,46 @@ sabor-brazil/
 ├── README.md
 ├── CONTRIBUTING.md
 ├── schema/
-│   └── entry-schema.md       # campos obrigatórios de cada entrada
+│   └── entry-schema.md
 ├── data/
-│   ├── rotulagem/             # trilha 1 — um arquivo .md por produto/categoria
-│   ├── regulatorio/           # trilha 2 — um arquivo .md por caso
-│   ├── institucional/         # trilha 3 — um arquivo .md por caso, com ID e status jurídico
-│   ├── superfaturamento/      # trilha 4 — comparação de preço documentada
-│   └── correlacao/            # trilha 5 — dado real × salto causal
+│   ├── rotulagem/             # trilha 1
+│   ├── regulatorio/           # trilha 2
+│   ├── institucional/         # trilha 3
+│   ├── superfaturamento/      # trilha 4
+│   ├── correlacao/            # trilha 5
+│   └── catalog.json           # gerado por npm run sync
+├── artigos/                   # X Articles + heroes fonte
+├── public/artigos/            # heroes servidos pelo site
 ├── docs/
-│   ├── metodologia.md          # como uma fonte vira uma entrada verificada
-│   └── metodologia-trilha3.md  # regras específicas para não virar peça de advocacy
-├── src/                        # site Astro (catálogo + formulário)
-└── .github/
-    └── ISSUE_TEMPLATE/
-        └── nova-entrada.md   # template para sugestão da comunidade
+│   ├── metodologia.md
+│   └── metodologia-trilha3.md
+├── src/                       # site Astro
+└── .github/ISSUE_TEMPLATE/
 ```
 
 ## Site (Astro)
 
 ```bash
 npm install
-cp .env.example .env   # preencha GITHUB_TOKEN e GITHUB_REPO
+cp .env.example .env   # GITHUB_TOKEN e GITHUB_REPO
 npm run dev            # http://localhost:4321
+npm run sync           # regenera data/catalog.json + public/catalog.json
 ```
 
-O formulário em `/contribuir` chama `POST /api/sugerir`, que abre uma GitHub Issue com a label `nova-entrada`. Em produção (Vercel), configure as mesmas variáveis de ambiente. Deploy: conecte o repo à Vercel (adapter `@astrojs/vercel` já no projeto).
-
-### Catálogo em JSON (compartilhamento)
-
-```bash
-npm run sync   # regenera data/catalog.json e public/catalog.json
-```
-
-`predev` / `prebuild` já rodam o sync. Em produção: [`/catalog.json`](https://sabor-brazil.vercel.app/catalog.json). No repo: [`data/catalog.json`](data/catalog.json).
+- Home lista as cinco trilhas; cada uma tem `/trilha/[nome]`.
+- Entrada: `/entrada/[id]` (ex.: `/entrada/in-0010`) — campos específicos por trilha (Parece/É, comparação de preço, dado real × salto lógico).
+- `/contribuir` → `POST /api/sugerir` abre issue `nova-entrada` no GitHub.
+- Deploy: Vercel (`@astrojs/vercel`). `predev` / `prebuild` já rodam o sync.
 
 ## Como uma entrada é aceita
 
-1. Fonte primária ou secundária de qualidade (norma, órgão regulador, associação, decisão judicial, ou reportagem que cite essas fontes).
-2. Denominação oficial ou processo regulatório documentado — não boato, não captura de tela sem verificação.
-3. Classificação numa das duas trilhas, nunca ambas, nunca nenhuma.
-4. Toda alegação técnica não verificada por fonte independente é marcada explicitamente como hipótese — segue o mesmo padrão de honestidade epistêmica do lawfare-timeline.
+1. Fonte primária ou secundária de qualidade (norma, órgão, decisão judicial, ou reportagem que cite essas fontes).
+2. Denominação oficial, processo regulatório, comparação de preço ou fato processual documentado — não boato.
+3. Classificação em **uma** das cinco trilhas.
+4. Alegação sem fonte independente = hipótese explícita.
 
-Ver [`docs/metodologia.md`](docs/metodologia.md) e [`schema/entry-schema.md`](schema/entry-schema.md) para o detalhe de cada campo.
+Ver [`docs/metodologia.md`](docs/metodologia.md) e [`schema/entry-schema.md`](schema/entry-schema.md).
 
 ## Licença e uso
 
-Conteúdo sob licença aberta para reuso com atribuição. Curadoria e critério de aceite de entradas são mantidos pela equipe do projeto para preservar o rigor — issues e pull requests da comunidade são bem-vindos, mas passam por checagem de fonte antes do merge.
+Conteúdo sob licença aberta para reuso com atribuição. Curadoria e critério de aceite são mantidos pela equipe — issues e PRs da comunidade passam por checagem de fonte antes do merge.
