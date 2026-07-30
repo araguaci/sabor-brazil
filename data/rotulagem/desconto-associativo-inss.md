@@ -38,7 +38,7 @@ O elemento central é a diferença auditável entre o que a linha do extrato diz
 
 ## O que fica de fora desta entrada
 
-A controvérsia sobre a atuação da AGU é tratada em [`IN-0002`](../institucional/IN-0002-agu-messias-inss.md).
+A controvérsia sobre a atuação da AGU é tratada em [IN-0002](/entrada/in-0002).
 
 ## Atualização pendente
 

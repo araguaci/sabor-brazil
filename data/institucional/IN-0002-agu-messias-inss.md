@@ -43,7 +43,7 @@ A insinuação de proteção política via parentesco com Lula não é tratada c
 
 ## Ver também
 
-[`RT-0008`](../rotulagem/desconto-associativo-inss.md) — os fatos verificados sobre o próprio esquema de descontos indevidos, tratados separadamente por serem fato de rotulagem/fraude, não disputa institucional.
+[RT-0008](/entrada/rt-0008) — os fatos verificados sobre o próprio esquema de descontos indevidos, tratados separadamente por serem fato de rotulagem/fraude, não disputa institucional.
 
 ## Atualização pendente
 
