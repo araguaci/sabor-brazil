@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-07-29T20:14:26.151Z",
+  "generated_at": "2026-07-30T01:43:32.132Z",
   "site": "https://sabor-brazil.vercel.app",
   "schema": "schema/entry-schema.md",
   "endpoint": "/catalog.json",
@@ -52,7 +52,7 @@
       ],
       "argumento_juridico": {
         "autor": "Postagem em rede social de autoria não identificada — NÃO é petição, parecer ou manifestação processual. Tratada aqui como objeto de análise, não como fonte jurídica primária.",
-        "tese": "O texto original sustenta três 'recordes mundiais': (1) Bolsonaro seria a primeira pessoa impedida de ter sua imagem usada por IA por terceiros; (2) Flávio seria o primeiro político ameaçado de inelegibilidade por descumprir cautelar não imposta a ele; (3) Moraes seria o primeiro juiz de execução penal a decidir sobre propaganda eleitoral de terceiros — concluindo que a situação equivale a fechamento do processo eleitoral, comparável à Nicarágua."
+        "tese": "Alexandre de Moraes criou vários recordes: 1) Tornou Jair Bolsonaro a primeira pessoa do mundo impedida de ter sua imagem veiculada por IA por terceiros. 2) Tornou Flávio Bolsonaro o primeiro político do mundo ameaçado de inelegibilidade por supostamente descumprir uma cautelar que não foi imposta a ele. 3) Tornou ele próprio, Moraes, o primeiro juiz de execução penal do mundo a decidir sobre propaganda eleitoral em processos de terceiros."
       },
       "contraponto": {
         "existe": true,
@@ -71,7 +71,7 @@
       "slug": "in-0001",
       "path": "data/institucional/IN-0001-video-ia-convencao-pl.md",
       "url": "/entrada/in-0001",
-      "body": "# Despacho de 28/07/2026 — vídeo de IA na convenção do PL\n\n## Por que esta entrada existe apesar de reprovar no teste de generalização\n\nO texto original não seria aceito nesta trilha em sua forma bruta — falha em autoria identificada, dispositivo legal específico, e no teste de generalização (ver campo acima). Esta entrada existe para documentar **o que é fato checável** (o despacho, suas datas, seu conteúdo, a restrição anterior, o precedente citado) separado **da interpretação retórica** que circulou nas redes, permitindo que quem ler compare as duas coisas lado a lado — que é justamente o serviço que este projeto se propõe a prestar.\n\n## O que fica de fora\n\nNão incluí a comparação com a Nicarágua nem a conclusão sobre \"fim das eleições\" como fato ou como argumento jurídico — são retórica política, não elemento verificável, e sua inclusão aqui seria o projeto endossando uma tese partidária sem lastro processual, o que viola a regra de ouro do Sabor Brazil.\n\n## Atualização pendente\n\nEsta entrada deve ser atualizada quando: (a) a defesa de Bolsonaro responder ao despacho dentro do prazo de 48h; (b) o TSE ou STF se manifestarem sobre a ação do PT; (c) houver decisão sobre eventual reversão da domiciliar ou processo de inelegibilidade contra Flávio."
+      "body": "# Despacho de 28/07/2026 — vídeo de IA na convenção do PL\n\n## A citação contestada\n\nTexto viral de autoria não identificada — objeto de análise desta entrada, **não** posição do Sabor Brazil:\n\n> Alexandre de Moraes criou vários recordes: 1) Tornou Jair Bolsonaro a primeira pessoa do mundo impedida de ter sua imagem veiculada por IA por terceiros. 2) Tornou Flávio Bolsonaro o primeiro político do mundo ameaçado de inelegibilidade por supostamente descumprir uma cautelar que não foi imposta a ele. 3) Tornou ele próprio, Moraes, o primeiro juiz de execução penal do mundo a decidir sobre propaganda eleitoral em processos de terceiros.\n\nVersões circulantes acrescentam conclusão política (comparativo com a Nicarágua, apelo a “fim das eleições”). Essa extensão **não** entra como fato nem como argumento jurídico nesta ficha — ver “O que fica de fora”.\n\n## Por que esta entrada existe apesar de reprovar no teste de generalização\n\nO texto acima não seria aceito nesta trilha em sua forma bruta — falha em autoria identificada, dispositivo legal específico, e no teste de generalização (ver campo acima). Esta entrada existe para documentar **o que é fato checável** (o despacho, suas datas, seu conteúdo, a restrição anterior, o precedente citado) separado **da interpretação retórica** que circulou nas redes, permitindo que quem ler compare as duas coisas lado a lado — que é justamente o serviço que este projeto se propõe a prestar.\n\n## O que fica de fora\n\nNão incluí a comparação com a Nicarágua nem a conclusão sobre \"fim das eleições\" como fato ou como argumento jurídico — são retórica política, não elemento verificável, e sua inclusão aqui seria o projeto endossando uma tese partidária sem lastro processual, o que viola a regra de ouro do Sabor Brazil.\n\n## Atualização pendente\n\nEsta entrada deve ser atualizada quando: (a) a defesa de Bolsonaro responder ao despacho dentro do prazo de 48h; (b) o TSE ou STF se manifestarem sobre a ação do PT; (c) houver decisão sobre eventual reversão da domiciliar ou processo de inelegibilidade contra Flávio."
     },
     {
       "id": "IN-0002",

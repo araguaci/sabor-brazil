@@ -24,7 +24,7 @@ fontes:
     tipo: reportagem
 argumento_juridico:
   autor: "Postagem em rede social de autoria não identificada — NÃO é petição, parecer ou manifestação processual. Tratada aqui como objeto de análise, não como fonte jurídica primária."
-  tese: "O texto original sustenta três 'recordes mundiais': (1) Bolsonaro seria a primeira pessoa impedida de ter sua imagem usada por IA por terceiros; (2) Flávio seria o primeiro político ameaçado de inelegibilidade por descumprir cautelar não imposta a ele; (3) Moraes seria o primeiro juiz de execução penal a decidir sobre propaganda eleitoral de terceiros — concluindo que a situação equivale a fechamento do processo eleitoral, comparável à Nicarágua."
+  tese: "Alexandre de Moraes criou vários recordes: 1) Tornou Jair Bolsonaro a primeira pessoa do mundo impedida de ter sua imagem veiculada por IA por terceiros. 2) Tornou Flávio Bolsonaro o primeiro político do mundo ameaçado de inelegibilidade por supostamente descumprir uma cautelar que não foi imposta a ele. 3) Tornou ele próprio, Moraes, o primeiro juiz de execução penal do mundo a decidir sobre propaganda eleitoral em processos de terceiros."
 contraponto:
   existe: true
   resumo: "A própria decisão de Moraes descreve dois cenários distintos, não uma penalização automática de Flávio por descumprimento de restrição alheia: se Bolsonaro autorizou o vídeo, a violação é dele mesmo, da restrição de 17/07 que já pesava sobre sua própria conduta; se não autorizou, a tese contra Flávio e o PL é a de produção de deepfake sem consentimento — uma vedação eleitoral geral (aplicada a qualquer candidato, não específica a Bolsonaro), sustentada por precedente do TSE de maio/2026 aplicado a um candidato sem qualquer relação com o caso Bolsonaro. A sanção de inelegibilidade, além disso, não seria automática: exigiria investigação, provas, direito de defesa e decisão da Justiça Eleitoral. Quanto à competência, o fulcro da decisão é verificar se o próprio Bolsonaro — sob jurisdição de execução penal de Moraes — violou uma restrição que o mesmo juízo já lhe impusera; a repercussão sobre Flávio é derivada desse fato, não o objeto central da decisão."
@@ -35,9 +35,17 @@ tags: [stf, moraes, deepfake, eleitoral, competencia, template-reformado]
 
 # Despacho de 28/07/2026 — vídeo de IA na convenção do PL
 
+## A citação contestada
+
+Texto viral de autoria não identificada — objeto de análise desta entrada, **não** posição do Sabor Brazil:
+
+> Alexandre de Moraes criou vários recordes: 1) Tornou Jair Bolsonaro a primeira pessoa do mundo impedida de ter sua imagem veiculada por IA por terceiros. 2) Tornou Flávio Bolsonaro o primeiro político do mundo ameaçado de inelegibilidade por supostamente descumprir uma cautelar que não foi imposta a ele. 3) Tornou ele próprio, Moraes, o primeiro juiz de execução penal do mundo a decidir sobre propaganda eleitoral em processos de terceiros.
+
+Versões circulantes acrescentam conclusão política (comparativo com a Nicarágua, apelo a “fim das eleições”). Essa extensão **não** entra como fato nem como argumento jurídico nesta ficha — ver “O que fica de fora”.
+
 ## Por que esta entrada existe apesar de reprovar no teste de generalização
 
-O texto original não seria aceito nesta trilha em sua forma bruta — falha em autoria identificada, dispositivo legal específico, e no teste de generalização (ver campo acima). Esta entrada existe para documentar **o que é fato checável** (o despacho, suas datas, seu conteúdo, a restrição anterior, o precedente citado) separado **da interpretação retórica** que circulou nas redes, permitindo que quem ler compare as duas coisas lado a lado — que é justamente o serviço que este projeto se propõe a prestar.
+O texto acima não seria aceito nesta trilha em sua forma bruta — falha em autoria identificada, dispositivo legal específico, e no teste de generalização (ver campo acima). Esta entrada existe para documentar **o que é fato checável** (o despacho, suas datas, seu conteúdo, a restrição anterior, o precedente citado) separado **da interpretação retórica** que circulou nas redes, permitindo que quem ler compare as duas coisas lado a lado — que é justamente o serviço que este projeto se propõe a prestar.
 
 ## O que fica de fora
 
