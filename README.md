@@ -10,9 +10,9 @@
 
 | | |
 |---|---|
-| Entradas publicadas | **29** |
-| Rotulagem | 11 |
-| Regulatório | 3 |
+| Entradas publicadas | **34** |
+| Rotulagem | 13 |
+| Regulatório | 6 |
 | Institucional | 10 |
 | Superfaturamento | 3 |
 | Correlação | 2 |
@@ -33,7 +33,7 @@ Exemplos: "preparado alimentício sabor queijo prato", "embutido tipo calabresa"
 
 ### ⚖️ Trilha 2 — Mudanças Regulatórias Contestadas (`data/regulatorio/`)
 
-Decisões públicas nomeadas cuja base técnica é contestada ou já judicializada — **não** fraude de rótulo. Exemplos: E32 (RG-0001), loteria × jogo de azar (RG-0002), bets × Bolsa Família (RG-0003).
+Decisões públicas nomeadas cuja base técnica é contestada ou já judicializada — **não** fraude de rótulo. Exemplos: E32 (RG-0001), loteria × jogo de azar (RG-0002), bets × Bolsa Família (RG-0003), Pacote do Veneno (RG-0004), RDC 24 (RG-0005), PL leite/carne vegetal (RG-0006).
 
 ### 📑 Trilha 3 — Divergência Institucional Documentada (`data/institucional/`)
 

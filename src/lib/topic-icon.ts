@@ -41,7 +41,9 @@ export function topicIconForEntry(entry: Entry): TopicIconName {
   if (/combustivel|combustível|etanol|gasolina|e32|cnpe/.test(blob)) return 'fuel';
   if (/bets|aposta|bolsa-familia|bolsa.familia/.test(blob)) return 'ticket';
   if (/loteria|jogo-de-azar|cassino|monopolio|monopólio/.test(blob)) return 'dices';
-  if (/stf|moraes|eleitoral|agu|messias|despacho|cnj|sigilo|drogas|seletividade/.test(blob)) return 'gavel';
+  if (/azeite|oliva|adulter/.test(blob)) return 'droplets';
+  if (/agrotoxi|veneno|rdc.?24|plant-based|leite.vegetal|carne.vegetal/.test(blob)) return 'scroll';
+  if (/stf|moraes|eleitoral|agu|messias|despacho|cnj|sigilo|drogas|seletividade|cpmi/.test(blob)) return 'gavel';
   if (/sufotur|cache|cachê|merenda|superfatur/.test(blob)) return 'banknote';
   if (/pao-e-circo|pão.e.circo|emendas|farmacia|farmácia|nordeste|shows/.test(blob)) return 'chart';
 

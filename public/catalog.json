@@ -1,26 +1,230 @@
 {
   "version": 1,
-  "generated_at": "2026-07-30T17:45:22.710Z",
+  "generated_at": "2026-07-30T18:05:45.116Z",
   "site": "https://sabor-brazil.vercel.app",
   "schema": "schema/entry-schema.md",
   "endpoint": "/catalog.json",
   "counts": {
-    "total": 29,
+    "total": 34,
     "por_trilha": {
+      "regulatorio": 6,
+      "rotulagem": 13,
       "correlacao": 2,
       "institucional": 10,
-      "regulatorio": 3,
-      "rotulagem": 11,
       "superfaturamento": 3
     },
     "por_status": {
-      "hipotese": 2,
-      "argumento_juridico_fundamentado": 10,
-      "contestado_judicialmente": 2,
-      "verificado": 15
+      "verificado": 18,
+      "contestado_judicialmente": 3,
+      "hipotese": 3,
+      "argumento_juridico_fundamentado": 10
     }
   },
   "entradas": [
+    {
+      "id": "RG-0004",
+      "trilha": "regulatorio",
+      "titulo": "Lei 14.785/2023 ('Pacote do Veneno'): MAPA como autoridade exclusiva de registro de agrotóxicos",
+      "resumo_neutro": "A Lei 14.785/2023 concentrou no MAPA o registro de agrotóxicos; análise de ANVISA e IBAMA deixou de ser vinculante. Cobertura setorial documenta alta de registros e contestação técnica de servidores e cientistas; ADI específica não localizada nesta apuração.",
+      "apresentacao_comercial": "Modernização do registro de agrotóxicos / alinhamento a eficiência regulatória",
+      "denominacao_oficial": "Lei nº 14.785/2023 — MAPA concede o registro; análises de risco de ANVISA e IBAMA passam a não vinculantes (sem poder de veto tripartite)",
+      "orgao_regulador": "MAPA / ANVISA / IBAMA / Congresso Nacional",
+      "status": "verificado",
+      "data_entrada": "Wed Jul 29 2026 21:00:00 GMT-0300 (Horário Padrão de Brasília)",
+      "fontes": [
+        {
+          "titulo": "Pacote do Veneno afrouxou controle sobre agrotóxicos no Brasil — ((o))eco",
+          "url": "https://oeco.org.br/reportagens/pacote-do-veneno-afrouxou-controle-sobre-agrotoxicos-no-brasil/",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "Campanha Permanente Contra os Agrotóxicos — cobertura do pacote",
+          "url": "https://contraosagrotoxicos.org/pacote-do-veneno-afrouxou-controle-sobre-agrotoxicos-no-brasil/",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "Cientistas pedem política nacional de redução de agrotóxicos — Câmara",
+          "url": "https://www.camara.leg.br/noticias/541130-cientistas-pedem-criacao-de-politica-nacional-de-reducao-de-agrotoxicos/",
+          "tipo": "orgao_oficial"
+        }
+      ],
+      "tags": [
+        "agrotoxicos",
+        "mapa",
+        "anvisa",
+        "ibama",
+        "lei-14785"
+      ],
+      "divergencia_tecnica": {
+        "estudo_oficial": "O desenho legal vigente atribui ao MAPA a concessão do registro, com ANVISA e IBAMA em análise técnica não vinculante — mudança em relação ao regime tripartite anterior com poder de veto de cada órgão.",
+        "contraponto": "Associação de servidores da ANVISA, pesquisadores e propositores de política de redução de agrotóxicos contestam a adequação do novo arranjo para proteção sanitária e ambiental; reportagens citam aumento de registros (ex.: 912 em 2025 vs. 663 em 2024) e volume comercializado crescente.",
+        "lacuna_reconhecida": "Renúncia fiscal associada e lista de princípios ativos banidos na UE mas permitidos no Brasil precisam de checagem cruzada com fonte primária (MAPA/Receita) antes de entrar como dado quantitativo consolidado — hoje circulam a partir de apuração jornalística (Agência Pública / ((o))eco). ADI específica contra a lei não localizada nesta entrada."
+      },
+      "slug": "rg-0004",
+      "path": "data/regulatorio/lei-14785-pacote-do-veneno.md",
+      "url": "/entrada/rg-0004",
+      "body": "# Lei 14.785/2023 — registro de agrotóxicos\n\n## Por que esta entrada é Trilha 2\n\nDecisão pública, nomeada, votada e sancionada (origem PL 1459/2022 / “Pacote do Veneno”), com base técnica contestada por parte interessada qualificada — inclusive o órgão sanitário cujo poder de veto foi removido. Não é rotulagem de produto na prateleira; é mudança do **processo de registro**.\n\n## O que mudou\n\nAntes: aprovação tripartite (MAPA + ANVISA + IBAMA), com veto possível em cada frente. Depois da Lei 14.785/2023: MAPA concede o registro; análises de ANVISA e IBAMA deixam de ser vinculantes.\n\n## Status judicial\n\nAté a data desta entrada, **não localizada** ação judicial específica (ADI ou similar) contra a lei — a contestação documentada é técnica/institucional. Isso distingue o caso do [RG-0005](/entrada/rg-0005) (RDC 24, judicializada há anos) e do [RG-0001](/entrada/rg-0001) (ACP em curso).\n\n## O que fica de fora\n\nCifras de renúncia fiscal e listas comparativas UE×Brasil sem cruzamento com fonte primária não entram como fato consolidado. A leitura de “captura regulatória” além do texto legal é interpretação, não veredito do catálogo.\n\n## Atualização pendente\n\nVerificar ADI ou equivalente; cruzar números de registro e renúncia fiscal com fontes oficiais."
+    },
+    {
+      "id": "RG-0005",
+      "trilha": "regulatorio",
+      "titulo": "RDC 24/2010 (advertência sanitária em publicidade de alimentos): 16 anos judicializada, sem efeito prático",
+      "resumo_neutro": "A RDC 24/2010 da ANVISA exige alerta sanitário em publicidade de alimentos ricos em açúcar, gordura ou sódio; permanece judicializada desde a publicação e sem implementação plena. Em jan/2026 a agência abriu nova AIR sobre a resolução.",
+      "apresentacao_comercial": "Regra sanitária aprovada que protegeria o consumidor na publicidade de alimentos",
+      "denominacao_oficial": "RDC nº 24/2010 — alerta sanitário em publicidade de alimentos com alto teor de açúcar, gordura saturada ou sódio; norma vigente no papel, sem efeito prático pleno por litígio prolongado",
+      "orgao_regulador": "ANVISA",
+      "status": "contestado_judicialmente",
+      "data_entrada": "Wed Jul 29 2026 21:00:00 GMT-0300 (Horário Padrão de Brasília)",
+      "fontes": [
+        {
+          "titulo": "Como a indústria alimentícia impediu a regulação da publicidade no Brasil — O Joio e o Trigo",
+          "url": "https://ojoioeotrigo.com.br/2026/07/como-a-industria-alimenticia-impediu-a-regulacao-da-publicidade-no-brasil/",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "O povo contra as Big Food — Agência Pública",
+          "url": "https://apublica.org/2026/07/o-povo-contra-as-big-food-como-setor-alimenticio-impediu-regulacao-de-publicidade-no-pais/",
+          "tipo": "reportagem"
+        }
+      ],
+      "tags": [
+        "rdc-24",
+        "anvisa",
+        "publicidade",
+        "alimentos",
+        "judicializacao"
+      ],
+      "processo_judicial": {
+        "numero": "não localizado publicamente até a data desta entrada",
+        "vara": "disputa envolvendo competência da ANVISA para regular publicidade — STF citado na cobertura; número a confirmar",
+        "autor": "entidades do setor alimentício (incluindo ABIA) — detalhar partes no processo quando o número for localizado",
+        "pedidos": [
+          "impedir ou limitar a aplicação da RDC 24/2010"
+        ],
+        "status": "em curso / sem resolução definitiva há mais de 16 anos, segundo as fontes"
+      },
+      "divergencia_tecnica": {
+        "estudo_oficial": "A RDC 24/2010 exige alerta sanitário em publicidade de alimentos com alto teor de açúcar, gordura saturada ou sódio. Em jan/2026 a área técnica da ANVISA abriu nova Análise de Impacto Regulatório (AIR) sobre a resolução.",
+        "contraponto": "ABIA e associações empresariais judicializaram a norma desde a publicação; o presidente da ABIA elogiou publicamente o processo de AIR em reunião com diretor da ANVISA (fev/2026), segundo a cobertura — sinal de que a disputa sobre o alcance da norma pode continuar mesmo após eventual vitória formal da agência.",
+        "lacuna_reconhecida": "Número do processo no STF e status processual atual não localizados nesta apuração. Joio e Agência Pública parecem derivar da mesma linha investigativa — falta terceira fonte genuinamente independente."
+      },
+      "slug": "rg-0005",
+      "path": "data/regulatorio/rdc24-advertencia-sanitaria-judicializada.md",
+      "url": "/entrada/rg-0005",
+      "body": "# RDC 24/2010 — norma aprovada, efeito bloqueado\n\n## Por que esta entrada é Trilha 2\n\nNão é rótulo de produto: é **decisão regulatória** (RDC) cuja aplicação prática foi neutralizada por litígio prolongado. A norma não foi revogada nem, até as fontes desta entrada, declarada inconstitucional de forma definitiva — permanece sem efeito pleno há mais de 16 anos.\n\n## O que está documentado\n\n- Aprovação em 2010; judicialização imediata por entidades do setor.\n- Disputa sobre competência da ANVISA para regular publicidade, sem resolução definitiva citada.\n- Nova AIR aberta em janeiro/2026 — risco, segundo a reportagem, de reabrir parâmetros técnicos em vez de só destravar a aplicação.\n\n## O que fica de fora\n\nLeitura de “captura por exaustão” / padrão P06 do lawfare-timeline é **interpretação estrutural** útil para contextualizar, não fato no catálogo. Sem número de processo, o campo processual fica marcado como lacuna.\n\n## Atualização pendente\n\nLocalizar número e status no STF; terceira fonte independente; acompanhar resultado da AIR 2026."
+    },
+    {
+      "id": "RG-0006",
+      "trilha": "regulatorio",
+      "titulo": "PL 10.556/2018: restrição de 'leite', 'carne' e derivados em produtos vegetais — Câmara aprovou, Senado em análise",
+      "resumo_neutro": "Substitutivo do PL 10.556/2018, aprovado na Câmara em mar/2026, restringe denominações de origem animal em produtos plant-based; tramita na CRA do Senado. CNA e câmaras do MAPA apoiam; SVB e setor vegetal contestam.",
+      "apresentacao_comercial": "Defesa do consumidor contra indução a erro por nomes de leite/carne em produtos vegetais",
+      "denominacao_oficial": "Projeto de lei (ainda não lei) — restringe uso de termos como leite, carne, hambúrguer, bife, salsicha, linguiça, bacon etc. em produtos de origem vegetal, com exceção prevista para denominações consagradas que não induzam a erro",
+      "orgao_regulador": "Câmara dos Deputados / Senado Federal (CRA) / MAPA (câmaras setoriais)",
+      "status": "verificado",
+      "data_entrada": "Wed Jul 29 2026 21:00:00 GMT-0300 (Horário Padrão de Brasília)",
+      "fontes": [
+        {
+          "titulo": "CNA defende projeto que regulamenta rótulos de produtos de origem vegetal",
+          "url": "https://cnabrasil.org.br/noticias/cna-defende-projeto-que-regulamenta-rotulos-de-produtos-de-origem-vegetal",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "Câmara aprova PL que restringe termos como leite e carne para produtos vegetais — SVB",
+          "url": "https://svb.org.br/camara-aprova-pl-que-restringe-termos-como-leite-e-carne-para-produtos-vegetais/",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "Câmara aprova projeto que proíbe nomear como leite e carne produtos vegetais",
+          "url": "https://www.tribunadosertao.com.br/geral/2026/03/03/866707-camara-aprova-projeto-que-proibe-nomear-como-leite-e-carne-produtos-vegetais",
+          "tipo": "reportagem"
+        }
+      ],
+      "tags": [
+        "plant-based",
+        "leite-vegetal",
+        "pl-10556",
+        "rotulagem-legislativa",
+        "mapa"
+      ],
+      "divergencia_tecnica": {
+        "estudo_oficial": "CNA e câmaras setoriais de leite/carne do MAPA defendem a restrição como medida para evitar indução do consumidor a erro quanto à origem animal do produto.",
+        "contraponto": "SVB, Associação Base Planta e parlamentares críticos argumentam que 'leite vegetal' / 'hambúrguer vegetal' são nomes funcionais de uso, não alegação de identidade animal, e que a barreira real de mercado inclui tributação desigual (leite animal isento vs. bebida vegetal tributada).",
+        "lacuna_reconhecida": "Texto integral do substitutivo aprovado na Câmara (lista completa de termos e exceções) precisa ser lido na fonte primária (Câmara/Senado). Relatoria de Jaime Bagattoli na CRA — desfecho pendente nesta entrada. Ainda não judicializado."
+      },
+      "slug": "rg-0006",
+      "path": "data/regulatorio/pl10556-denominacao-leite-carne-vegetal.md",
+      "url": "/entrada/rg-0006",
+      "body": "# PL 10.556/2018 — nomes animal × vegetal\n\n## Por que esta entrada é Trilha 2 (e não só rotulagem)\n\nO núcleo não é um lote na prateleira: é **proposta legislativa** já aprovada na Câmara e em tramitação no Senado, com disputa documentada entre partes qualificadas sobre o que “protege o consumidor”. Ambos os lados invocam “não induzir a erro” para conclusões opostas — exatamente o tipo de divergência que a Trilha 2 documenta sem resolver.\n\n## Estado (mar–jul/2026)\n\n- Aprovado substitutivo na Câmara (madrugada de 2–3/03/2026, relator Rafael Simões).\n- CRA do Senado, relator senador Jaime Bagattoli.\n- Exceção prevista para denominações consagradas que não induzam a erro (detalhe no texto oficial).\n\n## O que fica de fora\n\nNão trata como lei vigente. Não decide se o nome “leite de aveia” engana ou esclarece. Tributação na Reforma Tributária é contexto citado pelas partes — não é o núcleo desta ficha.\n\n## Atualização pendente\n\nLer substitutivo na íntegra; acompanhar CRA/Senado e eventual sanção ou ação judicial pós-vigência."
+    },
+    {
+      "id": "RT-0012",
+      "trilha": "rotulagem",
+      "titulo": "Azeite de oliva 'extravirgem' adulterado com óleos vegetais mais baratos",
+      "resumo_neutro": "MAPA e ANVISA apreenderam ou suspenderam lotes de dezenas de marcas vendidas como azeite extravirgem; laudos apontam mistura com outros óleos vegetais, fora do padrão de identidade do azeite.",
+      "apresentacao_comercial": "Azeite de oliva extravirgem",
+      "denominacao_oficial": "Produto que, em lotes fiscalizados, apresenta mistura com óleos vegetais de outras espécies — fora do padrão de identidade e qualidade do azeite de oliva (extração mecânica exclusiva de azeitona)",
+      "orgao_regulador": "MAPA / ANVISA",
+      "status": "verificado",
+      "data_entrada": "Wed Jul 29 2026 21:00:00 GMT-0300 (Horário Padrão de Brasília)",
+      "fontes": [
+        {
+          "titulo": "Azeite ou fraude? Principal produto adulterado em 2025",
+          "url": "https://www.itatiaia.com.br/agro/azeite-ou-fraude-principal-produto-adulterado-em-2025-acende-alerta-veja-dicas/",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "Azeite adulterado: 25 marcas têm lotes proibidos pela ANVISA",
+          "url": "https://www.folhadoprogresso.com.br/azeite-adulterado-25-marcas-tem-lotes-proibidos-pela-anvisa/",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "Fiscalização da ANVISA derruba azeite e suspende sal e doce de leite",
+          "url": "https://www.em.com.br/emfoco/2026/01/30/fiscalizacao-da-anvisa-derruba-azeite-e-suspende-venda-de-sal-e-doce-de-leite/",
+          "tipo": "reportagem"
+        }
+      ],
+      "tags": [
+        "azeite",
+        "adulteracao",
+        "mapa",
+        "anvisa",
+        "rotulagem"
+      ],
+      "slug": "rt-0012",
+      "path": "data/rotulagem/azeite-de-oliva-adulterado.md",
+      "url": "/entrada/rt-0012",
+      "body": "# Azeite extravirgem × mistura de óleos\n\n## Parece × é\n\n**Azeite de oliva extravirgem** exige extração exclusivamente mecânica de azeitona, sob padrão de identidade e qualidade do MAPA. Lotes fiscalizados em 2025–2026 — com apreensão de milhares de litros e suspensão de dezenas de marcas — apresentaram **mistura com óleos vegetais mais baratos** (soja, canola etc.), detectável por análise laboratorial, não pelo olhar do consumidor na prateleira.\n\nAções documentadas incluem banimentos/suspensões ao longo de 2025 (ordem de 25 marcas, ~16.700 litros citados na cobertura) e continuidade em 2026 (marketplaces, lotes com laudo de adulteração, irregularidades cadastrais de importadoras).\n\n## O que fica de fora\n\nPercentual médio de adulteração no mercado e consolidação única do total de marcas banidas em 2025+2026 não estão em fonte primária única nesta entrada — circulam fragmentados na imprensa. Leitura de que a fiscalização seria só “reativa” e subestima o volume real é **hipótese estrutural**, não fato.\n\n## Atualização pendente\n\nCruzar com notas oficiais MAPA/ANVISA e, se existir, auditoria independente sobre fatia de mercado adulterado."
+    },
+    {
+      "id": "RT-0013",
+      "trilha": "rotulagem",
+      "titulo": "Sal grosso Marfim (iodo fora do padrão) e doce de leite São Benedito suspensos pela ANVISA",
+      "resumo_neutro": "Em jan/2026 a ANVISA suspendeu o lote 901124 do sal grosso Marfim por teor de iodo fora do padrão e restringiu a venda do doce de leite São Benedito (lote de 25/06/2025) por irregularidades sanitárias.",
+      "apresentacao_comercial": "Sal grosso iodado (Marfim); doce de leite em pedaços (São Benedito)",
+      "denominacao_oficial": "Sal iodado exige teor de iodo na faixa regulatória; doce de leite exige conformidade sanitária do lote — lotes citados falharam nesses requisitos, segundo a fiscalização",
+      "orgao_regulador": "ANVISA",
+      "status": "hipotese",
+      "data_entrada": "Wed Jul 29 2026 21:00:00 GMT-0300 (Horário Padrão de Brasília)",
+      "fontes": [
+        {
+          "titulo": "Fiscalização da ANVISA derruba azeite e suspende venda de sal e doce de leite",
+          "url": "https://www.em.com.br/emfoco/2026/01/30/fiscalizacao-da-anvisa-derruba-azeite-e-suspende-venda-de-sal-e-doce-de-leite/",
+          "tipo": "reportagem"
+        }
+      ],
+      "tags": [
+        "sal",
+        "iodo",
+        "doce-de-leite",
+        "anvisa",
+        "nao-conformidade"
+      ],
+      "slug": "rt-0013",
+      "path": "data/rotulagem/sal-grosso-doce-de-leite-anvisa-2026.md",
+      "url": "/entrada/rt-0013",
+      "body": "# Sal iodado e doce de leite fora do padrão\n\n## Parece × é\n\n**Sal iodado** e **doce de leite** ostentam denominações que pressupõem conformidade com regulamento técnico (iodação obrigatória; condições sanitárias de laticínio). Em 30/01/2026, a ANVISA determinou suspensão/recolhimento do lote 901124 do sal grosso Marfim (M. Gomes Praxedes) por teor de iodo reprovado, e restrição ao doce de leite em pedaços São Benedito (JF Indústria) — lote fabricado em 25/06/2025 — por irregularidades sanitárias.\n\nDiferente do azeite adulterado ([RT-0012](/entrada/rt-0012)), o quadro aqui é mais próximo de **não-conformidade de qualidade** do que de fraude por substituição de insumo — o critério do catálogo, porém, é objetivo (denominação × padrão técnico), não depende de provar intenção.\n\n## Por que o status é `hipotese`\n\nFonte única identificada até a data desta entrada (Estado de Minas / Em Foco). Motivo técnico detalhado da suspensão do doce de leite não está além de “irregularidades” na cobertura disponível. Sem segunda fonte independente ou nota oficial da ANVISA, a entrada fica em `hipotese`.\n\n## Atualização pendente\n\nLocalizar comunicado oficial da ANVISA e segunda cobertura independente; detalhar o motivo técnico do lote do doce de leite."
+    },
     {
       "id": "CR-0001",
       "trilha": "correlacao",

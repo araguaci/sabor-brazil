@@ -1,77 +1,109 @@
 # Schema de Entrada — Sabor Brazil
 
-Toda entrada, em qualquer trilha, é um arquivo Markdown com o front-matter abaixo. Mantém o mesmo espírito do schema do lawfare-timeline (`_data/lawfare.json`): campos obrigatórios, fonte auditável, ID sequencial por trilha.
+Toda entrada, em qualquer trilha, é um arquivo Markdown com front-matter YAML. Espírito alinhado ao lawfare-timeline: campos obrigatórios, fonte auditável, ID sequencial por trilha.
 
-## Campos obrigatórios
+Prefixos: `RT` = Rotulagem · `RG` = Regulatório · `IN` = Institucional · `SF` = Superfaturamento · `CR` = Correlação.
+
+## Campos obrigatórios (todas as trilhas)
 
 ```yaml
 ---
-id: RT-0001                 # RT = Rotulagem, RG = Regulatório, IN = Institucional. Sequencial, nunca reaproveitado.
-trilha: rotulagem            # "rotulagem" | "regulatorio" | "institucional"
-titulo: "Preparado alimentício sabor queijo prato"
-apresentacao_comercial: "Embalagem, propaganda e prateleira sugerem queijo prato tradicional"
-denominacao_oficial: "Preparado alimentício à base de queijo, com substituição parcial de gordura láctea por gordura vegetal"
-orgao_regulador: "MAPA / ANVISA"
-status: verificado           # "verificado" | "hipotese" | "contestado_judicialmente"
-data_entrada: 2026-07-29
+id: RT-0001
+trilha: rotulagem   # rotulagem | regulatorio | institucional | superfaturamento | correlacao
+titulo: "…"
+resumo_neutro: "Uma frase factual para o card — nunca a tese em disputa"
+status: verificado  # verificado | hipotese | contestado_judicialmente | argumento_juridico_fundamentado | fato_processual
+data_entrada: 2026-07-30
 fontes:
   - titulo: "Nome da fonte"
     url: "https://..."
     tipo: "norma | reportagem | orgao_oficial | decisao_judicial"
-tags: [laticinios, rotulagem-enganosa]
+tags: [exemplo]
 ---
 ```
 
-## Campo obrigatório em todas as trilhas — resumo_neutro
+### `resumo_neutro`
+
+Obrigatório. Usado exclusivamente como preview/card. Nunca reproduz `argumento_juridico.tese` nem `salto_logico.conclusao_alegada`.
+
+## Campos comuns (Trilhas 1–2, opcionais em outras)
 
 ```yaml
-resumo_neutro: "Uma frase factual, sem adjetivação e sem citar a tese contestada, usada exclusivamente como preview/card na listagem. Nunca reproduz o conteúdo de argumento_juridico.tese ou de qualquer alegação não verificada."
+apresentacao_comercial: "O que parece / como é vendido"
+denominacao_oficial: "O que a norma / fonte oficial diz"
+orgao_regulador: "MAPA / ANVISA / …"
 ```
 
-**Por que este campo existe:** o card de preview de uma entrada é a primeira coisa que alguém vê, muitas vezes sem clicar para ler a entrada inteira. Se o preview usar o campo `tese` (a alegação em disputa) como resumo, o site acaba repetindo com destaque exatamente o conteúdo que a curadoria classificou como não verificado — antes mesmo do contraponto aparecer. Isso vale sobretudo para a Trilha 3, mas é regra para as três: o card nunca é a alegação, é a descrição do caso.
-
-Exemplo — errado: usar `argumento_juridico.tese` ("Moraes seria o primeiro juiz do mundo a...") como preview.
-Exemplo — certo: `resumo_neutro: "Despacho de 28/07/2026 dá 48h para Bolsonaro esclarecer autorização de vídeo de IA na convenção do PL; entrada documenta fatos do despacho e avalia uma tese viral associada."`
-
-## Campos exclusivos da trilha Regulatório
+## Trilha 2 — Regulatório
 
 ```yaml
-processo_judicial:
-  numero: "não divulgado / número do processo se público"
-  vara: "4ª Vara Federal de Uberlândia (MG)"
-  autor: "Ministério Público Federal"
-  pedidos: ["suspensão da medida", "perícia técnica independente"]
+processo_judicial:          # se houver
+  numero: "…"
+  vara: "…"
+  autor: "…"
+  pedidos: ["…"]
   status: "em curso"
 divergencia_tecnica:
-  estudo_oficial: "resumo do que o estudo oficial testou e concluiu"
-  contraponto: "resumo da crítica técnica independente"
-  lacuna_reconhecida: "o que o próprio estudo oficial admite não ter testado"
+  estudo_oficial: "…"
+  contraponto: "…"
+  lacuna_reconhecida: "…"
 ```
 
-## Campos exclusivos da trilha Institucional (Trilha 3)
+## Trilha 3 — Institucional
 
 ```yaml
-dispositivo_legal: "art. 318 do CPP, ou súmula/regimento específico citado"
+dispositivo_legal: "art. …"
 fatos_checaveis:
-  - "datas de protocolo, número de pedidos, prazos decorridos — sem margem interpretativa"
+  - "data / ato / número — sem interpretação"
 argumento_juridico:
-  autor: "quem fez o argumento (petição de defesa, parecer, doutrina) — nunca atribuído ao projeto"
-  tese: "resumo da tese jurídica defendida"
+  autor: "quem sustenta a tese — nunca o projeto"
+  tese: "resumo da tese"
 contraponto:
   existe: true
-  resumo: "posição do outro lado do processo, do tribunal, ou doutrina divergente"
-  fonte: "URL ou referência, se localizada; caso contrário, 'não localizado até a data desta entrada'"
-teste_generalizacao: "confirmação de que o argumento se sustenta como questão de direito processual em abstrato, sem depender de ataque a pessoa/instituição específica"
+  resumo: "…"
+  fonte: "…"
+teste_generalizacao: "PASSA | PARCIAL | REPROVA — com justificativa"
+```
+
+## Trilha 4 — Superfaturamento
+
+```yaml
+comparacao_de_preco:
+  valor_contratado: "…"
+  valor_referencia: "…"
+  proporcao: "…"
+mecanismo_juridico: "inexigibilidade / pregão / …"
+orgaos_de_controle:
+  - "TCE / TCM / …"
+responsaveis_nomeados: "…"
+```
+
+## Trilha 5 — Correlação
+
+```yaml
+dado_real:
+  afirmacao: "…"
+  fonte: "…"
+salto_logico:
+  conclusao_alegada: "…"
+  onde_quebra: "…"
+contraponto_estrutural: "…"
 ```
 
 ## Regra de status
 
-- `verificado`: toda alegação da entrada tem fonte primária ou secundária cruzada com pelo menos duas fontes independentes.
-- `hipotese`: alegação plausível, mas sem fonte técnica independente que sustente o detalhe específico (ex: sintoma atribuído a um modelo de carro específico sem nota técnica do fabricante). Precisa ser marcada visualmente na entrada, nunca misturada ao texto como fato.
-- `contestado_judicialmente`: existe processo em curso questionando a base técnica ou legal da medida. Não implica que a medida seja ilegal — apenas que a suficiência dela está sob exame formal.
-- `argumento_juridico_fundamentado` (Trilha 3): a alegação cita dispositivo legal específico e é checável quanto aos fatos (datas, prazos, número de pedidos), mas a conclusão jurídica é interpretação de uma das partes, não fato estabelecido pelo projeto.
-- `fato_processual` (Trilha 3): elemento sem margem interpretativa — data de publicação de decisão, número de processo, texto de um ato oficial.
+- `verificado`: alegações centrais com fonte cruzada (≥2 independentes quando possível).
+- `hipotese`: sem confirmação independente suficiente; marcar visualmente, não misturar como fato.
+- `contestado_judicialmente`: processo em curso sobre a suficiência/legalidade da medida.
+- `argumento_juridico_fundamentado` (Trilha 3): fatos checáveis + conclusão jurídica de uma das partes.
+- `fato_processual` (Trilha 3): sem margem interpretativa (data, número, texto oficial).
 
 ## Regra de quotação
 
-Citações diretas de fontes seguem o mesmo limite do resto do trabalho editorial do autor: no máximo ~15 palavras por citação direta, uma citação por fonte, o resto sempre parafraseado.
+Citações diretas de fontes: no máximo ~15 palavras por citação direta, uma por fonte; demais conteúdo parafraseado. **Exceção:** a tese contestada / citação viral objeto de análise na Trilha 3 ou 5 pode aparecer integral no corpo (blockquote) e em `argumento_juridico.tese` / `salto_logico`, sempre atribuída e marcada como não-posição do projeto.
+
+## Não publicar
+
+- Arquivo cujo nome começa com `_` ou contém `template`
+- Tags `template` ou `nao-publicar`
+- Conteúdo em `data/_fila/` (só após conversão para pasta de trilha)

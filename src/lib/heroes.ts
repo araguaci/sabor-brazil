@@ -18,6 +18,26 @@ const ENTRY_HEROES: Record<string, HeroRef> = {
     src: '/artigos/rg-0003-bets-bolsa-familia-hero.png',
     alt: 'Capa bets — o Estado mediu o dano e o STF freou o freio',
   },
+  'RG-0004': {
+    src: '/artigos/rg-0004-pacote-veneno-hero.png',
+    alt: 'Capa — Lei 14.785/2023 Pacote do Veneno, registro no MAPA',
+  },
+  'RG-0005': {
+    src: '/artigos/rg-0005-rdc24-hero.png',
+    alt: 'Capa — RDC 24/2010 advertência sanitária judicializada',
+  },
+  'RG-0006': {
+    src: '/artigos/rg-0006-leite-carne-vegetal-hero.png',
+    alt: 'Capa — PL 10.556/2018 denominação leite e carne vegetal',
+  },
+  'RT-0012': {
+    src: '/artigos/rt-0012-azeite-adulterado-hero.png',
+    alt: 'Capa — azeite extravirgem adulterado com outros óleos',
+  },
+  'RT-0013': {
+    src: '/artigos/rt-0013-sal-doce-leite-hero.png',
+    alt: 'Capa — sal Marfim e doce de leite São Benedito suspensos',
+  },
   'IN-0001': {
     src: '/artigos/in-0001-video-ia-hero.png',
     alt: 'Capa — despacho sobre vídeo de IA e a tese dos três recordes',

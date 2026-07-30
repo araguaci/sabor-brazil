@@ -2,25 +2,37 @@
 
 ## Princípio central
 
-Uma entrada existe porque há uma **diferença auditável** — entre apresentação e denominação oficial (Trilha 1), ou entre decisão regulatória e sua base técnica demonstrada (Trilha 2). Não existe entrada por "achismo" ou por viralização em rede social sem checagem.
+Uma entrada existe porque há uma **diferença auditável** — entre apresentação e denominação (Trilha 1), decisão regulatória e base técnica (Trilha 2), procedimento previsto e fato processual (Trilha 3), preço contratado e referência (Trilha 4), ou dado real e salto causal viral (Trilha 5). Não existe entrada por achismo ou viralização sem checagem.
+
+Framework para agentes: [`METHODOLOGY.md`](../METHODOLOGY.md) na raiz.
 
 ## Passos para checagem de uma entrada nova
 
-1. **Identificar a fonte da alegação.** Rede social, vídeo, print de rótulo? Tudo isso é ponto de partida, nunca ponto de chegada.
-2. **Buscar a norma ou o processo regulatório correspondente.** Para Trilha 1: norma de identidade e qualidade do produto (ANVISA/MAPA). Para Trilha 2: a resolução, lei ou decisão que criou a mudança, e qualquer ação judicial associada.
-3. **Cruzar com pelo menos duas fontes independentes** sempre que possível. Uma fonte única entra como `hipotese`, nunca como `verificado`.
-4. **Separar fato de interpretação.** "O estudo oficial não testou durabilidade de longo prazo" é fato, se o próprio estudo disser isso. "O governo quis prejudicar os consumidores" é interpretação — não entra como fato em nenhuma entrada.
-5. **Marcar lacunas explicitamente.** Se uma fonte generaliza além do que consegue provar (um caso único de oficina virando "toda a frota vai quebrar"), a entrada documenta o caso E a generalização não sustentada, lado a lado.
+1. **Identificar a fonte da alegação.** Rede social, vídeo, print? Ponto de partida, nunca de chegada.
+2. **Buscar a norma, o processo, a comparação de preço ou o dado bruto correspondente** conforme a trilha.
+3. **Cruzar com pelo menos duas fontes independentes** sempre que possível. Fonte única → status `hipotese`, não `verificado`.
+4. **Separar fato de interpretação.** O que o documento diz vs. o que alguém conclui que isso significa.
+5. **Marcar lacunas explicitamente** (“Atualização pendente”, `lacuna_reconhecida`).
 
-## Erros a evitar (lições do caso E32)
+## Erros a evitar
 
-- **Não equiparar mudança regulatória pública a fraude/adulteração.** São categorias diferentes — uma tem nome, data e resolução; a outra é feita para não ser percebida.
-- **Não promover crítica de terceira mão a fato verificado.** Uma caracterização de vídeo do YouTube feita por outra pessoa não é o mesmo que ler a transcrição.
-- **Não atribuir causa não comprovada.** Corrosão por água pode ser higroscopia natural do combustível ou contaminação/adulteração na cadeia — ambas as hipóteses ficam registradas até haver dado que decida entre elas.
-- **Não estender uma alegação de marca genérica para modelo específico sem fonte técnica do fabricante ou estudo independente.**
+- Equiparar mudança regulatória pública (Trilha 2) a fraude de rotulagem (Trilha 1).
+- Promover crítica de terceira mão a fato verificado.
+- Atribuir causa não comprovada.
+- Estender alegação genérica a caso específico sem fonte.
+- Usar a tese em disputa como `resumo_neutro` / manchete do card.
+- Forçar entrada que falhou no teste da trilha (ver `METHODOLOGY.md` §7.2).
 
 ## Ciclo de vida de uma entrada
 
-`sugestão via issue` → `checagem de fonte pela curadoria` → `PR com entrada no schema correto` → `revisão de rigor (status verificado/hipótese correto?)` → `merge`
+```
+sugestão (issue /contribuir ou data/_fila)
+  → checagem de fonte
+  → .md no schema em data/<trilha>/
+  → hero + heroes.ts (quando couber)
+  → npm run sync
+  → revisão de status
+  → merge / deploy
+```
 
-Entradas podem mudar de status ao longo do tempo (uma `hipotese` pode virar `verificado` se aparecer fonte técnica; um caso `contestado_judicialmente` é atualizado quando a Justiça decide).
+Entradas podem mudar de status ao longo do tempo (`hipotese` → `verificado`; `contestado_judicialmente` atualizado quando a Justiça decide).
