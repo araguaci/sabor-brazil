@@ -30,6 +30,50 @@ const ENTRY_HEROES: Record<string, HeroRef> = {
     src: '/artigos/rg-0006-leite-carne-vegetal-hero.png',
     alt: 'Capa — PL 10.556/2018 denominação leite e carne vegetal',
   },
+  'RT-0001': {
+    src: '/artigos/rt-0001-tipo-calabresa-hero.png',
+    alt: 'Capa — linguiça tipo calabresa vs linguiça calabresa',
+  },
+  'RT-0002': {
+    src: '/artigos/rt-0002-sabor-chocolate-hero.png',
+    alt: 'Capa — sabor chocolate vs chocolate',
+  },
+  'RT-0003': {
+    src: '/artigos/rt-0003-mistura-lactea-hero.png',
+    alt: 'Capa — mistura láctea condensada vs leite condensado',
+  },
+  'RT-0004': {
+    src: '/artigos/rt-0004-sabor-queijo-hero.png',
+    alt: 'Capa — preparado sabor queijo vs queijo',
+  },
+  'RT-0005': {
+    src: '/artigos/rt-0005-bebida-lactea-hero.png',
+    alt: 'Capa — bebida láctea vs iogurte',
+  },
+  'RT-0006': {
+    src: '/artigos/rt-0006-composto-lacteo-hero.png',
+    alt: 'Capa — composto lácteo vs leite em pó',
+  },
+  'RT-0007': {
+    src: '/artigos/rt-0007-doce-soro-hero.png',
+    alt: 'Capa — doce de soro sabor doce de leite',
+  },
+  'RT-0008': {
+    src: '/artigos/rt-0008-desconto-inss-hero.png',
+    alt: 'Capa — desconto associativo em benefício do INSS',
+  },
+  'RT-0009': {
+    src: '/artigos/rt-0009-sabor-cafe-hero.png',
+    alt: 'Capa — pó sabor café vs café',
+  },
+  'RT-0010': {
+    src: '/artigos/rt-0010-nectar-refresco-hero.png',
+    alt: 'Capa — néctar/refresco vs suco',
+  },
+  'RT-0011': {
+    src: '/artigos/rt-0011-sabor-manteiga-hero.png',
+    alt: 'Capa — creme vegetal sabor manteiga vs manteiga',
+  },
   'RT-0012': {
     src: '/artigos/rt-0012-azeite-adulterado-hero.png',
     alt: 'Capa — azeite extravirgem adulterado com outros óleos',
