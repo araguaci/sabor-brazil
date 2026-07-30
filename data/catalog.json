@@ -1,18 +1,18 @@
 {
   "version": 1,
-  "generated_at": "2026-07-30T02:23:02.109Z",
+  "generated_at": "2026-07-30T02:52:20.026Z",
   "site": "https://sabor-brazil.vercel.app",
   "schema": "schema/entry-schema.md",
   "endpoint": "/catalog.json",
   "counts": {
-    "total": 18,
+    "total": 21,
     "por_trilha": {
-      "institucional": 4,
+      "institucional": 7,
       "regulatorio": 3,
       "rotulagem": 11
     },
     "por_status": {
-      "argumento_juridico_fundamentado": 4,
+      "argumento_juridico_fundamentado": 7,
       "contestado_judicialmente": 2,
       "verificado": 12
     }
@@ -188,7 +188,7 @@
       "titulo": "Sigilo de 100 anos sobre registros de visitas a Daniel Vorcaro na Superintendência da PF",
       "status": "argumento_juridico_fundamentado",
       "data_entrada": "Tue Jul 28 2026 21:00:00 GMT-0300 (Horário Padrão de Brasília)",
-      "resumo_neutro": "O Ministério da Justiça manteve, em recurso de LAI movido pela coluna de Malu Gaspar, o sigilo de 100 anos imposto pela PF sobre a lista de visitantes de Daniel Vorcaro durante sua custódia na Superintendência da PF em Brasília; a Justificativa invoca proteção à intimidade, mas o mesmo padrão de recusa se repete no Senado.",
+      "resumo_neutro": "O Ministério da Justiça manteve, em recurso de LAI movido pela coluna de Malu Gaspar, o sigilo de 100 anos imposto pela PF sobre a lista de visitantes de Daniel Vorcaro durante sua custódia na Superintendência da PF em Brasília; a justificativa invoca proteção à intimidade, mas o mesmo padrão de recusa se repete no Senado.",
       "dispositivo_legal": "Lei nº 12.527/2011 (Lei de Acesso à Informação — LAI), art. 3º, I, que estabelece a publicidade como regra geral da administração pública; Lei nº 8.159/1991 (Lei de Arquivos), art. 23, que permite restringir por até 100 anos o acesso a documentos cuja divulgação possa afetar a intimidade, a vida privada, a honra ou a imagem de pessoas",
       "fatos_checaveis": [
         "Daniel Vorcaro, fundador do Banco Master, ficou cerca de três meses (a partir de março de 2026) custodiado numa sala da Superintendência da PF em Brasília, durante negociação frustrada de acordo de colaboração premiada",
@@ -242,7 +242,200 @@
       "slug": "in-0004",
       "path": "data/institucional/IN-0004-sigilo-visitas-vorcaro-pf.md",
       "url": "/entrada/in-0004",
-      "body": "# Sigilo de 100 anos sobre visitas a Vorcaro na PF\n\n## Por que esta entrada é forte na mesma medida que IN-0003\n\nDispositivo legal citável e específico (LAI + Lei de Arquivos, com o mecanismo exato do \"sigilo centenário\" identificado), fatos com data e nomes de autoridades responsáveis, argumento atribuído a uma fonte jornalística concreta (não postagem anônima), contraponto oficial documentado (o parecer do ouvidor-geral), e um padrão que se repete em outra instituição (Senado) — o que fortalece o teste de generalização em vez de depender de um episódio isolado.\n\n## O que ainda falta para elevar o status desta entrada\n\nO argumento contrário à decisão do Ministério (a tese de que a informação é de interesse público) não tem, até a data desta entrada, um jurista ou especialista em transparência nomeado individualmente nas fontes consultadas — apenas atribuição genérica a \"especialistas\". Isso é registrado como uma lacuna: se uma fonte nomear especificamente quem defende essa posição (ex: representante da Fiquem Sabendo, Artigo 19, ou pesquisador de transparência), a entrada deve ser atualizada para atribuir a tese com mais precisão.\n\n## Ver também\n\nEsta entrada integra o mesmo cluster de investigação do caso Banco Master/Vorcaro já documentado no corpus do lawfare-timeline (IDs 1481-1500, Operações Compliance Zero e Carbono Oculto). Diferente daquele material, aqui o recorte é estritamente sobre a decisão de sigilo em si — não sobre o mérito das acusações de fraude contra Vorcaro.\n\n## Atualização pendente\n\nLocalizar posição nomeada de especialista em transparência/acesso à informação sobre o caso; acompanhar se a decisão será contestada judicialmente ou junto à Controladoria-Geral da União (CGU), instância de recurso após o Ministério."
+      "body": "# Sigilo de 100 anos sobre visitas a Vorcaro na PF\n\n## Por que esta entrada é forte na mesma medida que [IN-0003](/entrada/in-0003)\n\nDispositivo legal citável e específico (LAI + Lei de Arquivos, com o mecanismo exato do \"sigilo centenário\" identificado), fatos com data e nomes de autoridades responsáveis, argumento atribuído a uma fonte jornalística concreta (não postagem anônima), contraponto oficial documentado (o parecer do ouvidor-geral), e um padrão que se repete em outra instituição (Senado) — o que fortalece o teste de generalização em vez de depender de um episódio isolado.\n\n## A tese em disputa\n\nAtribuída à coluna de Malu Gaspar e a especialistas em transparência citados na imprensa — **não** posição do Sabor Brazil:\n\n> A LAI estabelece a publicidade como regra; classificar por 100 anos a lista de visitantes de um custodiado sob suspeita de fraude bilionária, especialmente quando há indício de que advogados ligados a políticos o visitavam, subverte a exceção (proteção à intimidade) em regra, blindando informação de interesse público sob justificativa de dados pessoais de terceiros.\n\n## O que ainda falta para elevar o status desta entrada\n\nO argumento contrário à decisão do Ministério (a tese de que a informação é de interesse público) não tem, até a data desta entrada, um jurista ou especialista em transparência nomeado individualmente nas fontes consultadas — apenas atribuição genérica a \"especialistas\". Isso é registrado como uma lacuna: se uma fonte nomear especificamente quem defende essa posição (ex: representante da Fiquem Sabendo, Artigo 19, ou pesquisador de transparência), a entrada deve ser atualizada para atribuir a tese com mais precisão.\n\n## Ver também\n\nEsta entrada integra o mesmo cluster de investigação do caso Banco Master/Vorcaro já documentado no corpus do [lawfare-timeline](https://lawfare-timeline.vercel.app) (IDs 1481-1500, Operações Compliance Zero e Carbono Oculto). Diferente daquele material, aqui o recorte é estritamente sobre a decisão de sigilo em si — não sobre o mérito das acusações de fraude contra Vorcaro.\n\n## Atualização pendente\n\nLocalizar posição nomeada de especialista em transparência/acesso à informação sobre o caso; acompanhar se a decisão será contestada judicialmente ou junto à Controladoria-Geral da União (CGU), instância de recurso após o Ministério."
+    },
+    {
+      "id": "IN-0005",
+      "trilha": "institucional",
+      "titulo": "Adesão do Brasil à WAICO (organização de governança de IA liderada pela China) e o enquadramento oficial como 'acompanhamento técnico'",
+      "status": "argumento_juridico_fundamentado",
+      "data_entrada": "Tue Jul 28 2026 21:00:00 GMT-0300 (Horário Padrão de Brasília)",
+      "resumo_neutro": "Brasil assinou em 16/07/2026 o acordo constitutivo da WAICO, organização de governança de IA liderada pela China e sem os EUA entre os fundadores; nota oficial descreve a adesão como acompanhamento de debates multilaterais, enquanto análise jurídica especializada nota que a ratificação pelo Congresso ainda está pendente e que o país corre em paralelo dois modelos regulatórios de IA distintos.",
+      "dispositivo_legal": "Art. 49, I da CF/88 — competência exclusiva do Congresso Nacional para resolver definitivamente sobre tratados, acordos ou atos internacionais que acarretem encargos ou compromissos gravosos ao patrimônio nacional; prática constitucional consolidada de que a assinatura pelo Executivo antecede, sem irregularidade em si, a ratificação congressual (ad referendum)",
+      "fatos_checaveis": [
+        "Em 16/07/2026, na Conferência Mundial de Inteligência Artificial em Xangai, Brasil assina o acordo constitutivo da WAICO (World AI Cooperation Organization) ao lado de 28 outros países, incluindo Rússia, Paquistão, Indonésia, África do Sul, Cuba, Venezuela e Belarus",
+        "Os EUA não integram a lista de fundadores da WAICO; em paralelo, promovem iniciativa concorrente ('Pax Silica' + 'AI Opportunity Statement') com 35 países",
+        "Nota conjunta dos ministérios brasileiros de Ciência/Tecnologia, Relações Exteriores e Gestão da Inovação enquadra a adesão como 'acompanhamento dos debates internacionais' e 'fortalecimento de mecanismos multilaterais de cooperação tecnológica'",
+        "Tramita no Congresso Nacional, em paralelo, o PL 2.338/2023, que adota modelo de regulação de IA inspirado no AI Act europeu, com classificação de risco e obrigações de conformidade",
+        "Até a data desta entrada, a ratificação da participação brasileira na WAICO pelo Congresso Nacional (art. 49, I da CF) ainda não ocorreu, nem foi definido o órgão que representará oficialmente o país na nova organização"
+      ],
+      "fontes": [
+        {
+          "titulo": "Entre Bruxelas e Pequim: acordo com a China coloca Brasil em dois polos da regulação da IA",
+          "url": "https://conjur.com.br/2026-jul-27/entre-bruxelas-e-pequim-acordo-com-a-china-coloca-brasil-em-dois-polos-da-regulacao-da-ia/",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "Brasil assina fundação da WAICO, iniciativa da China para governança de IA",
+          "url": "https://teletime.com.br/16/07/2026/brasil-assina-fundacao-da-waico-iniciativa-da-china-para-governanca-de-ia/",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "Brasil adere à aliança de IA da China que reúne países autoritários",
+          "url": "https://www.gazetadopovo.com.br/republica/brasil-adere-a-alianca-de-ia-da-china-que-reune-paises-autoritarios/",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "China lança coalizão de 29 países para disputar com os EUA as regras globais da inteligência artificial",
+          "url": "https://www.forte.jor.br/2026/07/18/china-lanca-coalizao-de-29-paises-para-disputar-com-os-eua-as-regras-globais-da-inteligencia-artificial/",
+          "tipo": "reportagem"
+        }
+      ],
+      "argumento_juridico": {
+        "autor": "Análise jurídica publicada pela ConJur (Consultor Jurídico); enquadramento crítico mais direto em Gazeta do Povo",
+        "tese": "A adesão à WAICO, liderada pela China e explicitamente posicionada como alternativa às instâncias ocidentais de governança de IA (G7, OCDE), coexiste de forma tensa com a tramitação de um projeto de lei doméstico inspirado no modelo regulatório europeu — e o enquadramento oficial da adesão como mero 'acompanhamento técnico' descreve de forma mais branda um alinhamento que tem peso geopolítico real, com a ratificação pelo Congresso, etapa que discutiria esse peso publicamente, ainda pendente."
+      },
+      "contraponto": {
+        "existe": true,
+        "resumo": "A assinatura pelo Poder Executivo antes da ratificação do Congresso não é, por si, irregular — é o procedimento padrão de celebração de tratados no direito constitucional brasileiro (o Executivo assina ad referendum, cabendo ao Congresso resolver definitivamente depois, conforme art. 49, I). A nota oficial, além disso, enquadra a WAICO como mecanismo multilateral entre vários (não substitutivo do PL 2.338/2023), e a presença do Secretário-Geral da ONU, António Guterres, no evento de fundação, é usada por defensores da adesão como indicativo de legitimidade multilateral mais ampla, não de alinhamento bilateral exclusivo com a China.",
+        "fonte": "ConJur — ver campo fontes; presença de Guterres registrada nas fontes originais da entrada correspondente no corpus O Dragão e a Onça (ID 1718)"
+      },
+      "teste_generalizacao": "PASSA, com uma ressalva. A pergunta — 'o Executivo deveria enquadrar publicamente, de forma mais explícita, o peso geopolítico de uma adesão internacional pendente de ratificação do Congresso, em vez de descrevê-la em linguagem técnica genérica?' — é uma questão de transparência e desenho institucional que se sustenta em abstrato. A ressalva: assinatura prévia à ratificação é prática constitucional normal, então esta entrada não documenta uma irregularidade processual (diferente do IN-0003 e IN-0004) — documenta uma tensão entre enquadramento oficial e significado geopolítico, que só se resolve de fato quando (e se) o Congresso debater a ratificação.",
+      "tags": [
+        "china",
+        "waico",
+        "ia",
+        "soberania",
+        "tratados-internacionais",
+        "congresso"
+      ],
+      "slug": "in-0005",
+      "path": "data/institucional/IN-0005-waico-china-soberania.md",
+      "url": "/entrada/in-0005",
+      "body": "# Adesão à WAICO e o enquadramento oficial da decisão\n\n## Por que esta entrada é mais cautelosa que [IN-0003](/entrada/in-0003) e [IN-0004](/entrada/in-0004)\n\nDiferente das duas entradas anteriores da Trilha 3, aqui não há indício de irregularidade processual — o Executivo brasileiro tem competência para assinar acordos internacionais antes da ratificação do Congresso, e isso é prática constitucional corrente, não um desvio. O que esta entrada documenta é mais sutil: a diferença entre a linguagem oficial usada para descrever a adesão (\"acompanhamento de debates internacionais\") e o peso geopolítico que a própria cobertura jornalística especializada (incluindo uma publicação jurídica, não só veículos de opinião) atribui ao gesto — sobretudo por coexistir com um projeto de lei doméstico de inspiração europeia e por a WAICO se posicionar explicitamente como alternativa às instâncias ocidentais de governança de IA.\n\n## A tese em disputa\n\nAtribuída à análise da ConJur e ao enquadramento crítico da Gazeta do Povo — **não** posição do Sabor Brazil:\n\n> A adesão à WAICO, liderada pela China e explicitamente posicionada como alternativa às instâncias ocidentais de governança de IA (G7, OCDE), coexiste de forma tensa com a tramitação de um projeto de lei doméstico inspirado no modelo regulatório europeu — e o enquadramento oficial da adesão como mero \"acompanhamento técnico\" descreve de forma mais branda um alinhamento que tem peso geopolítico real, com a ratificação pelo Congresso, etapa que discutiria esse peso publicamente, ainda pendente.\n\n## O que fica de fora desta entrada\n\nA tese de que a WAICO seria uma \"aliança de países autoritários\" (enquadramento da Gazeta do Povo) é registrada como argumento de uma fonte específica, não como fato — a lista de fundadores inclui também democracias como África do Sul, Indonésia e o próprio Brasil, ao lado de Rússia, Cuba, Venezuela e Belarus, então a caracterização do bloco como um todo depende de critério de quem classifica, e não é tratada aqui como consenso.\n\n## Atualização pendente\n\nAcompanhar a tramitação da ratificação da adesão à WAICO no Congresso Nacional (art. 49, I da CF) e a definição do órgão brasileiro de representação na organização — o desfecho desse processo é o que efetivamente testará se o Legislativo debaterá publicamente o peso geopolítico da adesão, ou se ratificará o feito consumado sem debate substantivo.\n\n## Ver também\n\nEsta entrada deriva do corpus [O Dragão e a Onça](https://odragaoeaonca.vercel.app/) (ID 1718), que documenta a relação Brasil-China em 17 capítulos temáticos. Cluster correlato: [IN-0006](/entrada/in-0006) (Mineração Taboca) e [IN-0007](/entrada/in-0007) (Ferrovia do Pará)."
+    },
+    {
+      "id": "IN-0006",
+      "trilha": "institucional",
+      "titulo": "Mineração Taboca: controle por estatal chinesa de minerais críticos e acordo direto com comunidade indígena sem mediação do MPF",
+      "status": "argumento_juridico_fundamentado",
+      "data_entrada": "Tue Jul 28 2026 21:00:00 GMT-0300 (Horário Padrão de Brasília)",
+      "resumo_neutro": "A Mineração Taboca, sob controle da estatal chinesa China Nonferrous desde 2024, é investigada pelo MPF por contaminação de rios na Terra Indígena Waimiri Atroari; a empresa firmou diretamente com a associação indígena um repasse de R$ 12,3 milhões, sem mediação do MPF, dois dias após lideranças declararem desconfiança total — o MPF vê o acordo com preocupação.",
+      "dispositivo_legal": "Art. 231, §3º da CF/88 (aproveitamento de recursos hídricos e pesquisa/lavra de riquezas minerais em terras indígenas depende de autorização do Congresso Nacional, ouvidas as comunidades afetadas); Convenção 169 da OIT sobre Povos Indígenas e Tribais, ratificada pelo Brasil via Decreto nº 5.051/2004 (direito à consulta prévia, livre e informada); Termo de Ajustamento de Conduta (TAC) firmado entre a empresa e o MPF em 2019, citado pela própria Taboca como base de sua relação institucional com a ACWA",
+      "fatos_checaveis": [
+        "A Mineração Taboca opera desde 1982 a mina de Pitinga (Presidente Figueiredo, AM), extraindo cassiterita, tântalo e nióbio, com estudos para extração de terras raras",
+        "Em 2024, a China Nonferrous Metal Mining Group (estatal chinesa) adquire o controle da Taboca e assume diretrizes de expansão operacional",
+        "Relatos de fiscais ambientais indígenas apontam lançamento de sedimentos desde março de 2021; em 12/05/2021, rejeitos atingiram a aldeia Arykawa, comprometendo o abastecimento de água potável",
+        "Em 2025, o MPF reabre o Inquérito Civil nº 1.13.000.002675/2025-46 sobre possível contaminação por metais pesados",
+        "Em janeiro de 2026, a empresa anuncia US$ 100 milhões em investimento para dobrar a produção até 2028, com planos de quadruplicá-la até 2035, segundo o MPF",
+        "Em 2026, a Taboca firma diretamente com a Associação Comunidade Waimiri Atroari (ACWA) o Termo de Cooperação nº 01/2026, repassando R$ 12,3 milhões, sem participação, anuência ou mediação institucional dos procuradores federais — dois dias depois de lideranças indígenas expressarem desconfiança total contra a empresa",
+        "O MPF recomenda que o Ibama assuma o licenciamento da mina e que a ANM impeça a expansão da lavra até a adoção de medidas de contenção e reparação; fiscais do Ibama constataram que a lavra extrapolou os limites das licenças geográficas",
+        "A Polícia Federal também abriu investigação sobre a contaminação, após reportagem do Repórter Brasil (Rainforest Investigations Fellowship)"
+      ],
+      "fontes": [
+        {
+          "titulo": "MPF investiga Mineração Taboca por colapso ambiental no Amazonas",
+          "url": "https://revistacenarium.com.br/mpf-investiga-mineracao-taboca-por-colapso-ambiental-no-amazonas/",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "Temor de Contaminação por Mineração Reacende Alerta para o Povo Waimiri Atroari",
+          "url": "https://jornalimpressobrasil.com.br/mineracao-waimiri-atroari-contaminacao-amazonas/",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "Íntegra da resposta da Mineração Taboca",
+          "url": "https://reporterbrasil.org.br/2026/03/integra-da-resposta-da-mineracao-taboca-waimiri-atroari/",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "MPF aponta contaminação por metais pesados de rios na TI Waimiri Atroari",
+          "url": "https://revistacenarium.com.br/mpf-aponta-contaminacao-por-metais-pesados-de-rios-na-ti-waimiri-atroari-no-amazonas/",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "PF vai investigar mineradora por contaminação em terra indígena no Amazonas",
+          "url": "https://pulitzercenter.org/stories/brazilian-federal-police-investigate-mining-company-pollution-indigenous-land-amazonas",
+          "tipo": "reportagem"
+        }
+      ],
+      "argumento_juridico": {
+        "autor": "Ministério Público Federal (procurador federal Fernando Merloto Soave, Manaus) e Ibama, por meio de recomendações e do inquérito civil",
+        "tese": "A assinatura de acordo financeiro direto entre a mineradora e a associação indígena, sem mediação do MPF, e logo após manifestação pública de desconfiança das lideranças, é vista com preocupação por poder enfraquecer a capacidade de negociação da comunidade e contornar a instância institucional que deveria mediar a relação em contexto de investigação ambiental em curso."
+      },
+      "contraponto": {
+        "existe": true,
+        "resumo": "A Mineração Taboca afirma manter, há anos, relação de diálogo, respeito e cooperação com a ACWA, incluindo convênios voluntários para projetos escolhidos pela própria Associação, além de cumprimento integral do TAC firmado com o MPF em 2019. A empresa também contesta a validade metodológica do relatório da Aqua Viridi (enviado pela FUNAI ao MPF), citando lacunas que comprometeriam a reprodutibilidade das conclusões, e afirma manter monitoramento ambiental contínuo por consultorias independentes credenciadas.",
+        "fonte": "Repórter Brasil, íntegra da resposta da empresa — ver campo fontes"
+      },
+      "teste_generalizacao": "PASSA. A pergunta — 'uma empresa sob investigação por dano ambiental deveria poder firmar acordo financeiro direto com a comunidade afetada, contornando o órgão federal que já medeia essa relação, logo após a comunidade expressar desconfiança pública?' — é uma questão de salvaguarda institucional que se sustenta em abstrato, independente da nacionalidade do controlador da empresa. A dimensão de soberania sobre minerais críticos (cassiterita, tântalo, nióbio, terras raras, sob controle de estatal estrangeira, com planos de quadruplicar produção até 2035) é contexto relevante mas não é o núcleo do argumento jurídico documentado aqui — o núcleo é o desvio da mediação institucional, categoria que se aplicaria da mesma forma a uma mineradora nacional ou de qualquer outro país.",
+      "tags": [
+        "china",
+        "mineracao",
+        "taboca",
+        "terras-raras",
+        "mpf",
+        "indigenas",
+        "soberania",
+        "minerais-criticos"
+      ],
+      "slug": "in-0006",
+      "path": "data/institucional/IN-0006-mineracao-taboca-china.md",
+      "url": "/entrada/in-0006",
+      "body": "# Mineração Taboca: controle estrangeiro de minerais críticos e mediação institucional contornada\n\n## Por que esta entrada mistura soberania com direitos indígenas, e como isso é tratado\n\nO caso tem duas camadas que merecem separação clara: **(1)** o fato de um ativo mineral estratégico (nióbio, tântalo, terras raras — todos na lista de minerais críticos, PL 2.780/2024) estar sob controle de uma estatal de governo estrangeiro, com planos de expansão agressiva (dobrar até 2028, quadruplicar até 2035, segundo o MPF); **(2)** o fato específico e checável de a empresa ter contornado a mediação do MPF ao negociar diretamente com a comunidade indígena logo após esta expressar desconfiança. A entrada documenta ambas, mas o argumento jurídico central (campo `argumento_juridico`) é sobre a segunda camada — a primeira é contexto relevante para entender por que o caso importa para a discussão de soberania sobre recursos estratégicos, mas não é, em si, uma alegação de ilegalidade.\n\n## A tese em disputa\n\nAtribuída ao MPF (procurador Fernando Merloto Soave) e ao Ibama — **não** posição do Sabor Brazil:\n\n> A assinatura de acordo financeiro direto entre a mineradora e a associação indígena, sem mediação do MPF, e logo após manifestação pública de desconfiança das lideranças, é vista com preocupação por poder enfraquecer a capacidade de negociação da comunidade e contornar a instância institucional que deveria mediar a relação em contexto de investigação ambiental em curso.\n\n## O que fica de fora\n\nNão trato como fato estabelecido que a contaminação tenha, de fato, nexo causal com as operações da Taboca — a própria empresa contesta isso, e o MPF trata o assunto como objeto de inquérito civil em andamento, não como conclusão fechada. A entrada documenta a investigação e a controvérsia sobre o acordo direto, não um veredito sobre contaminação.\n\n## Atualização pendente\n\nAcompanhar o desfecho do Inquérito Civil nº 1.13.000.002675/2025-46, a investigação da Polícia Federal, e eventual manifestação do MPF especificamente sobre a validade ou os efeitos do Termo de Cooperação nº 01/2026 firmado sem sua mediação.\n\n## Ver também\n\nCorpus [O Dragão e a Onça](https://odragaoeaonca.vercel.app/) (IDs 1667, 1671, 1672). Tema irmão: [IN-0007](/entrada/in-0007) (Ferrovia do Pará — consulta prévia). Contexto de cluster: [IN-0005](/entrada/in-0005) (WAICO)."
+    },
+    {
+      "id": "IN-0007",
+      "trilha": "institucional",
+      "titulo": "Ferrovia do Pará: acordos com construtora chinesa assinados antes da consulta prévia a comunidades tradicionais",
+      "status": "argumento_juridico_fundamentado",
+      "data_entrada": "Tue Jul 28 2026 21:00:00 GMT-0300 (Horário Padrão de Brasília)",
+      "resumo_neutro": "O governo do Pará assinou protocolo de intenções (2019) e memorando de entendimento em Pequim (2023) com a construtora chinesa CCCC para a Ferrovia do Pará antes de concluir a consulta prévia, livre e informada a comunidades indígenas, quilombolas e agroextrativistas afetadas pelo traçado; o Estado criou posteriormente um grupo de trabalho para a consulta, e o projeto segue para audiências públicas em 2026.",
+      "dispositivo_legal": "Convenção 169 da OIT sobre Povos Indígenas e Tribais, ratificada pelo Brasil (Decreto Legislativo nº 143/2002, promulgada pelo Decreto nº 5.051/2004), arts. 6º e 7º — obrigatoriedade de consulta prévia, livre e informada sempre que planos ou programas de desenvolvimento possam afetar diretamente povos indígenas e comunidades tradicionais, distinta da Audiência Pública prevista na legislação de licenciamento ambiental",
+      "fatos_checaveis": [
+        "Em 12/11/2019, o governador Helder Barbalho assina protocolo de intenções com a CCCC para estudos de viabilidade da Ferrovia do Pará (Marabá-Barcarena, 492 km, R$7 bilhões), sem consulta prévia concluída às comunidades ao longo do traçado",
+        "Reportagens de novembro/2019 (Brasil de Fato, FASE) registram moradores de Barcarena afirmando que ninguém havia dialogado com a comunidade sobre o projeto até aquele momento",
+        "Em 14/04/2023 e novamente em 14/04/2023, o governador assina memorando de entendimento em Pequim com a CCCC (representada por Sun Liqiang) e a Vale, revisando o valor para R$10 bilhões (US$2 bilhões)",
+        "O RIMA do projeto (2021, SEMAS) identifica impactos diretos e indiretos sobre 11 comunidades e vilas, 2 assentamentos (5.459 hectares, 123 famílias), 3 acampamentos (528 famílias), 189 fazendas e 7 comunidades quilombolas, numa área de 34.942 hectares",
+        "O mesmo RIMA afirma que, após consulta à Funai, não haveria interferência em Terras Indígenas demarcadas",
+        "Representante da Malungu (Coordenação das Associações das Comunidades Remanescentes de Quilombos do Pará) questiona, em audiência, que o estudo reconhece apenas comunidades quilombolas tituladas pelo Incra, não as tituladas pelo Iterpa (órgão estadual), e aponta confusão entre 'Audiência Pública' e 'Consulta Prévia, Livre e Informada'",
+        "A Sedeme (Secretaria de Desenvolvimento Econômico do Pará) anuncia a criação de grupo de trabalho para realização de consultas prévias, livres e informadas, em resposta às críticas",
+        "Em 24/05/2026, o projeto avança para fase de audiências públicas, com início de obras previsto para o primeiro semestre de 2027"
+      ],
+      "fontes": [
+        {
+          "titulo": "Governo do Pará anuncia ferrovia e comunidades temem 'mais mortes e mais sofrimento'",
+          "url": "https://fase.org.br/pt/noticias/governo-do-para-anuncia-ferrovia-e-comunidades-temem-mais-mortes-e-mais-sofrimento/",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "Projeto da Ferrovia Paraense S.A. desrespeita direitos de povos indígenas e comunidades tradicionais",
+          "url": "https://fase.org.br/pt/noticias/projeto-da-ferrovia-paraense-s-a-desrespeita-direitos-de-povos-indigenas-e-comunidades-tradicionais/",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "Ferrovia Paraense: projeto é crucial à nova fase da economia da Amazônia",
+          "url": "https://www.liberalamazon.com/pt-BR/infraestrutura/news/ferrovia-paraense-projeto-e-crucial-a-nova-fase-da-economia-da-amazonia",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "Divididos pela mineração: indígenas no Pará lutam para manter a identidade do seu povo",
+          "url": "https://observatoriodamineracao.com.br/divididos-pela-mineracao-indigenas-no-para-lutam-para-manter-a-identidade-do-seu-povo-contra-a-ferrovia-que-alimenta-a-siderurgia-global/",
+          "tipo": "reportagem"
+        }
+      ],
+      "argumento_juridico": {
+        "autor": "FASE (Federação de Órgãos para Assistência Social e Educacional) e Malungu (Coordenação das Associações das Comunidades Remanescentes de Quilombos do Pará), em manifestações e reportagens sobre audiências do projeto",
+        "tese": "O governo do Pará assinou compromissos financeiros e políticos com a construtora chinesa antes de realizar a consulta prévia, livre e informada exigida pela Convenção 169 da OIT, tratando posteriormente a exigência como etapa administrativa a ser regularizada, não como condição prévia ao acordo — e restringiu o reconhecimento de comunidades afetadas àquelas tituladas por órgão federal (Incra), excluindo as tituladas por órgão estadual (Iterpa)."
+      },
+      "contraponto": {
+        "existe": true,
+        "resumo": "O RIMA do projeto (2021) registra que a Funai foi consultada e concluiu não haver interferência em Terras Indígenas demarcadas — ou seja, o Estado sustenta ter seguido o rito de licenciamento ambiental aplicável às terras já homologadas. Em resposta às críticas, a Sedeme criou grupo de trabalho especificamente para conduzir as consultas prévias, livres e informadas, e o projeto formalmente ainda não concluiu o licenciamento — as audiências públicas de 2026 são etapa desse processo, não uma formalidade posterior a uma decisão já tomada de forma irreversível.",
+        "fonte": "RIMA — Ferrovia do Pará (SEMAS, 2021), citado por Liberal Amazon; anúncio da Sedeme sobre grupo de trabalho, mesma fonte"
+      },
+      "teste_generalizacao": "PASSA. A pergunta — 'um governo deveria assinar memorandos financeiros com parceiro internacional antes de concluir a consulta prévia às comunidades que o projeto afeta, tratando a consulta como etapa a ser regularizada depois?' — é uma questão de sequenciamento e boa-fé processual que se sustenta em abstrato, independente de o parceiro ser chinês, europeu ou nacional. A nacionalidade do investidor (CCCC, estatal chinesa) é contexto relevante para o cluster de soberania sobre infraestrutura estratégica, mas o argumento central é sobre ordem processual e reconhecimento desigual de titulação (Incra vs. Iterpa), replicável a qualquer financiador.",
+      "tags": [
+        "china",
+        "ferrovia-do-para",
+        "consulta-previa",
+        "convencao-169",
+        "quilombolas",
+        "soberania"
+      ],
+      "slug": "in-0007",
+      "path": "data/institucional/IN-0007-ferrovia-do-para-consulta-previa.md",
+      "url": "/entrada/in-0007",
+      "body": "# Ferrovia do Pará: consulta prévia e o problema do sequenciamento\n\n## Por que esta entrada trata separadamente \"atraso na consulta\" de \"ausência de consulta\"\n\nAs fontes mostram uma evolução ao longo do tempo, não um quadro estático: em 2019, moradores relatam ausência total de diálogo; ao longo do processo, sob pressão, a Sedeme cria um grupo de trabalho dedicado à consulta prévia. Isso é tratado aqui como **atraso e sequenciamento invertido** (compromissos financeiros assinados antes da consulta concluída), não como ausência definitiva de consulta — o processo, pelas fontes disponíveis até a data desta entrada, segue em andamento, com audiências públicas ocorrendo em 2026.\n\n## A tese em disputa\n\nAtribuída à FASE e à Malungu — **não** posição do Sabor Brazil:\n\n> O governo do Pará assinou compromissos financeiros e políticos com a construtora chinesa antes de realizar a consulta prévia, livre e informada exigida pela Convenção 169 da OIT, tratando posteriormente a exigência como etapa administrativa a ser regularizada, não como condição prévia ao acordo — e restringiu o reconhecimento de comunidades afetadas àquelas tituladas por órgão federal (Incra), excluindo as tituladas por órgão estadual (Iterpa).\n\n## O ponto mais específico e menos discutido publicamente\n\nA alegação da Malungu sobre reconhecimento desigual de titulação (comunidades tituladas pelo Incra reconhecidas, pelo Iterpa não) é um argumento técnico-jurídico específico, não uma alegação genérica de desrespeito — e não localizei, até a data desta entrada, resposta oficial pontual do governo do Pará sobre esse argumento específico. Fica registrado como lacuna.\n\n## Atualização pendente\n\nAcompanhar o resultado das audiências públicas de 2026, a atuação do grupo de trabalho da Sedeme, e se a crítica sobre titulação Incra/Iterpa recebeu resposta formal do Estado antes do início das obras previsto para 2027.\n\n## Ver também\n\nCorpus [O Dragão e a Onça](https://odragaoeaonca.vercel.app/) (IDs 1654, 1655, 1656). Tema irmão: [IN-0006](/entrada/in-0006) (Mineração Taboca). Contexto de cluster: [IN-0005](/entrada/in-0005) (WAICO)."
     },
     {
       "id": "RG-0001",
