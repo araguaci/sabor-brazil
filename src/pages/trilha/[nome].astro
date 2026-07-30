@@ -4,12 +4,11 @@ export const prerender = true;
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import EntryCard from '../../components/EntryCard.astro';
 import TopicIcon from '../../components/TopicIcon.astro';
-import { getEntriesByTrilha, type Trilha } from '../../lib/entries';
+import { getEntriesByTrilha, TRILHAS, type Trilha } from '../../lib/entries';
 import { trilhaMeta } from '../../lib/topic-icon';
 
 export function getStaticPaths() {
-  const trilhas: Trilha[] = ['rotulagem', 'regulatorio', 'institucional'];
-  return trilhas.map((nome) => ({ params: { nome } }));
+  return TRILHAS.map((nome) => ({ params: { nome } }));
 }
 
 const nome = Astro.params.nome as Trilha;

@@ -102,6 +102,14 @@ const pageTitle = title.includes('Sabor Brazil') ? title : `${title} — Sabor B
             <TopicIcon name="landmark" size={13} />
             Institucional
           </a>
+          <a href="/trilha/superfaturamento" aria-current={pathname.startsWith('/trilha/superfaturamento') ? 'page' : undefined}>
+            <TopicIcon name="banknote" size={13} />
+            Superfaturamento
+          </a>
+          <a href="/trilha/correlacao" aria-current={pathname.startsWith('/trilha/correlacao') ? 'page' : undefined}>
+            <TopicIcon name="chart" size={13} />
+            Correlação
+          </a>
           <a href="/contribuir" aria-current={pathname.startsWith('/contribuir') ? 'page' : undefined}>
             <TopicIcon name="plus" size={13} />
             Encontrei um sabor

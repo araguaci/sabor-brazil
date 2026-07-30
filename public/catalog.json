@@ -1,23 +1,116 @@
 {
   "version": 1,
-  "generated_at": "2026-07-30T02:52:20.026Z",
+  "generated_at": "2026-07-30T15:21:34.206Z",
   "site": "https://sabor-brazil.vercel.app",
   "schema": "schema/entry-schema.md",
   "endpoint": "/catalog.json",
   "counts": {
-    "total": 21,
+    "total": 28,
     "por_trilha": {
-      "institucional": 7,
+      "correlacao": 2,
+      "institucional": 9,
       "regulatorio": 3,
-      "rotulagem": 11
+      "rotulagem": 11,
+      "superfaturamento": 3
     },
     "por_status": {
-      "argumento_juridico_fundamentado": 7,
+      "hipotese": 2,
+      "argumento_juridico_fundamentado": 9,
       "contestado_judicialmente": 2,
-      "verificado": 12
+      "verificado": 15
     }
   },
   "entradas": [
+    {
+      "id": "CR-0001",
+      "trilha": "correlacao",
+      "titulo": "'Pão e circo': a correlação entre pobreza regional e gasto público com shows no Nordeste",
+      "status": "hipotese",
+      "data_entrada": "Tue Jul 28 2026 21:00:00 GMT-0300 (Horário Padrão de Brasília)",
+      "resumo_neutro": "O relatório 'Farras' (De Olho nos Ruralistas) documenta que o Nordeste concentra 78-80% dos shows financiados com dinheiro público no Brasil (R$ 2,22 bi, jan/2024-mar/2026); uma alegação viral usa esse dado real para concluir que há uma lógica deliberada de 'pão e circo' na região mais pobre do país — esta entrada isola o dado do salto de causalidade.",
+      "dado_real": {
+        "afirmacao": "78-80% dos shows financiados com dinheiro público no Brasil (5.818 de 7.412 apresentações) ocorreram no Nordeste entre janeiro de 2024 e março de 2026, somando R$ 2,22 bilhões em cachês pagos por estados e prefeituras.",
+        "fonte": "Relatório 'Farras', observatório De Olho nos Ruralistas, jul/2026"
+      },
+      "salto_logico": {
+        "conclusao_alegada": "A região com maiores índices de pobreza, violência, analfabetismo e déficit de saneamento concentra também o maior gasto público com festas — o que a alegação viral interpreta como 'lógica de pão e circo', sugerindo intenção deliberada de distrair a população de investimentos estruturantes.",
+        "onde_quebra": "O dado mostra correlação regional entre indicadores sociais e volume de shows públicos, mas não estabelece de onde vem o dinheiro (rubricas de turismo e cultura, tipicamente, não competem diretamente com verbas carimbadas de saúde/saneamento/educação, que têm dotação orçamentária própria e frequentemente vinculação constitucional mínima obrigatória — Emenda Constitucional 29 para saúde, por exemplo). A alegação também não controla por fatores estruturais alternativos: o Nordeste tem calendário de festas populares mais denso (São João, carnaval fora de época, festejos regionais) e forte cadeia produtiva de entretenimento (piseiro, forró, arrocha) com produtoras locais de peso — fatores culturais e econômicos de mercado, não apenas decisão de gestor público, ajudam a explicar a concentração geográfica."
+      },
+      "contraponto_estrutural": "É simultaneamente verdadeiro que: (1) o Nordeste concentra mais shows públicos e (2) isso pode refletir infraestrutura cultural regional consolidada e não uma escolha de substituir investimento estruturante por entretenimento — as duas explicações não são mutuamente excludentes, e a alegação viral escolhe apenas a interpretação mais acusatória sem descartar a outra.",
+      "fontes": [
+        {
+          "titulo": "Nordeste concentra quase 80% dos shows financiados com dinheiro público no Brasil",
+          "url": "https://portaldeolho.com.br/destaques/nordeste-concentra-quase-80-dos-shows-financiados-com-dinheiro-publico-no-brasil/",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "Farras: relatório completo sobre gastos públicos com shows",
+          "url": "https://deolhonosruralistas.com.br/2026/07/07/farras-nordeste/",
+          "tipo": "reportagem"
+        }
+      ],
+      "tags": [
+        "correlacao",
+        "pao-e-circo",
+        "nordeste",
+        "cultura",
+        "gasto-publico"
+      ],
+      "slug": "cr-0001",
+      "path": "data/correlacao/pao-e-circo-nordeste-shows.md",
+      "url": "/entrada/cr-0001",
+      "body": "# \"Pão e circo\": onde o dado real termina e a conclusão começa\n\n## Por que esta entrada existe\n\nEsta é a primeira entrada da Trilha 5 e serve de modelo do padrão: o dado (concentração regional de gasto público com shows) é real, verificado e relevante para debate público sobre prioridades orçamentárias. A conclusão de que isso configura \"pão e circo\" — estratégia deliberada de distração da população através de entretenimento financiado, insinuando má-fé de gestores — é o salto que a entrada não valida, porque não há, nas fontes disponíveis, evidência de que o dinheiro gasto com shows tenha vindo de rubricas que, de outra forma, seriam aplicadas em saneamento, saúde ou educação.\n\n## O que a entrada não faz\n\nNão conclui que gasto público com shows seja necessariamente bem aplicado, nem que a crítica sobre prioridades orçamentárias seja ilegítima como pauta de debate público — ambas são posições defensáveis. O que a entrada não permite é o salto de \"dado de concentração regional\" para \"prova de lógica de distração deliberada\" sem evidência adicional sobre a origem específica dos recursos.\n\n## Ligação com outras trilhas\n\nEsta entrada não invalida [SF-0001](/entrada/sf-0001) — pelo contrário, mostra por que a Trilha 4 é o caminho correto para investigar esse tema com rigor: se há superfaturamento documentado dentro dos contratos de shows (como no caso da Sufotur), isso é uma alegação checável por comparação de preço, bem mais sólida do que a alegação genérica de \"pão e circo\" regional.\n\n## Como usar esta entrada\n\nEsta trilha existe para que alegações politicamente carregadas, mas ancoradas em dado real, tenham um destino público que preserve o dado e marque o limite da conclusão — em vez de a recusa acontecer apenas em conversa privada e se perder."
+    },
+    {
+      "id": "CR-0002",
+      "trilha": "correlacao",
+      "titulo": "Emendas parlamentares em recorde vs. cortes no Farmácia Popular e Pé-de-Meia: o salto do 'dinheiro foi para show'",
+      "status": "hipotese",
+      "data_entrada": "Tue Jul 28 2026 21:00:00 GMT-0300 (Horário Padrão de Brasília)",
+      "resumo_neutro": "O Orçamento de 2026 destina R$ 61,4 bi a emendas parlamentares (recorde histórico) enquanto corta R$ 500 mi do Farmácia Popular e R$ 300 mi das bolsas do CAPS; uma leitura popular liga os dois fatos como se o dinheiro cortado tivesse sido redirecionado para entretenimento — mas as próprias emendas vão majoritariamente para saúde (65-81%), e o financiamento de shows via emenda é uma fração documentada muito menor.",
+      "dado_real": {
+        "afirmacao": "Emendas parlamentares atingiram R$ 61,4 bilhões no Orçamento de 2026 (alta de mais de 20% sobre 2025), enquanto o Farmácia Popular foi cortado em R$ 500 milhões, o Pé-de-Meia em R$ 500 mil, e as bolsas do CAPS em R$ 300 milhões. A plataforma Central das Emendas identificou 66 indicações relacionadas a shows, incluindo uma emenda de R$ 497,5 mil do senador Jorge Kajuru para uma apresentação da dupla Fernando & Sorocaba.",
+        "fonte": "CNN Brasil, CONFAP e Portal Transparência Brasil, cruzando dados do Orçamento 2026 (PLN 15/25) e do painel histórico de emendas — ver campo fontes"
+      },
+      "salto_logico": {
+        "conclusao_alegada": "A leitura popular mais comum conecta os dois fatos diretamente: o dinheiro que faltou para Farmácia Popular e Pé-de-Meia teria sido desviado para financiar shows e entretenimento via emendas — repetindo o enquadramento de 'pão e circo' já documentado em CR-0001, agora na escala federal.",
+        "onde_quebra": "As emendas parlamentares de 2026 vão esmagadoramente para saúde — entre 65% e 81,2% do total, dependendo do recorte da fonte — incluindo atenção básica e assistência hospitalar, áreas cronicamente subfinanciadas (o próprio relator do Orçamento admitiu que mesmo com as emendas, os recursos ficaram R$ 2,7 bilhões abaixo do piso constitucional de saúde). O financiamento de shows via emenda é real e documentado, mas em escala muito menor: 66 indicações identificadas pela Central das Emendas, com exemplos na casa das centenas de milhares de reais cada — uma fração ínfima dos R$ 61,4 bilhões totais. Não há, nas fontes disponíveis, um vínculo direto e específico entre 'o corte no Farmácia Popular' e 'o aumento no financiamento de shows' — são duas decisões orçamentárias distintas dentro do mesmo pacote de negociação."
+      },
+      "contraponto_estrutural": "Existe, sim, uma dinâmica orçamentária real por trás da correlação, só que mais estrutural do que a leitura de 'desvio para show': emendas parlamentares individuais e de bancada são impositivas (pagamento obrigatório por decisão do STF pós-2022), o que dá ao Congresso poder de barganha que o Executivo não tem sobre despesas discricionárias como Farmácia Popular ou bolsas de pesquisa — nas negociações orçamentárias, o que é 'garantido' cresce, e o que depende de decisão discricionária do Executivo é o que sofre corte quando o teto de gastos aperta. Esse é um problema de desenho institucional genuíno (concentração de poder de emenda vs. programas executivos), mas é uma tese diferente de 'a verba de saúde virou show' — e essa distinção importa para quem quer criticar o mecanismo com precisão.",
+      "fontes": [
+        {
+          "titulo": "Prefeituras recebem valor recorde em emendas parlamentares em 2026",
+          "url": "https://revistaoeste.com/politica/prefeituras-recebem-valor-recorde-em-emendas-parlamentares-em-2026/",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "Orçamento de 2026 tira dinheiro do Farmácia Popular e do Pé-de-Meia",
+          "url": "https://www.cnnbrasil.com.br/politica/orcamento-de-2026-tira-dinheiro-do-farmacia-popular-e-do-pe-de-meia/",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "Emendas Parlamentares 2014–2026 — Painel Histórico",
+          "url": "https://portaltransparenciabrasil.com/emendas-parlamentares/painel",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "Saúde tem o maior volume de emendas parlamentares no Orçamento de 2026",
+          "url": "https://www.camara.leg.br/noticias/1231788-saude-tem-o-maior-volume-de-emendas-parlamentares-no-orcamento-de-2026/",
+          "tipo": "reportagem"
+        }
+      ],
+      "tags": [
+        "correlacao",
+        "emendas-parlamentares",
+        "pao-e-circo",
+        "orcamento",
+        "shows"
+      ],
+      "slug": "cr-0002",
+      "path": "data/correlacao/emendas-recorde-farmacia-popular.md",
+      "url": "/entrada/cr-0002",
+      "body": "# Emendas em recorde, Farmácia Popular cortado: onde o salto quebra\n\n## Por que esta entrada não absolve as emendas de crítica\n\nIsolar o salto lógico não significa dizer que não há problema — o campo `contraponto_estrutural` documenta um problema real e talvez mais grave do que a versão popular: o caráter impositivo das emendas cria uma assimetria de poder orçamentário entre Congresso e Executivo que estruturalmente penaliza programas discricionários em qualquer negociação apertada, com ou sem show nenhum de permeio. Essa crítica é mais precisa, mais difícil de refutar, e mais generalizável do que \"o dinheiro foi pro show\".\n\n## A ligação real com shows, e por que ela é pequena\n\nAs 66 indicações de emenda para shows identificadas pela Central das Emendas são fato documentado, não hipótese — incluindo o exemplo nominal do senador Jorge Kajuru. Isso poderia, inclusive, virar entrada própria na Trilha 4 (superfaturamento) se houver comparação de valor de mercado do cachê da dupla Fernando & Sorocaba disponível. Mas como fração de R$ 61,4 bilhões, não sustenta a tese de que é para lá que o dinheiro cortado de programas sociais foi.\n\n## Ver também\n\n[CR-0001](/entrada/cr-0001) — mesmo padrão de correlação, escala estadual/municipal em vez de federal. As duas entradas, lidas juntas, mostram que o financiamento público de shows é real e às vezes questionável (ver Trilha 4), mas consistentemente menor, em proporção, do que as alegações virais sugerem quando comparado ao orçamento total da área.\n\n## Atualização pendente\n\nSe a Central das Emendas publicar valor total agregado das 66 indicações de shows, atualizar esta entrada com o percentual exato sobre os R$ 61,4 bilhões, para tornar a desproporção ainda mais precisa do que a estimativa qualitativa atual."
+    },
     {
       "id": "IN-0001",
       "trilha": "institucional",
@@ -436,6 +529,107 @@
       "path": "data/institucional/IN-0007-ferrovia-do-para-consulta-previa.md",
       "url": "/entrada/in-0007",
       "body": "# Ferrovia do Pará: consulta prévia e o problema do sequenciamento\n\n## Por que esta entrada trata separadamente \"atraso na consulta\" de \"ausência de consulta\"\n\nAs fontes mostram uma evolução ao longo do tempo, não um quadro estático: em 2019, moradores relatam ausência total de diálogo; ao longo do processo, sob pressão, a Sedeme cria um grupo de trabalho dedicado à consulta prévia. Isso é tratado aqui como **atraso e sequenciamento invertido** (compromissos financeiros assinados antes da consulta concluída), não como ausência definitiva de consulta — o processo, pelas fontes disponíveis até a data desta entrada, segue em andamento, com audiências públicas ocorrendo em 2026.\n\n## A tese em disputa\n\nAtribuída à FASE e à Malungu — **não** posição do Sabor Brazil:\n\n> O governo do Pará assinou compromissos financeiros e políticos com a construtora chinesa antes de realizar a consulta prévia, livre e informada exigida pela Convenção 169 da OIT, tratando posteriormente a exigência como etapa administrativa a ser regularizada, não como condição prévia ao acordo — e restringiu o reconhecimento de comunidades afetadas àquelas tituladas por órgão federal (Incra), excluindo as tituladas por órgão estadual (Iterpa).\n\n## O ponto mais específico e menos discutido publicamente\n\nA alegação da Malungu sobre reconhecimento desigual de titulação (comunidades tituladas pelo Incra reconhecidas, pelo Iterpa não) é um argumento técnico-jurídico específico, não uma alegação genérica de desrespeito — e não localizei, até a data desta entrada, resposta oficial pontual do governo do Pará sobre esse argumento específico. Fica registrado como lacuna.\n\n## Atualização pendente\n\nAcompanhar o resultado das audiências públicas de 2026, a atuação do grupo de trabalho da Sedeme, e se a crítica sobre titulação Incra/Iterpa recebeu resposta formal do Estado antes do início das obras previsto para 2027.\n\n## Ver também\n\nCorpus [O Dragão e a Onça](https://odragaoeaonca.vercel.app/) (IDs 1654, 1655, 1656). Tema irmão: [IN-0006](/entrada/in-0006) (Mineração Taboca). Contexto de cluster: [IN-0005](/entrada/in-0005) (WAICO)."
+    },
+    {
+      "id": "IN-0008",
+      "trilha": "institucional",
+      "titulo": "Sigilo em cascata: reclamação disciplinar contra juiz por suposto favorecimento fica 8 meses sob sigilo no CNJ",
+      "status": "argumento_juridico_fundamentado",
+      "data_entrada": "Tue Jul 28 2026 21:00:00 GMT-0300 (Horário Padrão de Brasília)",
+      "resumo_neutro": "O TRF-1 apontou indício de manipulação na distribuição de um processo que beneficiou parente do ministro do STF Kássio Nunes Marques, mas não abriu processo disciplinar; o recurso do MPF ao CNJ pedindo a abertura está sob sigilo há oito meses, justificado pelo CNJ por conter informações ligadas a processos que já tramitavam sob sigilo na origem.",
+      "dispositivo_legal": "Art. 93, IX da CF/88 — publicidade dos julgamentos e atos processuais do Poder Judiciário como regra, admitindo-se limitação apenas quando o interesse público à informação for superado por outro interesse público relevante, e sempre mediante decisão fundamentada; Regimento Interno do CNJ, disposições sobre sigilo em procedimentos disciplinares",
+      "fatos_checaveis": [
+        "O TRF-1 identificou indícios de manipulação na distribuição processual ('fórum shopping') beneficiando caso ligado à irmã do ministro do STF Kássio Nunes Marques, atribuída ao juiz Itagiba Catta Preta",
+        "Apesar de apontar a manipulação, o TRF-1 não abriu Processo Administrativo Disciplinar (PAD) contra o juiz",
+        "O MPF discordou da decisão e recorreu ao CNJ em novembro de 2025, pedindo a abertura do PAD — sanção que pode levar a suspensão do cargo por até três meses sem salário",
+        "Até a data da reportagem (meados de julho de 2026), o processo estava sob sigilo no CNJ havia oito meses, sem decisão",
+        "Segundo o MPF, o juiz 'manteve-se inerte', recusando-se a se pronunciar sobre o alerta de burla ao juízo natural",
+        "A assessoria do CNJ justificou o sigilo afirmando que o processo contém informações relacionadas aos processos judiciais que resultaram na reclamação disciplinar, a qual já tramitava sob sigilo na origem"
+      ],
+      "fontes": [
+        {
+          "titulo": "CNJ segura há oito meses processo que beneficiou irmã de Kassio Nunes",
+          "url": "https://www.metropoles.com/colunas/andreza-matais/cnj-segura-ha-oito-meses-processo-que-beneficiou-irma-de-kassio-nunes",
+          "tipo": "reportagem"
+        }
+      ],
+      "argumento_juridico": {
+        "autor": "Coluna de Andreza Matais (Metrópoles), com base no recurso do Ministério Público Federal ao CNJ",
+        "tese": "Manter sob sigilo, por oito meses e sem decisão, um recurso que pede apuração disciplinar de um juiz por suposto favorecimento a parente de ministro do STF, usando como justificativa que o processo de origem também era sigiloso, aplica sigilo em cascata sem reavaliação independente do interesse público em cada etapa — mesmo havendo interesse público específico e distinto (integridade da distribuição processual, isonomia perante a lei) que não se confunde com o sigilo do processo original."
+      },
+      "contraponto": {
+        "existe": true,
+        "resumo": "A justificativa do CNJ tem lógica interna coerente: se o processo de origem corria sob sigilo (por conter dados protegidos, como informações pessoais de terceiros ou matéria sigilosa por natureza), discutir os fatos desse processo no recurso disciplinar poderia expor indiretamente o que estava protegido na origem. Não localizei, até a data desta entrada, uma manifestação pública detalhada do CNJ especificamente sobre por que o sigilo do processo original justificaria também o sigilo sobre a existência e o andamento do próprio recurso disciplinar (que são fatos de natureza distinta: conduta funcional do juiz, não o mérito do caso sigiloso).",
+        "fonte": "Metrópoles — assessoria do CNJ citada na mesma reportagem"
+      },
+      "teste_generalizacao": "PASSA. A pergunta — 'o sigilo de um processo judicial de origem deveria se estender automaticamente ao processo disciplinar sobre a conduta do juiz nesse processo, sem reavaliação independente do interesse público em cada esfera?' — é uma questão de desenho institucional que se sustenta em abstrato, aplicável a qualquer juiz e qualquer processo, não apenas a este caso específico. A menção ao parentesco com um ministro do STF é contexto que aumenta o interesse público do caso, mas o argumento central é sobre o mecanismo de sigilo em cascata em si.",
+      "tags": [
+        "cnj",
+        "sigilo",
+        "magistratura",
+        "processo-disciplinar",
+        "transparencia",
+        "sigilo-em-cascata"
+      ],
+      "slug": "in-0008",
+      "path": "data/institucional/IN-0008-sigilo-cascata-cnj-catta-preta.md",
+      "url": "/entrada/in-0008",
+      "body": "# Sigilo em cascata: quando o processo disciplinar herda o sigilo do processo original\n\n## Por que este é o primeiro de um padrão, não um caso isolado\n\nEsta entrada inaugura um recorte temático dentro da Trilha 3: casos em que um erro ou possível desvio de magistrado, uma vez identificado por um órgão de controle, é em seguida classificado sob sigilo — dificultando o acompanhamento público do próprio mecanismo de responsabilização. É um padrão estruturalmente diferente do [IN-0004](/entrada/in-0004) (sigilo sobre visitas a Vorcaro): lá, o sigilo protegia dados de terceiros num contexto de investigação criminal; aqui, o sigilo recai sobre o processo que apura a conduta de quem deveria, ele mesmo, ser agente do controle público.\n\n## A tese em disputa\n\nAtribuída à coluna de Andreza Matais (Metrópoles) e ao recurso do MPF — **não** posição do Sabor Brazil:\n\n> Manter sob sigilo, por oito meses e sem decisão, um recurso que pede apuração disciplinar de um juiz por suposto favorecimento a parente de ministro do STF, usando como justificativa que o processo de origem também era sigiloso, aplica sigilo em cascata sem reavaliação independente do interesse público em cada etapa.\n\n## O que fica de fora desta entrada\n\nNão trato como fato estabelecido que o juiz Itagiba Catta Preta tenha efetivamente cometido irregularidade — isso é precisamente o que o processo disciplinar, ainda sob sigilo e sem decisão, deveria apurar. A entrada documenta o mecanismo de sigilo em si e o atraso de oito meses, não faz juízo sobre o mérito da acusação de favorecimento.\n\n## Atualização pendente\n\nAcompanhar eventual decisão do CNJ sobre a abertura do PAD contra o juiz Itagiba Catta Preta, e localizar manifestação mais detalhada do CNJ sobre o critério de extensão do sigilo do processo de origem ao recurso disciplinar propriamente dito.\n\n## Padrão para futuras entradas deste recorte\n\nCasos futuros neste tema (`erro-judicial-sob-sigilo`) devem documentar, sempre que possível: (1) o erro ou desvio identificado por órgão de controle; (2) a decisão de não abrir processo ou de sigilar o que se abriu; (3) o argumento institucional para o sigilo; (4) se esse argumento resiste ao teste de proporcionalidade entre o sigilo necessário e o interesse público em acompanhamento do próprio mecanismo de responsabilização."
+    },
+    {
+      "id": "IN-0009",
+      "trilha": "institucional",
+      "titulo": "Seletividade penal na Lei de Drogas: ausência de critério objetivo e a resposta do STF (RE 635.659)",
+      "status": "argumento_juridico_fundamentado",
+      "data_entrada": "Tue Jul 28 2026 21:00:00 GMT-0300 (Horário Padrão de Brasília)",
+      "resumo_neutro": "Até junho de 2024, a Lei de Drogas não previa critério quantitativo objetivo para diferenciar usuário de traficante, deixando a distinção a critério de polícia, MP e Judiciário caso a caso; o próprio STF reconheceu, em documento oficial, que jovens brancos e de classe média eram mais frequentemente tratados como usuários e jovens pobres, negros e pardos como traficantes, e fixou 40g/6 plantas como critério objetivo no RE 635.659.",
+      "dispositivo_legal": "Art. 28 (uso) e art. 33 (tráfico) da Lei nº 11.343/2006 (Lei de Drogas), sem critério quantitativo objetivo de distinção antes de 2024; art. 5º, caput, da CF/88 (princípio da isonomia); RE 635.659, Tema 506 de Repercussão Geral, julgamento concluído em 26/06/2024",
+      "fatos_checaveis": [
+        "Antes da decisão, a Lei de Drogas não estabelecia quantidade mínima ou máxima para diferenciar consumo pessoal de tráfico — cabia a policiais, ao Ministério Público e a juízes decidir caso a caso, considerando circunstâncias como local da abordagem, quantidade, forma de acondicionamento e antecedentes",
+        "Documento oficial de esclarecimento do STF sobre o RE 635.659 reconhece expressamente que, na ausência de critério preciso, a lei era aplicada de forma desigual: jovens brancos e de classe média tinham chances maiores de serem considerados usuários, enquanto jovens pobres, negros e pardos eram mais frequentemente considerados traficantes",
+        "Em 26/06/2024, o STF concluiu o julgamento do RE 635.659, declarando a inconstitucionalidade, sem redução de texto, do art. 28 da Lei de Drogas para a maconha, e fixando presunção relativa de uso pessoal para posse de até 40 gramas ou 6 plantas fêmeas",
+        "O CNJ organizou levantamento nacional para cumprir a decisão, incluindo revisão de antecedentes criminais, arquivamento de inquéritos e denúncias, e possibilidade de revisão criminal para condenados por posse de pequena quantidade",
+        "O critério de 40g não é absoluto — é presunção relativa, que pode ser afastada por outras circunstâncias do caso concreto, mantendo margem de discricionariedade policial e judicial mesmo após a decisão"
+      ],
+      "fontes": [
+        {
+          "titulo": "RE 635.659 (Tema 506) — Esclarecimentos à sociedade",
+          "url": "https://www.stf.jus.br/arquivo/cms/noticiaNoticiaStf/anexo/RE635659Tema506informaosociedaderev.LCFSP20h10.pdf",
+          "tipo": "orgao_oficial"
+        },
+        {
+          "titulo": "STF define 40 gramas de maconha como critério para diferenciar usuário de traficante",
+          "url": "https://noticias.stf.jus.br/postsnoticias/stf-define-40-gramas-de-maconha-como-criterio-para-diferenciar-usuario-de-traficante/",
+          "tipo": "orgao_oficial"
+        },
+        {
+          "titulo": "CNJ fará levantamento para cumprir decisão do STF sobre descriminalização da maconha para uso pessoal",
+          "url": "https://www.cnj.jus.br/cnj-fara-levantamento-para-cumprir-decisao-do-stf-sobre-descriminalizacao-da-maconha-para-uso-pessoal/",
+          "tipo": "orgao_oficial"
+        }
+      ],
+      "argumento_juridico": {
+        "autor": "O próprio STF, em documento oficial de esclarecimento sobre o julgamento — não uma tese de ativismo externo, mas reconhecimento institucional da própria Corte sobre o problema que a decisão buscou corrigir",
+        "tese": "A ausência de critério objetivo na lei permitia aplicação desigual por raça e classe social na definição de quem é usuário e quem é traficante, configurando um padrão de seletividade penal estrutural — próximo, na prática, do que a criminologia crítica descreve como tratamento diferenciado conforme perfil do acusado, independentemente da conduta em si."
+      },
+      "contraponto": {
+        "existe": true,
+        "resumo": "Parte da crítica ao próprio julgamento argumenta que um critério quantitativo fixo, por si, não resolve a seletividade penal, porque a presunção de 40g é relativa — pode ser afastada por outras circunstâncias do caso concreto, preservando margem de discricionariedade policial e judicial que é justamente onde a literatura aponta a origem do viés. Há também posição doutrinária (voto do ministro Edson Fachin) de que cabe ao Legislativo, não ao Judiciário, fixar esse critério quantitativo — não por discordar do diagnóstico da seletividade, mas por razão de competência institucional.",
+        "fonte": "Portal STF (esclarecimentos do presidente Barroso) e cobertura do Metrópoles sobre a divergência de Fachin — ver campo fontes"
+      },
+      "teste_generalizacao": "PASSA, de forma direta. A pergunta — 'a ausência de critério objetivo na lei penal, deixando a qualificação da conduta a discricionariedade de agentes de segurança e do Judiciário, favorece aplicação desigual por raça e classe?' — é uma questão de desenho legislativo e igualdade perante a lei que se sustenta inteiramente em abstrato, é reconhecida pela própria instituição responsável por corrigir o problema (o STF), e não depende de nenhum indivíduo específico. É o candidato mais sólido, dentre os padrões de 'aplicação diferenciada da lei penal' já considerados neste projeto, por ter reconhecimento institucional direto do próprio Tribunal, não apenas de uma das partes em disputa.",
+      "tags": [
+        "seletividade-penal",
+        "lei-de-drogas",
+        "stf",
+        "re-635659",
+        "racial",
+        "isonomia"
+      ],
+      "slug": "in-0009",
+      "path": "data/institucional/IN-0009-seletividade-penal-lei-drogas.md",
+      "url": "/entrada/in-0009",
+      "body": "# Seletividade penal na Lei de Drogas: o problema que o próprio STF documentou\n\n## Por que este é o candidato certo para o tema \"direito penal seletivo\"\n\nA proposta original (\"direito penal somente para inimigos\") é um enquadramento teórico amplo demais para virar entrada — é usado retoricamente por espectros políticos opostos no Brasil (à direita, para descrever o tratamento dado a réus do 8 de janeiro; à esquerda e na criminologia, para descrever a seletividade penal contra pobres e negros na guerra às drogas), sem caso específico nem dispositivo legal identificável. Este caso resolve o problema: tem dispositivo legal específico (art. 28 vs. art. 33 da Lei de Drogas), fato reconhecido pela própria instituição responsável pela correção (STF, em documento oficial, não em declaração de ministro isolado), e um desfecho institucional concreto (RE 635.659, critério de 40g fixado).\n\n## A tese em disputa\n\nAtribuída ao próprio STF, em documento oficial de esclarecimento — **não** posição do Sabor Brazil:\n\n> A ausência de critério objetivo na lei permitia aplicação desigual por raça e classe social na definição de quem é usuário e quem é traficante, configurando um padrão de seletividade penal estrutural.\n\n## O que fica de fora\n\nNão trato como resolvido o debate sobre se o critério de 40g elimina a seletividade — o próprio campo `contraponto` documenta que a presunção é relativa e a discricionariedade residual permanece. A entrada documenta o reconhecimento do problema e a resposta institucional, não afirma que o problema estrutural foi eliminado.\n\n## Nota sobre uso do enquadramento \"direito penal do inimigo\"\n\nNão usei esse termo teórico (de Günther Jakobs) no título ou nos campos estruturados, porque ele descreve uma tese acadêmica ampla sobre tratamento processual diferenciado que vai além do que esta entrada documenta. O que está aqui é mais estreito e mais checável: seletividade na qualificação da conduta (usuário vs. traficante) por ausência de critério objetivo — um recorte específico que pode, se o leitor quiser, ser lido como uma manifestação concreta daquela tese mais ampla, sem que o projeto precise adotar a tese inteira como categoria.\n\n## Atualização pendente\n\nAcompanhar dados pós-2024 (se existirem, via CNJ, IPEA ou Fórum Brasileiro de Segurança Pública) sobre se a disparidade racial/de classe na qualificação usuário/traficante diminuiu, se manteve ou se deslocou para outros pontos de discricionariedade (como a \"afastabilidade\" da presunção relativa) após a fixação do critério de 40g."
     },
     {
       "id": "RG-0001",
@@ -1047,6 +1241,130 @@
       "path": "data/rotulagem/creme-vegetal-sabor-manteiga.md",
       "url": "/entrada/rt-0011",
       "body": "# Sabor manteiga × manteiga\n\n## Parece × é\n\n**Manteiga** é produto lácteo com identidade e qualidade próprias. **Creme vegetal** / **margarina sabor manteiga** usa base vegetal e aromatização para lembrar manteiga — denominação que, lida com atenção, já admite não ser o produto lácteo.\n\nA própria ANVISA, em material de Q&A sobre óleos e gorduras, situa cremes vegetais de uso similar à margarina no âmbito regulatório do MAPA — separado da manteiga clássica.\n\n## O que fica de fora\n\nAlegações nutricionais (“mais saudável”) sem estudo independente não entram. O núcleo é a diferença de **nome e base lipídica**."
+    },
+    {
+      "id": "SF-0001",
+      "trilha": "superfaturamento",
+      "titulo": "Superfaturamento de cachês artísticos na Sufotur (Bahia), 2015-2024",
+      "status": "verificado",
+      "data_entrada": "Tue Jul 28 2026 21:00:00 GMT-0300 (Horário Padrão de Brasília)",
+      "resumo_neutro": "Investigação da TV Bahia, com base em relatórios do TCE-BA e notas fiscais, aponta discrepâncias entre valores de mercado e valores pagos pela Sufotur/Bahiatursa a produtoras de eventos entre 2015 e 2024, incluindo um caso documentado de cachê 9 vezes maior que o valor de mercado do mesmo artista.",
+      "comparacao_de_preco": {
+        "valor_contratado": "Sete apresentações da cantora Emily Ferraz custaram mais de R$ 500 mil à Sufotur — média de R$ 71 mil por show",
+        "valor_referencia": "Áudios e mensagens obtidos pela TV Bahia mostram negociação da mesma artista para show privado por R$ 8 mil",
+        "proporcao": "Aproximadamente 9 vezes o valor de mercado privado, no caso documentado"
+      },
+      "mecanismo_juridico": "Contratações realizadas por inexigibilidade de licitação, mecanismo que permite contratar diretamente artista consagrado por empresário exclusivo, mas exige compatibilidade de preço com o mercado e justificativa detalhada — requisitos que, segundo os relatórios do TCE-BA, não foram cumpridos de forma recorrente",
+      "orgaos_de_controle": [
+        "Tribunal de Contas do Estado da Bahia (TCE-BA) — mais de uma década de relatórios analisados pela investigação; contas da Sufotur de 2019, 2020 e 2021 desaprovadas; múltiplas multas aplicadas ao ex-gestor"
+      ],
+      "responsaveis_nomeados": "Diogo Medrado, ex-superintendente da Bahiatursa (2014-2022) e depois da Sufotur, citado nos relatórios do TCE-BA e multado em diferentes ocasiões; nega irregularidades. Alexsandro Sampaio, apontado como responsável pela Nível Dez Produções, admitiu a existência do esquema em gravação da TV Bahia sem saber que estava sendo filmado.",
+      "fontes": [
+        {
+          "titulo": "Investigação aponta suposto esquema de superfaturamento de cachês com recursos públicos na Bahia",
+          "url": "https://bahiaeconomica.com.br/wp/2026/06/17/investigacao-aponta-suposto-esquema-milionario-de-superfaturamento-de-caches-pagos-com-recursos-publicos-na-bahia/",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "Investigação revela esquema que superfaturou milhões em cachês de artistas pagos com verba pública na Bahia",
+          "url": "https://interiordabahia.com.br/2026/06/17/investigacao-revela-esquema-que-superfaturou-milhoes-em-caches-de-artistas-pagos-com-verba-publica-na-bahia/",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "Escândalo dos Cachês Milionários na Bahia: Investigação Aponta para Esquema de Superfaturamento e Lesão a Artistas no Extremo Sul",
+          "url": "https://primeirojornal.com.br/2026/06/23/escandalo-dos-caches-milionarios-na-bahia-investigacao-aponta-para-esquema-de-superfaturamento-e-lesao-a-artistas-no-extremo-sul/",
+          "tipo": "reportagem"
+        }
+      ],
+      "tags": [
+        "superfaturamento",
+        "bahia",
+        "sufotur",
+        "cache",
+        "inexigibilidade"
+      ],
+      "slug": "sf-0001",
+      "path": "data/superfaturamento/sufotur-bahia-caches.md",
+      "url": "/entrada/sf-0001",
+      "body": "# Superfaturamento de cachês na Sufotur (Bahia)\n\n## Por que esta entrada é `verificado`, não `hipotese`\n\nO critério da Trilha 4 é comparação de preço documentada — e aqui ela existe de forma direta: a mesma artista, no mesmo período, negociando show privado por R$ 8 mil e recebendo em média R$ 71 mil por apresentação da Sufotur, com fonte em áudios e mensagens obtidos pela reportagem, cruzados com notas fiscais e relatórios do TCE-BA ao longo de mais de uma década. Isso não é uma alegação isolada — é um padrão que o próprio tribunal de contas já vinha sinalizando (contas desaprovadas em três anos consecutivos, multas ao gestor responsável).\n\n## O que fica marcado como \"suposto\" e por quê\n\nAs próprias fontes usam a palavra \"suposto\" para o esquema como um todo, porque a apuração completa de responsabilidade civil, administrativa e criminal ainda depende de órgãos de controle formais — a reportagem é o ponto de partida, não o veredito final. A entrada preserva esse status: os números de comparação de preço são checáveis e verificados; a caracterização como \"esquema\" criminoso organizado é objeto de apuração em andamento.\n\n## Padrão estrutural para outras entradas da Trilha 4\n\nEste é o formato de referência: valor documentado vs. valor de referência, com proporção calculável, mecanismo legal (aqui, inexigibilidade de licitação) identificado, e órgão de controle nomeado com histórico de manifestação sobre o caso.\n\n## Atualização pendente\n\nAcompanhar eventual instauração de processo formal por TCE-BA, MP-BA ou Polícia Civil/Federal a partir da investigação jornalística; total de R$ 1,84 bilhão movimentado pela Sufotur desde 2019 ainda não teve auditoria completa divulgada publicamente sobre a proporção do valor sob suspeita de superfaturamento."
+    },
+    {
+      "id": "SF-0002",
+      "trilha": "superfaturamento",
+      "titulo": "Superfaturamento na merenda escolar de Ananindeua (PA)",
+      "status": "verificado",
+      "data_entrada": "Tue Jul 28 2026 21:00:00 GMT-0300 (Horário Padrão de Brasília)",
+      "resumo_neutro": "Documentos do Tribunal de Contas dos Municípios do Pará e do Portal da Transparência indicam que a Prefeitura de Ananindeua, sob a gestão do ex-prefeito Daniel Santos, pagou por gêneros alimentícios da merenda escolar valores muito acima dos praticados por municípios vizinhos e do mercado varejista.",
+      "comparacao_de_preco": {
+        "valor_contratado": "R$ 32/kg por peito de frango sem pele e sem osso (314 mil kg em dois anos); R$ 65/kg por filé de peito de frango em tiras (184 mil kg); R$ 58/kg por bife de patinho",
+        "valor_referencia": "Peito de frango: R$ 15-20/kg em supermercados e açougues locais. Filé em tiras: R$ 18,98/kg pago pela Prefeitura de Castanhal pelo mesmo item. Patinho: R$ 41,35/kg de média nacional pela plataforma Banco de Preços; Bragança pagou R$ 18,68/kg por pá limpa; Bannach pagou R$ 22,44/kg por patinho",
+        "proporcao": "Entre 1,6x e 3,4x o valor de referência, dependendo do item comparado"
+      },
+      "mecanismo_juridico": "Licitações via Ata de Registro de Preços, com indícios apontados tanto de superfaturamento de preço (valor unitário acima do mercado) quanto de superfaturamento de quantidade (aquisição de volume maior que o necessário) — as duas categorias definidas pelo Guia Referencial da CGU/TCU com base na Lei nº 14.133/2021",
+      "orgaos_de_controle": [
+        "Tribunal de Contas dos Municípios do Pará (TCMPA) — documentos públicos analisados pela reportagem"
+      ],
+      "responsaveis_nomeados": "Daniel Santos, ex-prefeito de Ananindeua, alvo das suspeitas segundo documentos do TCMPA e Portal da Transparência; empresa MR Comércio e Serviços, vencedora da licitação mais recente após desclassificação de três concorrentes",
+      "fontes": [
+        {
+          "titulo": "Daniel Santos é suspeito de superfaturar merenda escolar em Ananindeua",
+          "url": "https://dol.com.br/noticias/para/947637/daniel-santos-e-suspeito-de-superfaturar-merenda-escolar-em-ananindeua",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "Daniel Santos: merenda dispara, carne dobra de preço e contrato vai a R$ 46 milhões",
+          "url": "https://dol.com.br/noticias/para/948036/daniel-santos-merenda-dispara-carne-dobra-de-preco-e-contrato-vai-a-r-46-milhoes",
+          "tipo": "reportagem"
+        }
+      ],
+      "tags": [
+        "superfaturamento",
+        "merenda-escolar",
+        "ananindeua",
+        "para",
+        "licitacao"
+      ],
+      "slug": "sf-0002",
+      "path": "data/superfaturamento/ananindeua-merenda-escolar.md",
+      "url": "/entrada/sf-0002",
+      "body": "# Superfaturamento na merenda escolar de Ananindeua\n\n## Por que a comparação entre municípios fortalece esta entrada\n\nDiferente de comparar apenas com preço de supermercado (que pode variar por volume, prazo de entrega, ou condições logísticas específicas do fornecimento institucional), esta entrada tem a vantagem de comparar **preço pago por prefeituras vizinhas pelo mesmo tipo de item, no mesmo mercado regional** — Castanhal pagando R$ 18,98/kg pelo mesmo filé em tiras que Ananindeua pagou R$ 65/kg é uma comparação de contexto equivalente, não apenas varejo vs. atacado institucional.\n\n## O que ainda é indício, não sentença\n\nAs fontes usam \"suspeita\" e \"possibilidade de superfaturamento\" — não há, até a data desta entrada, decisão final do TCMPA sobre o caso. A entrada documenta os dados de preço comparativo, que são verificáveis independentemente do desfecho do processo de apuração.\n\n## Atualização pendente\n\nAcompanhar manifestação formal do TCMPA sobre o caso e eventual resposta detalhada da gestão anterior ou da empresa MR Comércio e Serviços.\n\n## Ver também\n\n[SF-0001](/entrada/sf-0001) (Sufotur) e [SF-0003](/entrada/sf-0003) (Piritiba) — mesmo padrão de investigação em setores diferentes (eventos culturais e merenda escolar)."
+    },
+    {
+      "id": "SF-0003",
+      "trilha": "superfaturamento",
+      "titulo": "Merenda escolar superfaturada em Piritiba (BA) — caso com decisão final do tribunal de contas",
+      "status": "verificado",
+      "data_entrada": "Tue Jul 28 2026 21:00:00 GMT-0300 (Horário Padrão de Brasília)",
+      "resumo_neutro": "O Tribunal de Contas dos Municípios da Bahia condenou o ex-prefeito de Piritiba, Samuel Oliveira Santana, a multa e ressarcimento de R$ 310.151,14 por superfaturamento em compras de merenda escolar entre 2017 e 2020, por ausência de pesquisa prévia de preços exigida por lei.",
+      "comparacao_de_preco": {
+        "valor_contratado": "Preços contratados nos Pregões Presenciais nº 24/2017, 01/2018 e 01/2019, superiores aos de referência do mercado regional, segundo apuração dos auditores do TCM-BA",
+        "valor_referencia": "Preços de referência do mercado regional, conforme apurado pelos auditores do TCM-BA — valores específicos por item não detalhados nas fontes consultadas até esta entrada",
+        "proporcao": "Prejuízo total apurado de R$ 310.151,14, correspondente ao montante pago a maior pela prefeitura no período"
+      },
+      "mecanismo_juridico": "Ausência de pesquisa prévia de preços exigida pela Lei nº 8.666/93 (lei de licitações vigente à época dos fatos); a prefeitura não apresentou documentos comprovando pesquisa ampla de mercado nem consulta a preços de outros entes públicos ou fornecedores privados, apenas planilhas de valores estimados sem metodologia comprovada",
+      "orgaos_de_controle": [
+        "Tribunal de Contas dos Municípios da Bahia (TCM-BA), relator conselheiro substituto Antônio Carlos da Silva — decisão final proferida, cabendo recurso"
+      ],
+      "responsaveis_nomeados": "Samuel Oliveira Santana, ex-prefeito de Piritiba (PP à época), multado em R$ 1,5 mil e condenado a ressarcir R$ 310.151,14 aos cofres municipais com recursos pessoais",
+      "fontes": [
+        {
+          "titulo": "Piritiba: Ex-prefeito é multado por compra de merenda superfaturada",
+          "url": "https://interiordabahia.com.br/2026/05/13/piritiba-ex-prefeito-e-multado-por-compra-de-merenda-superfaturada/",
+          "tipo": "reportagem"
+        }
+      ],
+      "tags": [
+        "superfaturamento",
+        "merenda-escolar",
+        "piritiba",
+        "bahia",
+        "tcm-ba",
+        "licitacao"
+      ],
+      "slug": "sf-0003",
+      "path": "data/superfaturamento/piritiba-merenda-escolar.md",
+      "url": "/entrada/sf-0003",
+      "body": "# Merenda escolar superfaturada em Piritiba — caso concluído\n\n## Por que esta entrada é o exemplo de referência da Trilha 4\n\nDiferente de SF-0001 e SF-0002, que documentam investigações ou apurações em andamento, este é o primeiro caso do catálogo com **decisão final de mérito de um tribunal de contas**, incluindo sanção nominal (multa) e determinação de ressarcimento com recursos pessoais do responsável. Isso o torna o padrão-ouro de verificação da trilha: não depende de acompanhamento futuro para confirmar se a alegação se sustentou — já foi julgada.\n\n## O que a defesa alegou, e por que não foi aceita\n\nO ex-prefeito alegou dificuldades logísticas e suposta qualidade superior das marcas adquiridas para justificar os preços mais altos. O TCM-BA não aceitou a justificativa porque a exigência legal (pesquisa prévia de preços, art. da Lei 8.666/93) não foi cumprida processualmente — a prefeitura não comprovou ter feito a pesquisa de mercado que fundamentaria qualquer diferença de preço por qualidade, mesmo que essa diferença fosse real.\n\n## Atualização pendente\n\nVerificar se houve recurso da decisão do TCM-BA e seu desfecho; localizar valores específicos por item para permitir cálculo de proporção comparável ao formato de SF-0001 e SF-0002.\n\n## Ver também\n\n[SF-0001](/entrada/sf-0001), [SF-0002](/entrada/sf-0002) — mesmo padrão em setores diferentes; esta entrada mostra o desfecho institucional que as outras duas ainda aguardam."
     }
   ]
 }

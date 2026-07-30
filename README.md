@@ -6,9 +6,9 @@
 
 ---
 
-## As duas trilhas
+## As trilhas
 
-Este projeto **não mistura** duas categorias que parecem semelhantes mas são juridicamente e analiticamente distintas. Misturá-las enfraquece o argumento das duas.
+Este projeto **não mistura** categorias que parecem semelhantes mas são analiticamente distintas.
 
 ### 🏷️ Trilha 1 — Rotulagem Enganosa (`data/rotulagem/`)
 
@@ -30,7 +30,15 @@ Diferença crucial em relação às Trilhas 1 e 2: nas outras trilhas, o padrão
 
 Ver [`docs/metodologia-trilha3.md`](docs/metodologia-trilha3.md) para o detalhe de como uma entrada desta trilha é aceita sem virar peça de advocacy.
 
-**Regra de ouro do projeto:** se uma entrada não se encaixa claramente em nenhuma das três definições acima, ela não entra. Não existe uma quarta categoria "parece suspeito".
+### 💰 Trilha 4 — Superfaturamento (`data/superfaturamento/`)
+
+Casos com **comparação de preço documentada**: valor contratado versus valor de referência (mercado, município vizinho, tribunal de contas), com proporção calculável, mecanismo jurídico identificado e órgão de controle nomeado.
+
+### 📊 Trilha 5 — Correlação (`data/correlacao/`)
+
+Alegações virais ancoradas em **dado real**, mas que acrescentam um salto causal não sustentado pelas fontes. A entrada isola o dado, marca a conclusão alegada e explica onde a causalidade quebra.
+
+**Regra de ouro do projeto:** se uma entrada não se encaixa claramente numa das cinco definições acima, ela não entra.
 
 ---
 
@@ -45,7 +53,9 @@ sabor-brazil/
 ├── data/
 │   ├── rotulagem/             # trilha 1 — um arquivo .md por produto/categoria
 │   ├── regulatorio/           # trilha 2 — um arquivo .md por caso
-│   └── institucional/         # trilha 3 — um arquivo .md por caso, com ID e status jurídico
+│   ├── institucional/         # trilha 3 — um arquivo .md por caso, com ID e status jurídico
+│   ├── superfaturamento/      # trilha 4 — comparação de preço documentada
+│   └── correlacao/            # trilha 5 — dado real × salto causal
 ├── docs/
 │   ├── metodologia.md          # como uma fonte vira uma entrada verificada
 │   └── metodologia-trilha3.md  # regras específicas para não virar peça de advocacy

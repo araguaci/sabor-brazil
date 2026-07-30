@@ -9,7 +9,13 @@ import matter from 'gray-matter';
 
 const ROOT = process.cwd();
 const DATA_ROOT = path.join(ROOT, 'data');
-const TRILHAS = ['rotulagem', 'regulatorio', 'institucional'];
+const TRILHAS = [
+  'rotulagem',
+  'regulatorio',
+  'institucional',
+  'superfaturamento',
+  'correlacao',
+];
 const OUT_DATA = path.join(DATA_ROOT, 'catalog.json');
 const OUT_PUBLIC = path.join(ROOT, 'public', 'catalog.json');
 

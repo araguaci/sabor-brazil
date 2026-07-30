@@ -24,6 +24,12 @@ Pergunta de controle: **se eu removesse o nome das pessoas e das instituições 
 
 Todo template de listagem (home, página da trilha) deve puxar o campo `resumo_neutro`, nunca `argumento_juridico.tese`, como texto de preview. Uma tese não verificada, ou mesmo uma tese que reprovou no teste de generalização, não pode aparecer como a "manchete" visual de uma entrada — isso reproduz com destaque exatamente o que a curadoria classificou como problemático, antes que o leitor veja o contraponto. Antes de fazer merge de qualquer entrada nesta trilha, confirmar visualmente (preview local ou staging) que o card mostra o resumo neutro, não a tese em disputa.
 
+## Recorte temático: erro judicial seguido de sigilo (`tag: erro-judicial-sob-sigilo`)
+
+Um padrão recorrente o suficiente para merecer tratamento próprio, sem precisar de trilha nova: casos em que um erro, desvio ou possível favorecimento por parte de um magistrado é identificado por um órgão de controle (CNJ, corregedoria, tribunal superior) e, em seguida, o próprio processo de apuração — não o processo judicial original — é classificado sob sigilo. Isso é diferente de sigilo justificado por proteção a vítima, a terceiro ou a dado sensível de investigação em andamento (que tem contraponto legítimo forte, como em IN-0004): aqui, o sigilo recai sobre o mecanismo de responsabilização do próprio agente público que deveria estar sujeito a controle.
+
+Toda entrada com esta tag deve documentar, além dos campos padrão da trilha: (1) o erro ou desvio identificado por órgão de controle competente; (2) a decisão de sigilar o processo de apuração dessa conduta; (3) a justificativa institucional para o sigilo; (4) se essa justificativa resiste ao teste de proporcionalidade entre o sigilo necessário (proteção de dado realmente sensível) e o interesse público em acompanhar o próprio mecanismo de responsabilização — que é uma questão distinta do mérito do processo original. Ver `IN-0008` como entrada de referência do padrão.
+
 ## Exemplo de entrada aceitável vs. não aceitável
 
 **Aceitável**: "Neste processo, a defesa argumentou que a prisão preventiva deveria ter sido convertida em domiciliar no primeiro pedido após o diagnóstico médico, com base no art. 318 do CPP, e que isso não ocorreu até o quinto pedido — fato checável pelas datas de protocolo. A conclusão de que houve mora processual é o argumento da petição, não um fato estabelecido pelo projeto."

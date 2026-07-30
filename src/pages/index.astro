@@ -4,14 +4,14 @@ export const prerender = true;
 import BaseLayout from '../layouts/BaseLayout.astro';
 import EntryCard from '../components/EntryCard.astro';
 import TopicIcon from '../components/TopicIcon.astro';
-import { getAllEntries } from '../lib/entries';
+import { getAllEntries, TRILHAS, type Trilha } from '../lib/entries';
 import { trilhaMeta } from '../lib/topic-icon';
 import { PROJECT_HERO } from '../lib/heroes';
 
 const entries = getAllEntries();
-const rotulagem = entries.filter((e) => e.trilha === 'rotulagem');
-const regulatorio = entries.filter((e) => e.trilha === 'regulatorio');
-const institucional = entries.filter((e) => e.trilha === 'institucional');
+const byTrilha = Object.fromEntries(
+  TRILHAS.map((t) => [t, entries.filter((e) => e.trilha === t)])
+) as Record<Trilha, typeof entries>;
 ---
 
 <BaseLayout title="Sabor Brazil — Nem tudo é o que parece">
@@ -26,8 +26,8 @@ const institucional = entries.filter((e) => e.trilha === 'institucional');
         O QUE <span class="strike">PARECE</span>
       </h1>
       <p class="hero-sub">
-        Produtos “sabor” disto e daquilo, mudanças regulatórias contestadas e divergências
-        institucionais documentadas — cada entrada com fonte, status e denominação cruzada.
+        Rótulos, regras, procedimentos, preços e narrativas virais — cada entrada com fonte,
+        status e o limite entre o dado e a conclusão.
       </p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#catalogo">Explorar catálogo</a>
@@ -36,7 +36,7 @@ const institucional = entries.filter((e) => e.trilha === 'institucional');
 
       <div class="trilha-pills">
         {
-          (['rotulagem', 'regulatorio', 'institucional'] as const).map((t) => (
+          TRILHAS.map((t) => (
             <a class="trilha-pill" href={`/trilha/${t}`}>
               <TopicIcon name={trilhaMeta[t].icon} size={16} />
               <span>
@@ -51,43 +51,29 @@ const institucional = entries.filter((e) => e.trilha === 'institucional');
     <div class="hero-stamp" aria-hidden="true">SELVA</div>
   </section>
 
-  <section class="section" id="catalogo">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="section-tag">
-          <TopicIcon name="tag" size={12} />
-          § 01
-        </span>
-        <h2 class="section-title">Rotulagem</h2>
-        <span class="section-count">{rotulagem.length} entradas</span>
-      </div>
-      {rotulagem.length === 0 ? (
-        <p class="form-note">Nenhuma entrada publicada nesta trilha ainda.</p>
-      ) : (
-        <div class="grid">
-          {rotulagem.map((entry, i) => <EntryCard entry={entry} delay={i * 60} />)}
-        </div>
-      )}
-    </div>
-  </section>
-
-  {(regulatorio.length > 0 || institucional.length > 0) && (
-    <section class="section">
-      <div class="wrap">
-        <div class="section-head">
-          <span class="section-tag">
-            <TopicIcon name="scroll" size={12} />
-            § 02
-          </span>
-          <h2 class="section-title">Regulatório & institucional</h2>
-          <span class="section-count">{regulatorio.length + institucional.length} entradas</span>
-        </div>
-        <div class="grid">
-          {[...regulatorio, ...institucional].map((entry, i) => (
-            <EntryCard entry={entry} delay={i * 60} />
-          ))}
-        </div>
-      </div>
-    </section>
-  )}
+  {
+    TRILHAS.map((t, sectionIndex) => {
+      const list = byTrilha[t];
+      if (list.length === 0) return null;
+      return (
+        <section class="section" id={sectionIndex === 0 ? 'catalogo' : undefined}>
+          <div class="wrap">
+            <div class="section-head">
+              <span class="section-tag">
+                <TopicIcon name={trilhaMeta[t].icon} size={12} />
+                § {String(sectionIndex + 1).padStart(2, '0')}
+              </span>
+              <h2 class="section-title">{trilhaMeta[t].titulo}</h2>
+              <span class="section-count">{list.length} entradas</span>
+            </div>
+            <div class="grid">
+              {list.map((entry, i) => (
+                <EntryCard entry={entry} delay={i * 60} />
+              ))}
+            </div>
+          </div>
+        </section>
+      );
+    })
+  }
 </BaseLayout>

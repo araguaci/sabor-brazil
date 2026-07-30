@@ -11,7 +11,13 @@ type Body = {
   email?: string;
 };
 
-const ALLOWED_TRILHAS = new Set(['rotulagem', 'regulatorio', 'institucional']);
+const ALLOWED_TRILHAS = new Set([
+  'rotulagem',
+  'regulatorio',
+  'institucional',
+  'superfaturamento',
+  'correlacao',
+]);
 
 function clean(value: unknown, max: number): string {
   return String(value ?? '')

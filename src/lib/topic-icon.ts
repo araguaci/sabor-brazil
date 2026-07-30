@@ -4,6 +4,8 @@ export type TopicIconName =
   | 'tag'
   | 'scroll'
   | 'landmark'
+  | 'banknote'
+  | 'chart'
   | 'beef'
   | 'candy'
   | 'milk'
@@ -39,7 +41,9 @@ export function topicIconForEntry(entry: Entry): TopicIconName {
   if (/combustivel|combustível|etanol|gasolina|e32|cnpe/.test(blob)) return 'fuel';
   if (/bets|aposta|bolsa-familia|bolsa.familia/.test(blob)) return 'ticket';
   if (/loteria|jogo-de-azar|cassino|monopolio|monopólio/.test(blob)) return 'dices';
-  if (/stf|moraes|eleitoral|agu|messias|despacho/.test(blob)) return 'gavel';
+  if (/stf|moraes|eleitoral|agu|messias|despacho|cnj|sigilo|drogas|seletividade/.test(blob)) return 'gavel';
+  if (/sufotur|cache|cachê|merenda|superfatur/.test(blob)) return 'banknote';
+  if (/pao-e-circo|pão.e.circo|emendas|farmacia|farmácia|nordeste|shows/.test(blob)) return 'chart';
 
   return topicIconForTrilha(entry.trilha);
 }
@@ -47,6 +51,8 @@ export function topicIconForEntry(entry: Entry): TopicIconName {
 export function topicIconForTrilha(trilha: Trilha): TopicIconName {
   if (trilha === 'rotulagem') return 'tag';
   if (trilha === 'regulatorio') return 'scroll';
+  if (trilha === 'superfaturamento') return 'banknote';
+  if (trilha === 'correlacao') return 'chart';
   return 'landmark';
 }
 
@@ -69,13 +75,23 @@ export const trilhaMeta: Record<
     titulo: 'Institucional',
     descricao: 'Caso concreto: procedimento previsto versus o que ocorreu de fato.',
   },
+  superfaturamento: {
+    icon: 'banknote',
+    titulo: 'Superfaturamento',
+    descricao: 'Preço contratado versus referência de mercado, com órgão de controle.',
+  },
+  correlacao: {
+    icon: 'chart',
+    titulo: 'Correlação',
+    descricao: 'Dado real isolado do salto causal que a narrativa viral acrescenta.',
+  },
 };
 
 export const ecosystemLinks = [
   {
     href: 'https://sabor-brazil.vercel.app/',
     title: 'Sabor Brazil',
-    description: 'Catálogo aberto onde o nome não é a coisa — rotulagem, regulatório e institucional.',
+    description: 'Catálogo aberto onde o nome não é a coisa — rotulagem, regulatório, institucional, superfaturamento e correlação.',
     icon: 'tag' as TopicIconName,
     current: true,
     image: '/artigos/sabor-brazil-projeto-hero.png',

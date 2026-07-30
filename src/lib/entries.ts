@@ -2,7 +2,12 @@ import fs from 'node:fs';
 import path from 'node:path';
 import matter from 'gray-matter';
 
-export type Trilha = 'rotulagem' | 'regulatorio' | 'institucional';
+export type Trilha =
+  | 'rotulagem'
+  | 'regulatorio'
+  | 'institucional'
+  | 'superfaturamento'
+  | 'correlacao';
 
 export type Fonte = {
   titulo: string;
@@ -29,13 +34,30 @@ export type Entry = {
   argumento_juridico?: { autor?: string; tese?: string };
   contraponto?: { existe?: boolean | null; resumo?: string; fonte?: string };
   teste_generalizacao?: string;
+  comparacao_de_preco?: {
+    valor_contratado?: string;
+    valor_referencia?: string;
+    proporcao?: string;
+  };
+  mecanismo_juridico?: string;
+  orgaos_de_controle?: string[];
+  responsaveis_nomeados?: string;
+  dado_real?: { afirmacao?: string; fonte?: string };
+  salto_logico?: { conclusao_alegada?: string; onde_quebra?: string };
+  contraponto_estrutural?: string;
   body: string;
   slug: string;
   filePath: string;
 };
 
 const DATA_ROOT = path.join(process.cwd(), 'data');
-const TRILHAS: Trilha[] = ['rotulagem', 'regulatorio', 'institucional'];
+export const TRILHAS: Trilha[] = [
+  'rotulagem',
+  'regulatorio',
+  'institucional',
+  'superfaturamento',
+  'correlacao',
+];
 
 function isPublishable(data: Record<string, unknown>, fileName: string): boolean {
   if (fileName.startsWith('_') || fileName.includes('template')) return false;
@@ -98,6 +120,8 @@ export function trilhaLabel(trilha: Trilha): string {
     rotulagem: 'Rotulagem',
     regulatorio: 'Regulatório',
     institucional: 'Institucional',
+    superfaturamento: 'Superfaturamento',
+    correlacao: 'Correlação',
   };
   return map[trilha];
 }

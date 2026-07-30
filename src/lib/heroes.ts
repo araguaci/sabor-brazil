@@ -46,6 +46,34 @@ const ENTRY_HEROES: Record<string, HeroRef> = {
     src: '/artigos/in-0007-ferrovia-para-hero.png',
     alt: 'Capa — Ferrovia do Pará e consulta prévia',
   },
+  'IN-0008': {
+    src: '/artigos/in-0008-sigilo-cascata-hero.png',
+    alt: 'Capa — sigilo em cascata no CNJ',
+  },
+  'IN-0009': {
+    src: '/artigos/in-0009-seletividade-drogas-hero.png',
+    alt: 'Capa — seletividade penal na Lei de Drogas',
+  },
+  'SF-0001': {
+    src: '/artigos/sf-0001-sufotur-caches-hero.png',
+    alt: 'Capa — superfaturamento de cachês na Sufotur (Bahia)',
+  },
+  'SF-0002': {
+    src: '/artigos/sf-0002-ananindeua-merenda-hero.png',
+    alt: 'Capa — merenda escolar superfaturada em Ananindeua',
+  },
+  'SF-0003': {
+    src: '/artigos/sf-0003-piritiba-merenda-hero.png',
+    alt: 'Capa — merenda escolar superfaturada em Piritiba',
+  },
+  'CR-0001': {
+    src: '/artigos/cr-0001-pao-e-circo-hero.png',
+    alt: 'Capa — correlação pobreza e shows públicos no Nordeste',
+  },
+  'CR-0002': {
+    src: '/artigos/cr-0002-emendas-farmacia-hero.png',
+    alt: 'Capa — emendas em recorde vs. cortes no Farmácia Popular',
+  },
 };
 
 export const PROJECT_HERO: HeroRef = {
