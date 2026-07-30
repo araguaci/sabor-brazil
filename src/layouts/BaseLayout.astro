@@ -90,6 +90,10 @@ const pageTitle = title.includes('Sabor Brazil') ? title : `${title} — Sabor B
             <TopicIcon name="home" size={13} />
             Início
           </a>
+          <a href="/sobre" aria-current={pathname.startsWith('/sobre') ? 'page' : undefined}>
+            <TopicIcon name="book" size={13} />
+            Sobre
+          </a>
           <a href="/trilha/rotulagem" aria-current={pathname.startsWith('/trilha/rotulagem') ? 'page' : undefined}>
             <TopicIcon name="tag" size={13} />
             Rotulagem

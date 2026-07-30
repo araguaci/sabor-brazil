@@ -1,0 +1,226 @@
+---
+export const prerender = true;
+
+import BaseLayout from '../layouts/BaseLayout.astro';
+import TopicIcon from '../components/TopicIcon.astro';
+import { getAllEntries, TRILHAS, type Trilha } from '../lib/entries';
+import { trilhaMeta } from '../lib/topic-icon';
+import { PROJECT_HERO } from '../lib/heroes';
+
+const entries = getAllEntries();
+const total = entries.length;
+const porTrilha = Object.fromEntries(
+  TRILHAS.map((t) => [t, entries.filter((e) => e.trilha === t).length])
+) as Record<Trilha, number>;
+
+const statusCounts = entries.reduce(
+  (acc, e) => {
+    acc[e.status] = (acc[e.status] ?? 0) + 1;
+    return acc;
+  },
+  {} as Record<string, number>
+);
+---
+
+<BaseLayout
+  title="Sobre — Sabor Brazil"
+  description="Catálogo aberto onde o nome não é a coisa. O que é, o que não é, como funciona."
+  image={PROJECT_HERO.src}
+>
+  <section class="hero hero--with-cover">
+    <div class="hero-cover" aria-hidden="true">
+      <img src={PROJECT_HERO.src} alt="" width="1200" height="480" />
+    </div>
+    <div class="wrap hero-foreground">
+      <p class="eyebrow">
+        <TopicIcon name="book" size={12} />
+        Sobre o projeto
+      </p>
+      <h1 class="hero-title" style="max-width: 14ch; font-size: clamp(2.8rem, 9vw, 5.5rem);">
+        O NOME<br />NÃO É<br />A <span class="strike">COISA</span>
+      </h1>
+      <p class="hero-sub">
+        Catálogo aberto e verificável de casos em que o rótulo, a regra ou a narrativa sugere uma
+        coisa — e a fonte diz outra. Disciplina de arquivo, não de opinião.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/#catalogo">Explorar catálogo</a>
+        <a class="btn" href="/contribuir">Encontrei um sabor</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section about-band">
+    <div class="wrap about-split">
+      <div>
+        <p class="section-tag">
+          <TopicIcon name="tag" size={12} />
+          O que é
+        </p>
+        <h2 class="about-heading">Separação entre fato e interpretação</h2>
+        <p class="about-lead">
+          O Sabor Brazil documenta, com fonte e denominação cruzadas, produtos “sabor” disto e
+          daquilo, mudanças regulatórias contestadas, divergências institucionais, superfaturamento
+          com comparação de preço e alegações virais ancoradas em dado real — mas cuja conclusão
+          não se sustenta.
+        </p>
+        <p class="about-body">
+          Nasceu do mesmo rigor do
+          <a href="https://lawfare-timeline.vercel.app/">lawfare-timeline</a>: toda entrada tem
+          fonte, toda fonte é auditável, hipótese nunca vira fato sem prova. Em produção:
+          <strong>{total} entradas</strong> em cinco trilhas.
+        </p>
+      </div>
+      <dl class="about-stats" aria-label="Números do catálogo">
+        <div>
+          <dt>Entradas</dt>
+          <dd>{total}</dd>
+        </div>
+        {
+          TRILHAS.map((t) => (
+            <div>
+              <dt>{trilhaMeta[t].titulo}</dt>
+              <dd>{porTrilha[t]}</dd>
+            </div>
+          ))
+        }
+      </dl>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <p class="section-tag">
+        <TopicIcon name="shield" size={12} />
+        O que não é
+      </p>
+      <h2 class="about-heading">Limites explícitos</h2>
+      <ul class="about-not-list">
+        <li>
+          <strong>Não é lista de fake news.</strong> Alegação viral com dado real e salto inválido
+          vira Trilha 5 — o dado fica, a conclusão é marcada.
+        </li>
+        <li>
+          <strong>Não misture categorias.</strong> Mudança regulatória pública não é fraude de
+          rótulo. Debate ideológico amplo sem dispositivo e caso concreto não entra na Trilha 3.
+        </li>
+        <li>
+          <strong>Não é panfleto.</strong> O mesmo rigor vale para casos que desfavorecem governo
+          ou oposição — ver, por exemplo, a CPMI do INSS sem relatório aprovado para nenhum lado.
+        </li>
+        <li>
+          <strong>Não presume má-fé automática.</strong> Na Trilha 3, a tese é sempre atribuída a
+          quem a fez; o contraponto é obrigatório ou a lacuna é declarada.
+        </li>
+        <li>
+          <strong>Não existe categoria “parece suspeito”.</strong> Se não cabe numa das cinco
+          trilhas com critério objetivo, não vira entrada.
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section about-band">
+    <div class="wrap">
+      <p class="section-tag">
+        <TopicIcon name="scroll" size={12} />
+        Cinco trilhas
+      </p>
+      <h2 class="about-heading">Critérios que não se misturam</h2>
+      <div class="about-trilhas">
+        {
+          TRILHAS.map((t) => (
+            <a class="about-trilha" href={`/trilha/${t}`}>
+              <span class="about-trilha-icon" aria-hidden="true">
+                <TopicIcon name={trilhaMeta[t].icon} size={22} />
+              </span>
+              <span class="about-trilha-meta">
+                <strong>{trilhaMeta[t].titulo}</strong>
+                <small>{porTrilha[t]} entradas</small>
+              </span>
+              <p>{trilhaMeta[t].descricao}</p>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap about-split about-split--reverse">
+      <div>
+        <p class="section-tag">
+          <TopicIcon name="search" size={12} />
+          Como uma entrada funciona
+        </p>
+        <h2 class="about-heading">Status à vista, tese nunca na manchete</h2>
+        <p class="about-body">
+          Cada ficha carrega <code>resumo_neutro</code> no card — descrição do caso, não a alegação
+          em disputa. Fontes com URL. Status explícito:
+        </p>
+        <ul class="about-status">
+          <li><span class="pill ok">Verificado</span> fonte cruzada quando possível</li>
+          <li><span class="pill hyp">Hipótese</span> uma fonte ou detalhe sem confirmação</li>
+          <li><span class="pill warn">Contestado judicialmente</span> processo em curso</li>
+          <li>
+            <span class="pill legal">Argumento jurídico</span> fatos checáveis + tese de terceiro
+          </li>
+        </ul>
+        <p class="about-body" style="margin-top: 1.25rem;">
+          Contagem atual no catálogo:
+          {Object.entries(statusCounts)
+            .map(([k, v]) => `${v} ${k}`)
+            .join(' · ')}.
+        </p>
+      </div>
+      <div class="about-quote">
+        <blockquote>
+          Hipótese nunca vira fato sem prova. O card nunca é a alegação — é o caso.
+        </blockquote>
+        <p>
+          Metodologia completa em
+          <a href="https://github.com/araguaci/sabor-brazil/blob/main/METHODOLOGY.md">METHODOLOGY.md</a>
+          e <a href="https://github.com/araguaci/sabor-brazil/blob/main/schema/entry-schema.md">schema</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section about-band">
+    <div class="wrap">
+      <p class="section-tag">
+        <TopicIcon name="globe" size={12} />
+        Ecossistema
+      </p>
+      <h2 class="about-heading">Mesma disciplina, outros recortes</h2>
+      <p class="about-body" style="max-width: 40rem; margin-bottom: 1.5rem;">
+        Parte do ecossistema Artes do Sul / AI Nativo Brasil. O Sabor Brazil compartilha rigor com o
+        lawfare-timeline, mas schema e IDs são independentes — aqui o foco é o caso individual sob
+        uma das cinco trilhas.
+      </p>
+      <div class="about-links">
+        <a href="https://lawfare-timeline.vercel.app/">Lawfare Timeline</a>
+        <a href="https://odragaoeaonca.vercel.app/">O Dragão e a Onça</a>
+        <a href="https://republica-sequestrada-hub.vercel.app/">República Sequestrada</a>
+        <a href="/catalog.json">catalog.json</a>
+        <a href="https://github.com/araguaci/sabor-brazil">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap about-cta">
+      <h2 class="about-heading">Próximo passo</h2>
+      <p class="about-lead">
+        Explore o catálogo, sugira um caso com fonte, ou leia a metodologia antes de contribuir.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/#catalogo">Explorar catálogo</a>
+        <a class="btn" href="/contribuir">Encontrei um sabor</a>
+        <a class="btn" href="https://github.com/araguaci/sabor-brazil/blob/main/METHODOLOGY.md">
+          Metodologia
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
