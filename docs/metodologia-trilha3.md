@@ -20,6 +20,10 @@ Nas Trilhas 1 e 2, o padrão contra o qual comparamos é publicamente não-contr
 
 Pergunta de controle: **se eu removesse o nome das pessoas e das instituições envolvidas, o argumento ainda se sustentaria como uma questão de direito processual em abstrato?** Se a resposta é não — se a entrada só faz sentido como ataque a uma pessoa ou instituição específica, e não como um ponto de direito verificável — ela não entra nesta trilha.
 
+## Regra de exibição — o card nunca é a alegação
+
+Todo template de listagem (home, página da trilha) deve puxar o campo `resumo_neutro`, nunca `argumento_juridico.tese`, como texto de preview. Uma tese não verificada, ou mesmo uma tese que reprovou no teste de generalização, não pode aparecer como a "manchete" visual de uma entrada — isso reproduz com destaque exatamente o que a curadoria classificou como problemático, antes que o leitor veja o contraponto. Antes de fazer merge de qualquer entrada nesta trilha, confirmar visualmente (preview local ou staging) que o card mostra o resumo neutro, não a tese em disputa.
+
 ## Exemplo de entrada aceitável vs. não aceitável
 
 **Aceitável**: "Neste processo, a defesa argumentou que a prisão preventiva deveria ter sido convertida em domiciliar no primeiro pedido após o diagnóstico médico, com base no art. 318 do CPP, e que isso não ocorreu até o quinto pedido — fato checável pelas datas de protocolo. A conclusão de que houve mora processual é o argumento da petição, não um fato estabelecido pelo projeto."
