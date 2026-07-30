@@ -1,4 +1,4 @@
-/** Capas de artigo X vinculadas a entradas / projeto. Arquivos em public/artigos/. */
+/** Capas de artigo X / entrada. Arquivos em public/artigos/. */
 
 export type HeroRef = {
   src: string;
@@ -17,6 +17,34 @@ const ENTRY_HEROES: Record<string, HeroRef> = {
   'RG-0003': {
     src: '/artigos/rg-0003-bets-bolsa-familia-hero.png',
     alt: 'Capa bets — o Estado mediu o dano e o STF freou o freio',
+  },
+  'IN-0001': {
+    src: '/artigos/in-0001-video-ia-hero.png',
+    alt: 'Capa — despacho sobre vídeo de IA e a tese dos três recordes',
+  },
+  'IN-0002': {
+    src: '/artigos/in-0002-agu-inss-hero.png',
+    alt: 'Capa — controvérsia sobre atuação da AGU na apuração do INSS',
+  },
+  'IN-0003': {
+    src: '/artigos/in-0003-inquerito-fake-news-hero.png',
+    alt: 'Capa — acúmulo de funções no Inquérito das Fake News',
+  },
+  'IN-0004': {
+    src: '/artigos/in-0004-sigilo-vorcaro-hero.png',
+    alt: 'Capa — sigilo de 100 anos sobre visitas a Vorcaro na PF',
+  },
+  'IN-0005': {
+    src: '/artigos/in-0005-waico-china-hero.png',
+    alt: 'Capa — adesão do Brasil à WAICO e enquadramento oficial',
+  },
+  'IN-0006': {
+    src: '/artigos/in-0006-mineracao-taboca-hero.png',
+    alt: 'Capa — Mineração Taboca, minerais críticos e mediação do MPF',
+  },
+  'IN-0007': {
+    src: '/artigos/in-0007-ferrovia-para-hero.png',
+    alt: 'Capa — Ferrovia do Pará e consulta prévia',
   },
 };
 
