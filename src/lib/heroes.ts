@@ -54,6 +54,10 @@ const ENTRY_HEROES: Record<string, HeroRef> = {
     src: '/artigos/in-0009-seletividade-drogas-hero.png',
     alt: 'Capa — seletividade penal na Lei de Drogas',
   },
+  'IN-0010': {
+    src: '/artigos/in-0010-cpmi-inss-hero.png',
+    alt: 'Capa — CPMI do INSS termina sem relatório aprovado',
+  },
   'SF-0001': {
     src: '/artigos/sf-0001-sufotur-caches-hero.png',
     alt: 'Capa — superfaturamento de cachês na Sufotur (Bahia)',
