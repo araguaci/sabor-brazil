@@ -122,6 +122,14 @@ const ENTRY_HEROES: Record<string, HeroRef> = {
     src: '/artigos/in-0010-cpmi-inss-hero.png',
     alt: 'Capa — CPMI do INSS termina sem relatório aprovado',
   },
+  'IN-0011': {
+    src: '/artigos/in-0011-supersalarios-hero.png',
+    alt: 'Capa — supersalários e teto constitucional no Judiciário',
+  },
+  'IN-0012': {
+    src: '/artigos/in-0012-carbono-oculto-hero.png',
+    alt: 'Capa — Operação Carbono Oculto, créditos ESG sobre terra pública',
+  },
   'SF-0001': {
     src: '/artigos/sf-0001-sufotur-caches-hero.png',
     alt: 'Capa — superfaturamento de cachês na Sufotur (Bahia)',

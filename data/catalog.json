@@ -1,26 +1,157 @@
 {
   "version": 1,
-  "generated_at": "2026-07-30T18:05:45.116Z",
+  "generated_at": "2026-07-30T18:38:07.284Z",
   "site": "https://sabor-brazil.vercel.app",
   "schema": "schema/entry-schema.md",
   "endpoint": "/catalog.json",
   "counts": {
-    "total": 34,
+    "total": 36,
     "por_trilha": {
+      "institucional": 12,
       "regulatorio": 6,
       "rotulagem": 13,
       "correlacao": 2,
-      "institucional": 10,
       "superfaturamento": 3
     },
     "por_status": {
+      "argumento_juridico_fundamentado": 12,
       "verificado": 18,
       "contestado_judicialmente": 3,
-      "hipotese": 3,
-      "argumento_juridico_fundamentado": 10
+      "hipotese": 3
     }
   },
   "entradas": [
+    {
+      "id": "IN-0011",
+      "trilha": "institucional",
+      "titulo": "Supersalários: tribunais estaduais pagam R$ 10,7 bi acima do teto constitucional em 2025, STF libera parte dos penduricalhos",
+      "resumo_neutro": "Levantamento de Transparência Brasil e República.org aponta R$ 10,7-11 bi pagos acima do teto constitucional pelos tribunais estaduais em 2025 (+42% sobre 2024); Folha revelou 616 magistrados recebendo até R$ 495 mil/mês via resolução conjunta CNJ/CNMP; STF, em 30/06/2026, liberou parte das verbas por maioria, mantendo limite de 35% acima do teto para indenizatórias.",
+      "status": "argumento_juridico_fundamentado",
+      "data_entrada": "Wed Jul 29 2026 21:00:00 GMT-0300 (Horário Padrão de Brasília)",
+      "fontes": [
+        {
+          "titulo": "Tribunais dos estados e DF pagaram R$ 10,7 bilhões acima do teto em 2025",
+          "url": "https://transparenciainternacional.org.br/posts/organizacoes-lancam-carta-aberta-pelo-fim-dos-supersalarios/",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "Carta aberta da sociedade civil pelo fim dos supersalários no serviço público",
+          "url": "https://www.justa.org.br/2026/02/carta-aberta-da-sociedade-civil-pelo-fim-dos-supersalarios-no-servico-publico/",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "STF conclui julgamento em plenário virtual extraordinário e libera parte dos penduricalhos",
+          "url": "https://fenafisco.org.br/01/07/2026/stf-conclui-julgamento-e-libera-parte-dos-penduricalhos-que-haviam-sido-barrados-pelo-tribunal/",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "STF forma maioria para liberar parte de penduricalhos barrados em julgamento",
+          "url": "https://www.cartacapital.com.br/justica/supersalarios-stf-forma-maioria-para-liberar-parte-de-penduricalhos-barrados-em-julgamento/",
+          "tipo": "reportagem"
+        }
+      ],
+      "tags": [
+        "supersalarios",
+        "penduricalhos",
+        "teto-constitucional",
+        "judiciario",
+        "cnj",
+        "stf",
+        "p11"
+      ],
+      "dispositivo_legal": "Art. 37, XI da CF/88 (teto remuneratório do funcionalismo público, hoje R$ 46,4 mil, correspondente ao subsídio de ministro do STF); Resolução conjunta CNJ/CNMP citada pelos tribunais como fundamento para verbas acima do teto; Art. 37, §12 da CF/88 (regime de subteto estadual, quando aplicável).",
+      "fatos_checaveis": [
+        "Levantamento de março de 2026 (Transparência Brasil e República.org): tribunais estaduais e do DF pagaram entre R$ 10,7 bi e R$ 11 bi acima do teto constitucional em 2025 — mais que o dobro dos R$ 4,5 bi de 2023 e 42% acima dos R$ 7,5 bi de 2024",
+        "TJSP lidera com R$ 3,94 bi acima do teto; TJMG em segundo com R$ 1,22 bi",
+        "Em 61% dos casos no TJMG, os penduricalhos responderam por mais da metade da remuneração bruta do magistrado",
+        "Reportagem da Folha de S.Paulo apurou que ao menos sete tribunais estaduais (DF, GO, MA, PR, RJ, RN, RO) pagaram, em maio de 2026, salários acima do teto sob fundamento de resolução conjunta CNJ/CNMP, com casos de até R$ 495 mil no mês, para pelo menos 616 magistrados",
+        "Em 06/07/2026, os ministros Alexandre de Moraes e Flávio Dino determinaram que os presidentes desses sete tribunais enviassem, em 48h, folhas de pagamento detalhadas de abril a julho de 2026, sob pena de punições",
+        "Em 30/06/2026, por maioria (Moraes, Zanin, Dino, Gilmar Mendes formando o voto conjunto; Fachin presidindo a maioria de 6 votos), o STF manteve o limite de até 35% acima do teto para verbas indenizatórias e outros 35% para o quinquênio por tempo de serviço, mas liberou pagamento de férias não usufruídas, plantões judiciais, licença-prêmio e verbas retroativas já reconhecidas — condicionando a retomada de passivos a auditoria e referendo do plenário, com o CNJ tendo 30 dias para apresentar relação de verbas com legalidade verificada",
+        "Pesquisa Datafolha (mesma janela): 83% da população reprova os supersalários"
+      ],
+      "argumento_juridico": {
+        "autor": "Transparência Internacional Brasil, Transparência Brasil e Justa, em carta aberta pela sociedade civil (fev/2026)",
+        "tese": "O teto constitucional do art. 37, XI da CF/88 é sistematicamente contornado por resoluções administrativas internas do próprio Judiciário (CNJ/CNMP) que criam rubricas indenizatórias e retroativas, produzindo um regime paralelo em que o valor pago supera, em casos extremos, dez vezes o teto nominal — sem que isso configure, tecnicamente, violação da norma constitucional, porque a exceção foi criada pelo mesmo sistema que deveria ser limitado por ela."
+      },
+      "contraponto": {
+        "existe": true,
+        "resumo": "O próprio STF, em 30/06/2026, não referendou o status quo integralmente — manteve limite de 35% acima do teto para duas categorias específicas de verba (indenizatórias e quinquênio), liberando apenas rubricas mais restritas (férias não gozadas, plantões, licença-prêmio, retroativos já reconhecidos), e condicionou a retomada de passivos a auditoria do CNJ com prazo de 30 dias e referendo do plenário — ou seja, o mecanismo de controle institucional está ativo, ainda que produzindo resultado parcial em vez de zerar os penduricalhos. A determinação de Moraes e Dino de 06/07/2026, exigindo folhas de pagamento detalhadas de sete tribunais em 48h sob pena de punição, é evidência adicional de fiscalização ativa em curso, não de omissão total do sistema de controle.",
+        "fonte": "Fenafisco e CartaCapital — ver campo fontes"
+      },
+      "teste_generalizacao": "PASSA. A pergunta — 'um poder pode, por resolução administrativa própria, criar exceções ao teto constitucional que a Constituição lhe impõe, sem que isso passe pelo crivo do Legislativo que fixou o teto originalmente?' — é uma questão de desenho institucional que se sustenta inteiramente em abstrato, é aplicável a qualquer tribunal do país, não depende de nenhum magistrado específico, e já gerou resposta institucional documentada (decisão do STF de 30/06/2026, determinação de Moraes/Dino de 06/07/2026). É estruturalmente próxima de IN-0008 e IN-0009: o problema é reconhecido e parcialmente enfrentado pelo próprio sistema, não apenas denunciado por fonte externa.",
+      "slug": "in-0011",
+      "path": "data/institucional/IN-0011-supersalarios-teto-constitucional-judiciario.md",
+      "url": "/entrada/in-0011",
+      "body": "# Supersalários: o teto que o próprio sistema resolveu ampliar\n\n## Por que esta entrada não é sobre \"juízes corruptos\"\n\nO mecanismo documentado aqui não é apropriação individual disfarçada — é a criação, por resolução conjunta de dois órgãos do próprio Judiciário (CNJ e CNMP), de categorias de verba que o STF depois teve que revisar judicialmente. O problema estrutural é o **desenho do processo**: o mesmo sistema que deveria operar sob o teto é quem define as exceções a ele, e a correção só chega via judicialização posterior — um padrão de \"regra cria a própria exceção\" que se soma aos já documentados em [IN-0008](/entrada/in-0008) (sigilo em cascata) e [IN-0010](/entrada/in-0010) (P06-B, prescrição parlamentar) como manifestações do mesmo tipo geral de captura processual sem necessidade de ilegalidade individual.\n\n## A tese em disputa\n\nAtribuída à Transparência Internacional Brasil, Transparência Brasil e Justa — **não** posição do Sabor Brazil:\n\n> O teto constitucional do art. 37, XI da CF/88 é sistematicamente contornado por resoluções administrativas internas do próprio Judiciário (CNJ/CNMP) que criam rubricas indenizatórias e retroativas, produzindo um regime paralelo em que o valor pago supera, em casos extremos, dez vezes o teto nominal.\n\n## Por que o teste de generalização passa mesmo com resposta institucional em curso\n\nDiferente de um caso encerrado sem resposta (como [IN-0004](/entrada/in-0004), ainda sem posição nomeada do outro lado), aqui o próprio STF já se pronunciou — parcialmente a favor da correção, parcialmente mantendo o status quo para certas rubricas. Isso não enfraquece a entrada: mostra que a pergunta estrutural é levada a sério pelo sistema, o que é exatamente o tipo de caso \"limpo\" que a Trilha 3 busca — sem necessidade de insinuar má-fé para que o problema seja relevante.\n\n## O que fica de fora\n\nNão trato como fato que qualquer magistrado nomeado tenha agido de má-fé ao receber os valores documentados — os valores foram pagos com base em resolução administrativa vigente à época, ainda que essa resolução esteja agora sob revisão judicial. A entrada documenta o mecanismo (como o teto é contornado) e a resposta institucional (STF, Moraes, Dino), não faz juízo sobre a conduta individual de magistrados receptores.\n\n## Atualização pendente\n\nAcompanhar o prazo de 30 dias do CNJ para apresentar a relação de verbas com legalidade verificada (contagem a partir de 30/06/2026); acompanhar a resposta dos sete tribunais (DF, GO, MA, PR, RJ, RN, RO) à determinação de Moraes/Dino de 06/07/2026; verificar se a auditoria do CNJ resulta em devolução de valores ou apenas em ajuste prospectivo.\n\n## Ver também\n\nTema irmão a [IN-0010](/entrada/in-0010) (P06-B) e a [IN-0008](/entrada/in-0008) (sigilo em cascata no CNJ) — os três casos documentam, sob ângulos diferentes, como órgãos do próprio Judiciário usam competência regulamentar interna para produzir efeitos que escapam do controle direto do desenho constitucional original."
+    },
+    {
+      "id": "IN-0012",
+      "trilha": "institucional",
+      "titulo": "Operação Carbono Oculto: créditos de carbono vendidos como ESG legítimo sobre terra pública federal grilada no Amazonas",
+      "resumo_neutro": "MPF e PF investigam esquema em que ~530 mil hectares de terra pública federal no sul do Amazonas, com cadeia dominial fraudada (SIGEF adulterado, INCRA e IPAAM capturados), geraram 168,8 milhões de créditos de carbono (UECs) certificados pela Verra e vendidos como compensação ESG a Boeing, Nestlé, Gol e outras empresas; INCRA confirmou que a área pertence à União.",
+      "status": "argumento_juridico_fundamentado",
+      "data_entrada": "Wed Jul 29 2026 21:00:00 GMT-0300 (Horário Padrão de Brasília)",
+      "fontes": [
+        {
+          "titulo": "Fraude em mercado de carbono grilou 500 mil hectares no sul do Amazonas",
+          "url": "https://amazoniareal.com.br/",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "Alvo da PF, tombo na Faria Lima: o esquema de crédito de carbono no AM",
+          "url": "https://www.metropoles.com/negocios/pf-faria-lima-esquema-credito-carbono",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "Família de Daniel Vorcaro, do Master, é dona de projeto irregular de crédito de carbono na Amazônia",
+          "url": "https://climainfo.org.br/2026/01/20/familia-de-daniel-vorcaro-do-master-e-dona-de-projeto-irregular-de-credito-de-carbono-na-amazonia/",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "Operação Carbono Oculto: revelações e desdobramentos",
+          "url": "https://transparenciainternacional.org.br/posts/operacao-carbono-oculto-revelacoes-e-desdobramentos/",
+          "tipo": "reportagem"
+        }
+      ],
+      "tags": [
+        "carbono",
+        "redd",
+        "grilagem",
+        "incra",
+        "mpf",
+        "amazonas",
+        "esg",
+        "greenwashing"
+      ],
+      "dispositivo_legal": "Lei nº 15.042/2024 (institui o Sistema Brasileiro de Comércio de Emissões — SBCE, sem efeito retroativo sobre o mercado voluntário onde os créditos aqui documentados foram gerados); competência do INCRA sobre terras públicas federais (Lei nº 8.629/1993 c/c Decreto nº 9.311/2018 — SIGEF); Termo de Ajustamento de Conduta e normas de licenciamento ambiental estadual (IPAAM/AM), cuja captura é objeto da investigação.",
+      "fatos_checaveis": [
+        "Organização identificou aproximadamente 530.000 ha de terras da União no sul do Amazonas (municípios de Lábrea e Apuí)",
+        "Agrimensores corrompidos inseriram dados fictícios no SIGEF (Sistema de Gestão Fundiária), deslocando títulos privados sobre essas áreas; cartórios registraram transferências formalmente válidas sobre terra que não pertencia aos solicitantes",
+        "Servidores de carreira do IPAAM — parte já investigada em 2019 na Operação Arquimedes por conduta semelhante — emitiram licenças ambientais e autorizações de manejo sobre as áreas com cadeia dominial fraudada",
+        "Empresa Carbonext desenvolveu os projetos Fortaleza do Ituxi REDD, Unitor REDD+ e Sempre-Viva; a certificadora internacional Verra, que não verifica cadeia dominial (apenas existência de floresta e metodologia de monitoramento), certificou os projetos",
+        "168,8 milhões de Unidades de Emissão de Carbono (UECs) foram geradas com essa validação internacional",
+        "Créditos foram comercializados via plataforma Moss e mercado voluntário a Boeing, Gol, Nestlé, Spotify, Toshiba, iFood, Itaú e PwC, entre outros, como compensação de emissões (escopo 3) em relatórios ESG",
+        "Enquanto os projetos geravam créditos pela 'conservação' das florestas, as mesmas áreas eram usadas para extração ilegal de madeira, autorizada por planos de manejo irregulares do IPAAM capturado — dupla monetização",
+        "Fase inicial da operação (05/06/2024): 76 mandados em 6 estados, prisões preventivas, bloqueio de R$ 1,6 bi; Verra suspendeu 3 projetos em 10/06/2024",
+        "Relatório final da Polícia Federal (mai/2025): 392 páginas, somadas a relatório de 108 páginas de dez/2024, totalizando 500 páginas de indiciamento; 31 pessoas formalmente indiciadas; MPF ainda decide entre denúncia ou arquivamento até a data desta entrada",
+        "INCRA confirmou que a área pertence à União e não pode ser usada para fins econômicos privados",
+        "Projetos ligados à família de Daniel Vorcaro (Banco Master) foram incorporados a fundos da REAG; Golden Green e Global Carbon atingiram avaliação conjunta de R$ 45,5 bi sem que uma única UEC tivesse sido efetivamente vendida por esses veículos específicos"
+      ],
+      "argumento_juridico": {
+        "autor": "Ministério Público Federal e Polícia Federal, com base no inquérito da Operação Carbono Oculto/Greenwashing (fases Expurgare, Protegere e relatório final)",
+        "tese": "A cadeia de certificação internacional de créditos de carbono (Carbonext como desenvolvedora, Verra como certificadora) validou e permitiu a comercialização global de créditos gerados sobre terra pública federal com cadeia dominial fraudada, sem verificação de titularidade — permitindo que fraude fundiária doméstica virasse ativo ESG vendido a corporações multinacionais como compensação legítima de emissões."
+      },
+      "contraponto": {
+        "existe": true,
+        "resumo": "Não localizei, até a data desta entrada, uma resposta pública detalhada da Verra especificamente sobre por que sua metodologia de certificação não inclui verificação de cadeia dominial — a certificadora suspendeu 3 projetos após a deflagração da operação, o que pode ser lido como reconhecimento tácito de falha, mas não substitui uma explicação formal do critério de certificação adotado. A Carbonext também não tem, nas fontes consultadas até esta entrada, uma resposta pública equivalente à que a Mineração Taboca deu em IN-0006 — a presente investigação segue sem denúncia ou arquivamento formal do MPF.",
+        "fonte": "Ausência de fonte é registrada como lacuna — ver atualização pendente"
+      },
+      "teste_generalizacao": "PASSA. A pergunta — 'um sistema de certificação internacional que valida apenas a existência física de um ativo ambiental (floresta) sem verificar a cadeia de titularidade jurídica sobre a terra onde esse ativo está deveria continuar operando dessa forma?' — é uma questão de desenho de governança de mercado voluntário de carbono que se sustenta inteiramente em abstrato, aplicável a qualquer certificadora e qualquer geografia, não depende de nenhum ator específico do caso brasileiro. É reforçada pelo fato de a falha ter permitido dupla monetização (créditos de conservação + madeira extraída ilegalmente das mesmas áreas), o que a torna estruturalmente mais grave do que uma simples lacuna de auditoria.",
+      "slug": "in-0012",
+      "path": "data/institucional/IN-0012-carbono-oculto-creditos-terra-publica.md",
+      "url": "/entrada/in-0012",
+      "body": "# Carbono Oculto: quando a auditoria internacional não pergunta de quem é a terra\n\n## Por que esta entrada existe fora do escopo direto do lawfare-timeline\n\nO corpus lawfare-timeline já documenta este caso em profundidade (arquivo `operacao-greenwashing.html`, IDs relacionados), com foco no padrão de captura institucional doméstica (INCRA, IPAAM, cartórios). Esta entrada do Sabor Brazil recorta um ângulo mais estreito e mais generalizável: **o mecanismo de certificação internacional em si** — por que um selo que circula globalmente como garantia ESG não verifica o dado mais básico (a quem pertence a terra) antes de emitir 168,8 milhões de unidades comercializáveis.\n\n## A tese em disputa\n\nAtribuída ao MPF/PF, com base no inquérito formal — **não** posição do Sabor Brazil:\n\n> A cadeia de certificação internacional de créditos de carbono validou e permitiu a comercialização global de créditos gerados sobre terra pública federal com cadeia dominial fraudada, sem verificação de titularidade.\n\n## O que fica de fora\n\nNão trato como fato estabelecido a responsabilidade penal de nenhum dos 31 indiciados — o MPF ainda não decidiu entre denúncia e arquivamento até a data desta entrada. Também não trato como resolvido se a Carbonext atuou como parte do esquema ou como vítima de fraude fundiária anterior à sua atuação — a própria apuração disponível trata isso como pergunta em aberto.\n\n## Ligação com outras trilhas do Sabor Brazil\n\nVer [IN-0006](/entrada/in-0006) (Mineração Taboca) para outro caso de mediação institucional contornada em contexto ambiental amazônico. A diferença central: em IN-0006 a empresa deu resposta pública específica; aqui, até a data desta entrada, não localizei resposta formal e nomeada da Verra ou da Carbonext. Cluster Vorcaro/Banco Master também em [IN-0004](/entrada/in-0004) (sigilo de visitas na PF).\n\n## Atualização pendente\n\nAcompanhar decisão do MPF sobre denúncia ou arquivamento (relatório final de mai/2025, ainda pendente de decisão até a data desta entrada); localizar resposta formal da Verra sobre revisão de metodologia pós-caso; verificar se alguma das empresas compradoras (Boeing, Nestlé, Gol, Spotify, Toshiba, iFood, Itaú, PwC) se manifestou publicamente sobre a compensação declarada em relatórios ESG; preferir URL de matéria específica da Amazônia Real em vez da homepage genérica atual na primeira fonte."
+    },
     {
       "id": "RG-0004",
       "trilha": "regulatorio",
