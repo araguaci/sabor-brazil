@@ -86,14 +86,6 @@ const pageTitle = title.includes('Sabor Brazil') ? title : `${title} — Sabor B
       <div class="wrap inner">
         <a class="brand" href="/">SABOR <span>BRAZIL</span></a>
         <nav class="nav" aria-label="Principal">
-          <a href="/" aria-current={pathname === '/' ? 'page' : undefined}>
-            <TopicIcon name="home" size={13} />
-            Início
-          </a>
-          <a href="/sobre" aria-current={pathname.startsWith('/sobre') ? 'page' : undefined}>
-            <TopicIcon name="book" size={13} />
-            Sobre
-          </a>
           <a href="/trilha/rotulagem" aria-current={pathname.startsWith('/trilha/rotulagem') ? 'page' : undefined}>
             <TopicIcon name="tag" size={13} />
             Rotulagem
