@@ -30,6 +30,10 @@ const ENTRY_HEROES: Record<string, HeroRef> = {
     src: '/artigos/rg-0006-leite-carne-vegetal-hero.png',
     alt: 'Capa — PL 10.556/2018 denominação leite e carne vegetal',
   },
+  'RG-0007': {
+    src: '/artigos/rg-0007-penduricalhos-hero.png',
+    alt: 'Capa — Resolução CNJ/CNMP 14/2026 sobre penduricalhos',
+  },
   'RT-0001': {
     src: '/artigos/rt-0001-tipo-calabresa-hero.png',
     alt: 'Capa — linguiça tipo calabresa vs linguiça calabresa',
@@ -130,6 +134,10 @@ const ENTRY_HEROES: Record<string, HeroRef> = {
     src: '/artigos/in-0012-carbono-oculto-hero.png',
     alt: 'Capa — Operação Carbono Oculto, créditos ESG sobre terra pública',
   },
+  'IN-0013': {
+    src: '/artigos/in-0013-viviane-barci-hero.png',
+    alt: 'Capa — escritório familiar e crescimento de casos nos tribunais superiores',
+  },
   'SF-0001': {
     src: '/artigos/sf-0001-sufotur-caches-hero.png',
     alt: 'Capa — superfaturamento de cachês na Sufotur (Bahia)',
@@ -142,6 +150,10 @@ const ENTRY_HEROES: Record<string, HeroRef> = {
     src: '/artigos/sf-0003-piritiba-merenda-hero.png',
     alt: 'Capa — merenda escolar superfaturada em Piritiba',
   },
+  'SF-0004': {
+    src: '/artigos/sf-0004-tst-lexus-hero.png',
+    alt: 'Capa — frota Lexus do TST, opção mais cara do estudo técnico',
+  },
   'CR-0001': {
     src: '/artigos/cr-0001-pao-e-circo-hero.png',
     alt: 'Capa — correlação pobreza e shows públicos no Nordeste',
@@ -149,6 +161,10 @@ const ENTRY_HEROES: Record<string, HeroRef> = {
   'CR-0002': {
     src: '/artigos/cr-0002-emendas-farmacia-hero.png',
     alt: 'Capa — emendas em recorde vs. cortes no Farmácia Popular',
+  },
+  'CR-0003': {
+    src: '/artigos/cr-0003-stf-familia-real-hero.png',
+    alt: 'Capa — orçamento do STF vs. Família Real britânica, comparador errado',
   },
 };
 

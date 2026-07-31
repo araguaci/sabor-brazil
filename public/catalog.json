@@ -1,26 +1,71 @@
 {
   "version": 1,
-  "generated_at": "2026-07-30T18:45:34.206Z",
+  "generated_at": "2026-07-31T04:16:34.820Z",
   "site": "https://sabor-brazil.vercel.app",
   "schema": "schema/entry-schema.md",
   "endpoint": "/catalog.json",
   "counts": {
-    "total": 36,
+    "total": 40,
     "por_trilha": {
-      "institucional": 12,
-      "regulatorio": 6,
+      "correlacao": 3,
+      "institucional": 13,
+      "regulatorio": 7,
       "rotulagem": 13,
-      "correlacao": 2,
-      "superfaturamento": 3
+      "superfaturamento": 4
     },
     "por_status": {
-      "argumento_juridico_fundamentado": 12,
-      "verificado": 18,
-      "contestado_judicialmente": 3,
-      "hipotese": 3
+      "hipotese": 4,
+      "argumento_juridico_fundamentado": 13,
+      "verificado": 20,
+      "contestado_judicialmente": 3
     }
   },
   "entradas": [
+    {
+      "id": "CR-0003",
+      "trilha": "correlacao",
+      "titulo": "\"STF custa 39% mais que a Família Real britânica\": dado real, comparador errado",
+      "resumo_neutro": "Levantamentos de 2025 e 2026 mostram que o orçamento do STF (R$ 897,6 mi em 2024, R$ 953,8 mi em 2025, previsão de R$ 1,04 bi em 2026) supera o orçamento da monarquia britânica (R$ 645,1 mi). O dado orçamentário é real; a conclusão de que isso prova desperdício comparável usa como referência uma instituição sem função jurisdicional equivalente.",
+      "status": "hipotese",
+      "data_entrada": "Wed Jul 29 2026 21:00:00 GMT-0300 (Horário Padrão de Brasília)",
+      "fontes": [
+        {
+          "titulo": "STF custa 39% mais que a Família Real britânica",
+          "url": "https://www.poder360.com.br/poder-justica/stf-custa-39-mais-que-a-familia-real-britanica/",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "STF tem orçamento bilionário e custo maior que o da Família Real britânica",
+          "url": "https://www.serranewsrj.com.br/2026/05/stf-tem-orcamento-bilionario.html",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "Ministros da Suprema Corte têm o trabalho mais leve do Judiciário dos EUA",
+          "url": "https://www.conjur.com.br/2025-ago-24/ministros-da-suprema-corte-tem-o-trabalho-mais-leve-do-judiciario-dos-eua/",
+          "tipo": "reportagem"
+        }
+      ],
+      "tags": [
+        "stf",
+        "orcamento",
+        "comparacao-internacional",
+        "judiciario",
+        "viral"
+      ],
+      "dado_real": {
+        "afirmacao": "O orçamento do STF (R$ 897,6 mi em 2024; R$ 953,8 mi aprovado para 2025; previsão de R$ 1,04 bi para 2026) é superior ao custo anual de manutenção da monarquia britânica (R$ 645,1 mi, convertido), uma diferença de aproximadamente 39%. O STF tem 11 ministros e cerca de 1.200 funcionários; a Família Real britânica tem 1.133 funcionários.",
+        "fonte": "Poder360 (fev/2025) e cobertura subsequente (Gazeta do Povo, Revista Oeste, Serra News, mai/2026) — números orçamentários públicos, sem contestação factual localizada"
+      },
+      "salto_logico": {
+        "conclusao_alegada": "Como uma monarquia hereditária cerimonial custa menos que o STF, o orçamento do STF é desproporcional e evidencia desperdício ou inchaço institucional sem justificativa funcional.",
+        "onde_quebra": "A comparação não controla pelo tipo de função exercida por cada instituição. A monarquia britânica é majoritariamente cerimonial — não julga processos, não produz decisões vinculantes, não sustenta estrutura de segurança institucional equivalente a uma corte que decide sobre liberdade, patrimônio e poder político de terceiros. O STF, em contraste, emitiu 101.970 decisões em 2023 (17.320 colegiadas + 84.650 monocráticas) e recebeu 78.242 novos processos no mesmo ano, incluindo 23.546 processos originários. Comparar custo total sem comparar volume de atividade jurisdicional equivalente é comparar duas categorias de instituição sem produto comum mensurável — o próprio STF, em nota, rejeitou a comparação em 2022 alegando que os papéis são 'completamente diferentes', o que é, neste ponto específico, procedente (ainda que isso não valide automaticamente o tamanho do orçamento em si — ver contraponto_estrutural)."
+      },
+      "contraponto_estrutural": "Isso não significa que não haja nada a questionar no orçamento do STF — apenas que a monarquia britânica é o comparador errado. O comparador funcionalmente correto são outras cortes constitucionais e supremas, e aí a anomalia aparece de outro ângulo, real e mais específico: o Tribunal Constitucional alemão julga cerca de 100 casos/ano, o Conselho Constitucional francês até 150, a Suprema Corte britânica até 120, e a Suprema Corte dos EUA (SCOTUS) recebe milhares de petições mas julga apenas cerca de 80 (67 casos na sessão 2024-25). O STF brasileiro julga mais de 10 mil processos por ano — uma anomalia de volume, não de custo per se, decorrente de sua função híbrida (corte constitucional + última instância recursal ampla), que nenhuma das cortes comparáveis internacionalmente acumula da mesma forma. Ou seja: o dado real (orçamento elevado) é verdadeiro, mas a comparação que sustenta indignação pública (vs. a realeza britânica) é estruturalmente mais fraca do que a comparação disponível e não usada (vs. cortes constitucionais de função equivalente, ajustada por volume de decisões).",
+      "slug": "cr-0003",
+      "path": "data/correlacao/stf-vs-familia-real.md",
+      "url": "/entrada/cr-0003",
+      "body": "# STF vs. Família Real: o dado é real, o comparador é que está errado\n\n## Por que isto não é desmentido, é recorte\n\nEsta entrada não nega o número — o orçamento do STF é, de fato, publicamente maior que o custo de manutenção da monarquia britânica, e isso é checável em fontes oficiais de ambas as instituições. O que quebra é a inferência que a comparação é chamada a sustentar: que o número, por si, prova desperdício, porque falta um comparador com função equivalente. A trilha 5 existe exatamente para isto — isolar o salto sem descartar o dado.\n\n## A conclusão em disputa\n\nCircula publicamente, atribuída de forma difusa à indignação com gastos do Judiciário — **não** posição do Sabor Brazil:\n\n> Se até uma monarquia hereditária custa menos que o STF, isso prova que o Judiciário brasileiro está inchado e desperdiça dinheiro público.\n\n## Onde a comparação certa aponta para outro lugar\n\nO ponto mais forte contra o STF não está na comparação viral — está nos dados de volume processual reportados pelo próprio noticiário jurídico especializado (ConJur): nenhuma corte constitucional comparável no mundo acumula o volume de decisões que o STF produz, porque nenhuma acumula, ao mesmo tempo, a função de guardiã da Constituição e de última instância recursal ampla da forma como o desenho institucional brasileiro permite. Esse é um argumento estrutural genuíno — só que é outro argumento, com outro comparador, e chega a uma conclusão mais específica (anomalia de desenho institucional) do que a conclusão viral (desperdício genérico via comparação com a realeza).\n\n## O que fica de fora\n\nNão trato como fato resolvido se o volume de 10 mil+ processos/ano do STF é, em si, desnecessário ou evitável por reforma processual — isso depende de argumento jurídico sobre desenho de recursos e competência originária que está fora do escopo desta entrada de correlação.\n\n## Atualização pendente\n\nAcompanhar orçamento de 2027 do STF quando aprovado; verificar se alguma nova comparação institucional (ex.: custo por decisão emitida, em vez de custo total) aparece no debate público — essa métrica resolveria diretamente o problema de comparabilidade identificado aqui."
+    },
     {
       "id": "IN-0011",
       "trilha": "institucional",
@@ -151,6 +196,69 @@
       "path": "data/institucional/IN-0012-carbono-oculto-creditos-terra-publica.md",
       "url": "/entrada/in-0012",
       "body": "# Carbono Oculto: quando a auditoria internacional não pergunta de quem é a terra\n\n## Por que esta entrada existe fora do escopo direto do lawfare-timeline\n\nO corpus lawfare-timeline já documenta este caso em profundidade (arquivo `operacao-greenwashing.html`, IDs relacionados), com foco no padrão de captura institucional doméstica (INCRA, IPAAM, cartórios). Esta entrada do Sabor Brazil recorta um ângulo mais estreito e mais generalizável: **o mecanismo de certificação internacional em si** — por que um selo que circula globalmente como garantia ESG não verifica o dado mais básico (a quem pertence a terra) antes de emitir 168,8 milhões de unidades comercializáveis.\n\n## A tese em disputa\n\nAtribuída ao MPF/PF, com base no inquérito formal — **não** posição do Sabor Brazil:\n\n> A cadeia de certificação internacional de créditos de carbono validou e permitiu a comercialização global de créditos gerados sobre terra pública federal com cadeia dominial fraudada, sem verificação de titularidade.\n\n## O que fica de fora\n\nNão trato como fato estabelecido a responsabilidade penal de nenhum dos 31 indiciados — o MPF ainda não decidiu entre denúncia e arquivamento até a data desta entrada. Também não trato como resolvido se a Carbonext atuou como parte do esquema ou como vítima de fraude fundiária anterior à sua atuação — a própria apuração disponível trata isso como pergunta em aberto.\n\n## Ligação com outras trilhas do Sabor Brazil\n\nVer [IN-0006](/entrada/in-0006) (Mineração Taboca) para outro caso de mediação institucional contornada em contexto ambiental amazônico. A diferença central: em IN-0006 a empresa deu resposta pública específica; aqui, até a data desta entrada, não localizei resposta formal e nomeada da Verra ou da Carbonext. Cluster Vorcaro/Banco Master também em [IN-0004](/entrada/in-0004) (sigilo de visitas na PF).\n\n## Atualização pendente\n\nAcompanhar decisão do MPF sobre denúncia ou arquivamento (relatório final de mai/2025, ainda pendente de decisão até a data desta entrada); localizar resposta formal da Verra sobre revisão de metodologia pós-caso; verificar se alguma das empresas compradoras (Boeing, Nestlé, Gol, Spotify, Toshiba, iFood, Itaú, PwC) se manifestou publicamente sobre a compensação declarada em relatórios ESG; preferir URL de matéria específica da Amazônia Real em vez da homepage genérica atual na primeira fonte."
+    },
+    {
+      "id": "IN-0013",
+      "trilha": "institucional",
+      "titulo": "Escritório de Viviane Barci de Moraes cresce 500% em casos nos tribunais superiores após Alexandre de Moraes chegar ao STF",
+      "resumo_neutro": "Levantamento com base em dados da Receita Federal mostra que o número de processos do escritório de Viviane Barci de Moraes em tribunais superiores subiu de 27 para 159 (STJ+STF) desde que seu marido, Alexandre de Moraes, ingressou no STF em 2017 — incluindo R$ 80 milhões recebidos do Banco Master em menos de dois anos. Em fev/2026, a advogada assumiu a defesa de Lucas Kallas — sócio de Daniel Vorcaro (Banco Master) — em processo remetido ao STF; a proposta de restringir atuação de parentes de ministros como advogados na Corte teve reunião cancelada pelo presidente Fachin dias depois.",
+      "status": "argumento_juridico_fundamentado",
+      "data_entrada": "Wed Jul 29 2026 21:00:00 GMT-0300 (Horário Padrão de Brasília)",
+      "fontes": [
+        {
+          "titulo": "Número de casos do escritório de Viviane Barci cresceu 500% após Moraes chegar ao STF",
+          "url": "https://www.gazetadopovo.com.br/republica/numero-de-casos-do-escritorio-de-viviane-barci-cresceu-500-apos-moraes-chegar-ao-stf/",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "Viviane Barci de Moraes assume defesa no STF de empresário ligado a Daniel Vorcaro, dono do Master",
+          "url": "https://ndmais.com.br/justica/viviane-barci-moraes-defesa-lucas-kallas-stf/",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "Viviane aciona STF para defender empresário elogiado por Lula",
+          "url": "https://revistaoeste.com/politica/viviane-aciona-stf-para-defender-empresario-elogiado-por-lula/",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "Mulher de Moraes assume defesa de empresário de mineração Lucas Kallas no STF",
+          "url": "https://jornaldebrasilia.com.br/noticias/politica-e-poder/mulher-de-moraes-assume-defesa-de-empresario-de-mineracao-lucas-kallas-no-stf/",
+          "tipo": "reportagem"
+        }
+      ],
+      "tags": [
+        "stf",
+        "conflito-de-interesse",
+        "impedimento",
+        "banco-master",
+        "mineracao",
+        "p03",
+        "p09"
+      ],
+      "dispositivo_legal": "Art. 144–145 do CPC (hipóteses de impedimento e suspeição do juiz, aplicáveis por analogia a vínculo familiar direto com advogado da causa); regras internas do STF sobre impedimento por parentesco, que em ago/2023 foram flexibilizadas para dar mais liberdade de atuação a familiares de ministros em causas com potencial conflito; proposta de alteração do Código de Ética da Corte (discutida em 2026, com reunião de 12/fev cancelada pelo presidente Edson Fachin) que previa restringir essa atuação.",
+      "fatos_checaveis": [
+        "Dados da Receita Federal mostram que o número de processos do escritório de Viviane Barci de Moraes em tribunais superiores (STJ + STF) cresceu de 27 para 159 desde que Alexandre de Moraes ingressou no STF em 2017 — aumento de quase 500%",
+        "O escritório recebeu R$ 80 milhões do Banco Master em menos de dois anos, segundo documentos da Receita Federal citados pela reportagem; outra apuração indica contrato que poderia alcançar R$ 129 milhões no total",
+        "Patrimônio em imóveis da família triplicou desde 2017",
+        "Em 02/02/2026, Viviane Barci de Moraes assumiu, por substabelecimento, a defesa de Lucas Kallas — sócio de Daniel Vorcaro na Cedro Participações/Biomm — em processo derivado da Operação Rejeito, remetido ao STF por decisão do TRF-6 por possível envolvimento de pessoa com foro privilegiado; a petição é assinada também pelos filhos do casal, Alexandre Barci de Moraes e Giuliana Barci de Moraes",
+        "Na abertura do ano judiciário de 2026, o próprio ministro Alexandre de Moraes classificou as críticas sobre o tema como 'má-fé' e 'mentira absurda', afirmando que o STF respeita rigorosamente as regras de impedimento",
+        "Em agosto de 2023, o STF havia flexibilizado as regras que restringiam a atuação de familiares de ministros em causas na Corte",
+        "Em fevereiro de 2026, o presidente do STF, Edson Fachin, cancelou reunião marcada para discutir mudança no Código de Ética que restringiria essa atuação, após baixa adesão de ministros ao convite prévio"
+      ],
+      "argumento_juridico": {
+        "autor": "André Marsiglia, advogado constitucionalista, em entrevista à Gazeta do Povo",
+        "tese": "Embora não se possa afirmar irregularidade sem provas concretas de ilegalidade, o caso evidencia um claro risco de conflito de interesses e de percepção de favorecimento, reforçando a necessidade de maior transparência e mecanismos rigorosos de fiscalização sobre agentes públicos de alto escalão e suas relações familiares e profissionais."
+      },
+      "contraponto": {
+        "existe": true,
+        "resumo": "O constitucionalista Alessandro Chiarottino, na mesma reportagem, pondera que o aumento no número de ações conduzidas pelo escritório de Viviane Barci de Moraes em tribunais superiores não é, por si só, um fator fora do padrão — isto é, cresce o volume de trabalho de qualquer escritório que ganha notoriedade, e o dado bruto do crescimento percentual não prova, isoladamente, direcionamento indevido de processos.",
+        "fonte": "Gazeta do Povo — mesma reportagem que traz a tese de Marsiglia"
+      },
+      "teste_generalizacao": "PARCIAL. A pergunta institucional geral — 'familiares de magistrados de tribunal superior devem poder atuar como advogados em causas na mesma Corte, incluindo causas com conexão a partes que também mantêm relação financeira direta com o escritório do familiar?' — é genuinamente generalizável e não depende do nome específico envolvido; o próprio STF já tratou o tema como pauta institucional (flexibilização de 2023, proposta de Código de Ética em 2026). O que impede classificar como PASSA pleno é que o caso concreto (Kallas/Vorcaro/Banco Master) mistura três camadas — pagamento de honorários anterior, participação de Kallas na mesma empresa (Biomm) que tem Vorcaro como maior acionista, e o fato de o processo ter sido remetido ao STF por decisão de instância inferior, não por escolha do escritório — o que exige cautela para não tratar proximidade financeira anterior como prova de direcionamento processual não demonstrado.",
+      "slug": "in-0013",
+      "path": "data/institucional/IN-0013-viviane-barci-escritorio-500-por-cento.md",
+      "url": "/entrada/in-0013",
+      "body": "# O escritório que cresceu junto com a cadeira\n\n## Por que isto não é sobre acusar Alexandre de Moraes de crime\n\nEsta entrada não afirma, e as fontes disponíveis não afirmam, que qualquer processo tenha sido decidido em favor de quem paga o escritório da família. O dado documentado é anterior a qualquer alegação desse tipo: crescimento de volume de casos, valor recebido de uma instituição financeira específica (Banco Master) que depois colapsou sob investigação federal, e a decisão institucional do próprio STF de flexibilizar, em 2023, as regras que poderiam ter limitado essa configuração — seguida da suspensão, em 2026, da discussão para apertar essas mesmas regras.\n\n## A tese em disputa\n\nAtribuída a André Marsiglia, advogado constitucionalista — **não** posição do Sabor Brazil:\n\n> Embora não se possa afirmar irregularidade sem provas concretas de ilegalidade, o caso evidencia um claro risco de conflito de interesses e de percepção de favorecimento.\n\n## O contraponto que a entrada preserva\n\nAlessandro Chiarottino, também constitucionalista, argumenta que crescimento de casos por notoriedade do sobrenome não é, isoladamente, evidência de direcionamento — um escritório de alto perfil naturalmente atrai mais clientes independentemente de qualquer irregularidade. A entrada registra os dois lados lado a lado, sem escolher entre eles.\n\n## O que fica de fora\n\nNão trato como fato que o processo de Lucas Kallas tenha sido ou venha a ser decidido de forma favorável por influência de Moraes — a atuação da advogada, até a data desta entrada, não coincide com decisão de mérito do ministro no caso, e a remessa ao STF partiu do TRF-6, não de escolha da defesa.\n\n## Atualização pendente\n\nAcompanhar se a proposta de restrição ao Código de Ética do STF (reunião cancelada em fev/2026) volta à pauta; acompanhar desfecho do processo de Lucas Kallas no STF e se Alexandre de Moraes formalmente se declara impedido nele."
     },
     {
       "id": "RG-0004",
@@ -289,6 +397,64 @@
       "body": "# PL 10.556/2018 — nomes animal × vegetal\n\n## Por que esta entrada é Trilha 2 (e não só rotulagem)\n\nO núcleo não é um lote na prateleira: é **proposta legislativa** já aprovada na Câmara e em tramitação no Senado, com disputa documentada entre partes qualificadas sobre o que “protege o consumidor”. Ambos os lados invocam “não induzir a erro” para conclusões opostas — exatamente o tipo de divergência que a Trilha 2 documenta sem resolver.\n\n## Estado (mar–jul/2026)\n\n- Aprovado substitutivo na Câmara (madrugada de 2–3/03/2026, relator Rafael Simões).\n- CRA do Senado, relator senador Jaime Bagattoli.\n- Exceção prevista para denominações consagradas que não induzam a erro (detalhe no texto oficial).\n\n## O que fica de fora\n\nNão trata como lei vigente. Não decide se o nome “leite de aveia” engana ou esclarece. Tributação na Reforma Tributária é contexto citado pelas partes — não é o núcleo desta ficha.\n\n## Atualização pendente\n\nLer substitutivo na íntegra; acompanhar CRA/Senado e eventual sanção ou ação judicial pós-vigência."
     },
     {
+      "id": "RG-0007",
+      "trilha": "regulatorio",
+      "titulo": "Resolução Conjunta CNJ/CNMP nº 14/2026: regulamenta decisão do STF sobre penduricalhos, mas Transparência Brasil aponta expansão de privilégios que a própria tese vedava",
+      "resumo_neutro": "Em 09/04/2026, CNJ e CNMP publicaram a Resolução Conjunta nº 14/2026, editada para regulamentar a decisão do STF de 25/03/2026 sobre penduricalhos na magistratura e no MP. A ONG Transparência Brasil classificou o ato como 'inequívoca afronta' à tese do STF, apontando que a resolução limitou o teto de 35% a apenas duas das sete verbas que o STF havia submetido a esse limite, deixando auxílio-moradia, diárias e outras rubricas fora do teto explícito.",
+      "status": "verificado",
+      "data_entrada": "Wed Jul 29 2026 21:00:00 GMT-0300 (Horário Padrão de Brasília)",
+      "fontes": [
+        {
+          "titulo": "Nota pública: Resolução do CNMP e CNJ afronta Tese do STF com criação e liberação de penduricalhos",
+          "url": "https://www.transparencia.org.br/noticias/resolucao-do-cnmp-e-cnj-afronta-tese-do-stf/",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "Transparência Brasil diz que resolução de CNJ e CNMP contraria STF",
+          "url": "https://www.poder360.com.br/poder-brasil/transparencia-brasil-diz-que-resolucao-de-cnj-e-cnmp-contraria-stf/",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "Penduricalhos e teto remuneratório: A decisão do STF",
+          "url": "https://www.migalhas.com.br/depeso/460943/penduricalhos-e-teto-remuneratorio-a-decisao-do-stf",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "Por unanimidade, CNJ aprova ato que regulamenta penduricalhos",
+          "url": "https://www.poder360.com.br/poder-justica/por-unanimidade-cnj-aprova-ato-que-regulamenta-penduricalhos/",
+          "tipo": "reportagem"
+        }
+      ],
+      "tags": [
+        "penduricalhos",
+        "cnj",
+        "cnmp",
+        "stf",
+        "teto-constitucional",
+        "p11",
+        "p06"
+      ],
+      "apresentacao_comercial": "O ato se apresenta como mera regulamentação técnica em cumprimento à decisão vinculante do STF de 25/03/2026 (julgamento conjunto Rcl 88.319, ADIs 6.606/6.601/6.604, REs 968.646/1.059.466), padronizando pagamentos e reforçando transparência",
+      "denominacao_oficial": "Segundo a Transparência Brasil, o ato normativo, sob pretexto de regulamentar a decisão do STF, criou nova verba não prevista na tese (gratificação de proteção à primeira infância e à maternidade, 3% do subsídio por dependente até 6 anos) e restringiu o limite de 35% do teto — que o STF havia aplicado à soma de sete rubricas — a apenas duas delas (gratificação de difícil provimento e de exercício cumulativo), deixando auxílio-moradia, auxílio-saúde, diárias, ajuda de custo e férias indenizadas fora do teto expresso na resolução",
+      "orgao_regulador": "CNJ (Conselho Nacional de Justiça) e CNMP (Conselho Nacional do Ministério Público)",
+      "divergencia_tecnica": {
+        "estudo_oficial": "Tese fixada pelo STF em 25/03/2026 (julgamento conjunto de Rcl 88.319, ADIs 6.606/6.601/6.604 e REs 968.646/1.059.466), que submeteu a um limite de 35% acima do teto constitucional a soma de sete rubricas indenizatórias, delegando ao CNJ e ao CNMP a tarefa de 'padronizar e fixar' os valores",
+        "contraponto": "Transparência Brasil, em nota pública de 09/04/2026, argumenta que a Resolução Conjunta nº 14/2026 vai além de regulamentar a tese: amplia hipóteses de recebimento, cria rubrica nova, limita o teto de 35% a apenas 2 das 7 verbas previstas na tese, amplia a gratificação por exercício cumulativo para hipóteses de afastamento/licença (esvaziando a exigência de acúmulo efetivo de funções), e não disciplina o limite de 35% para pagamentos retroativos",
+        "lacuna_reconhecida": "A própria matéria do Migalhas (publicação jurídica, não crítica ao ato) confirma tecnicamente a divergência apontada pela Transparência Brasil quanto ao alcance da trava percentual — 'a comparação entre a resolução e a tese revelou divergências materiais' — o que reduz a possibilidade de a divergência ser mero enquadramento político de uma ONG: há concordância entre fonte crítica e fonte técnica neutra sobre o fato da divergência, ainda que discordem sobre sua gravidade"
+      },
+      "processo_judicial": {
+        "numero": "Não localizada ação judicial (ADI ou reclamação) especificamente contra a Resolução Conjunta nº 14/2026 até a data desta entrada — a contestação disponível é nota técnica de ONG, não processo em curso",
+        "vara": "N/A até a data desta entrada",
+        "autor": "N/A",
+        "pedidos": [],
+        "status": "não judicializado até a data desta entrada"
+      },
+      "slug": "rg-0007",
+      "path": "data/regulatorio/resolucao-14-2026-penduricalhos.md",
+      "url": "/entrada/rg-0007",
+      "body": "# O ato que regulamenta a decisão dizendo que a cumpre\n\n## Por que isto é Trilha 2, não Trilha 3\n\nDiferente de IN-0011 (que documenta o quadro agregado dos supersalários e a resposta do próprio STF), esta entrada recorta um instrumento específico e nomeado: a Resolução Conjunta CNJ/CNMP nº 14/2026, publicada em 09/04/2026 — apenas 15 dias após a tese do STF de 25/03/2026 que ela alega regulamentar. O critério da Trilha 2 se aplica com precisão: é uma norma pública, nomeada, votada (por unanimidade, 11 dos 15 conselheiros do CNJ, os demais 4 cargos vagos), cuja base técnica — se de fato regulamenta ou se contorna a decisão que deveria implementar — é contestada por entidade do setor com nota técnica formal.\n\n## A tese em disputa\n\nAtribuída à Transparência Brasil, em nota pública de 09/04/2026 — **não** posição do Sabor Brazil:\n\n> A Resolução Conjunta nº 14/2026 é uma inequívoca afronta à Tese fixada pelo Supremo Tribunal Federal em 25.mar.2026 [...]. Em vez de apenas regulamentar a decisão da Corte, a resolução expande o sistema de penduricalhos por meio de inovação infralegal que contraria frontalmente o STF.\n\n## O que fica de fora\n\nNão trato como fato que o CNJ e o CNMP tenham agido de má-fé ou com intenção deliberada de burlar o STF — os conselhos podem sustentar, e provavelmente sustentam, interpretação técnica diferente sobre o alcance da delegação que a própria tese do STF lhes conferiu (\"padronizar e fixar\" os valores). A entrada documenta a divergência entre o texto da tese e o texto da resolução, não faz juízo sobre a intenção dos conselheiros que votaram por unanimidade.\n\n## Por que a fonte jurídica neutra importa aqui\n\nO artigo do Migalhas — publicação voltada a conteúdo técnico-jurídico e de preparação para concursos, sem qualquer histórico de posicionamento crítico ao Judiciário — descreve a mesma divergência material entre resolução e tese que a Transparência Brasil aponta, usando linguagem neutra (\"a comparação... revelou divergências materiais\"). Isso reforça que o fato central (o descompasso entre os dois textos) é verificável independentemente da fonte, ainda que a leitura sobre gravidade e intenção varie.\n\n## Ligação com o catálogo\n\nVer [IN-0011](/entrada/in-0011) para o quadro agregado dos supersalários e a resposta subsequente do STF em 30/06/2026, que já ocorre depois desta resolução e pode ser lida, em parte, como reação a ela.\n\n## Atualização pendente\n\nVerificar se alguma ADI ou reclamação foi protocolada especificamente contra a Resolução Conjunta nº 14/2026 após a data desta entrada; acompanhar se a auditoria do CNJ determinada pelo STF em 30/06/2026 (ver IN-0011) trata explicitamente das divergências aqui documentadas."
+    },
+    {
       "id": "RT-0012",
       "trilha": "rotulagem",
       "titulo": "Azeite de oliva 'extravirgem' adulterado com óleos vegetais mais baratos",
@@ -355,6 +521,52 @@
       "path": "data/rotulagem/sal-grosso-doce-de-leite-anvisa-2026.md",
       "url": "/entrada/rt-0013",
       "body": "# Sal iodado e doce de leite fora do padrão\n\n## Parece × é\n\n**Sal iodado** e **doce de leite** ostentam denominações que pressupõem conformidade com regulamento técnico (iodação obrigatória; condições sanitárias de laticínio). Em 30/01/2026, a ANVISA determinou suspensão/recolhimento do lote 901124 do sal grosso Marfim (M. Gomes Praxedes) por teor de iodo reprovado, e restrição ao doce de leite em pedaços São Benedito (JF Indústria) — lote fabricado em 25/06/2025 — por irregularidades sanitárias.\n\nDiferente do azeite adulterado ([RT-0012](/entrada/rt-0012)), o quadro aqui é mais próximo de **não-conformidade de qualidade** do que de fraude por substituição de insumo — o critério do catálogo, porém, é objetivo (denominação × padrão técnico), não depende de provar intenção.\n\n## Por que o status é `hipotese`\n\nFonte única identificada até a data desta entrada (Estado de Minas / Em Foco). Motivo técnico detalhado da suspensão do doce de leite não está além de “irregularidades” na cobertura disponível. Sem segunda fonte independente ou nota oficial da ANVISA, a entrada fica em `hipotese`.\n\n## Atualização pendente\n\nLocalizar comunicado oficial da ANVISA e segunda cobertura independente; detalhar o motivo técnico do lote do doce de leite."
+    },
+    {
+      "id": "SF-0004",
+      "trilha": "superfaturamento",
+      "titulo": "TST compra 30 Lexus ES 300H por R$ 10,39 mi — opção mais cara entre as 4 avaliadas no próprio estudo técnico do tribunal",
+      "resumo_neutro": "O TST adquiriu 30 sedãs híbridos Lexus ES 300H a R$ 346,5 mil cada (R$ 10,39 mi no total) para uso dos 27 ministros. O Estudo Técnico Preliminar do próprio tribunal avaliou quatro modelos — Honda Accord, BYD Seal, Toyota Camry e Lexus ES 300H, entre R$ 310 mil e R$ 344 mil — e a Corte optou pelo único acima dessa faixa. O caso já chegou ao TCU.",
+      "status": "verificado",
+      "data_entrada": "Wed Jul 29 2026 21:00:00 GMT-0300 (Horário Padrão de Brasília)",
+      "fontes": [
+        {
+          "titulo": "TST compra 27 sedãs de luxo Lexus para ministros, cada um a R$ 346,5 mil",
+          "url": "https://www.infomoney.com.br/politica/tst-compra-27-sedas-de-luxo-lexus-para-ministros-cada-um-a-r-3465-mil/",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "TST compra carros híbridos de luxo para ministros",
+          "url": "https://www.gazetadopovo.com.br/republica/tst-compra-carros-hibridos-de-luxo-ministros/",
+          "tipo": "reportagem"
+        },
+        {
+          "titulo": "TST gasta R$ 10,3 milhões em 30 veículos de luxo para ministros",
+          "url": "https://oantagonista.com.br/brasil/tst-gasta-r-103-milhoes-em-30-veiculos-de-luxo-para-ministros/",
+          "tipo": "reportagem"
+        }
+      ],
+      "tags": [
+        "tst",
+        "frota",
+        "licitacao",
+        "p11",
+        "custeio"
+      ],
+      "comparacao_de_preco": {
+        "valor_contratado": "R$ 346,5 mil por unidade (Lexus ES 300H, já com desconto sobre o valor de tabela de R$ 396 mil) — R$ 10,39 milhões pelo lote de 30 veículos",
+        "valor_referencia": "R$ 310 mil a R$ 344 mil por unidade — faixa dos outros três modelos (Honda Accord, BYD Seal, Toyota Camry) avaliados no mesmo Estudo Técnico Preliminar do TST, para a mesma finalidade de uso",
+        "proporcao": "O Lexus custou entre 0,7% e 11,8% a mais do que os concorrentes considerados no próprio estudo técnico da Corte — a comparação não vem de fonte externa, é interna ao processo de escolha do TST"
+      },
+      "mecanismo_juridico": "Aquisição via Estudo Técnico Preliminar formal, conduzido pela própria Secretaria do Tribunal; sem indício de irregularidade formal no processo de compra — o Estudo Técnico recomendava veículo tipo sedã dentro de padrões de segurança e conforto, sem exigir o modelo mais caro entre os avaliados",
+      "orgaos_de_controle": [
+        "TCU (Tribunal de Contas da União) — processo já em análise segundo reportagem do InfoMoney"
+      ],
+      "responsaveis_nomeados": "Gustavo Caribé de Carvalho, diretor-geral da Secretaria do Tribunal, assinou em 25/08/2024 o documento que ampliou a compra de 27 para 30 unidades",
+      "slug": "sf-0004",
+      "path": "data/superfaturamento/tst-frota-lexus.md",
+      "url": "/entrada/sf-0004",
+      "body": "# TST e a opção mais cara entre quatro\n\n## Por que isto é P11, não corrupção clássica\n\nComo no caso do custeio administrativo documentado no dossiê T-191 do lawfare-timeline, aqui não há alegação de desvio, propina ou processo irregular — a compra seguiu Estudo Técnico Preliminar formal. **O dado relevante é a prioridade alocativa dentro de um processo regular**: entre quatro opções tecnicamente equivalentes para a mesma finalidade (transporte de autoridades em Brasília), a Corte escolheu a única que estava acima da faixa de preço das outras três, alegando alinhamento ao \"Plano Estratégico Institucional\" e ao objetivo declarado de \"reforçar a imagem do TST perante a sociedade\".\n\n## O que fica de fora\n\nNão trato como fato que a compra seja ilegal — não há decisão do TCU até a data desta entrada que assim classifique o processo, e o próprio Estudo Técnico é público e formal. A entrada documenta a comparação de preço e a decisão alocativa, não antecipa o resultado do controle externo.\n\n## Contexto ampliado\n\nA compra da frota veio na mesma semana em que a Corte foi criticada por contratar, sem licitação, uma sala VIP de 44 m² no Aeroporto de Brasília por R$ 1,5 milhão por dois anos — contrato que não está no escopo desta entrada por não ter comparação de preço documentada com referência de mercado equivalente até o momento, mas que compõe o mesmo padrão institucional.\n\n## Atualização pendente\n\nAcompanhar decisão do TCU sobre o processo de aquisição da frota; verificar se o TST respondeu publicamente aos questionamentos sobre por que o modelo mais caro do próprio estudo foi o escolhido."
     },
     {
       "id": "CR-0001",
