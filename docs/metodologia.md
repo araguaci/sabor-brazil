@@ -14,6 +14,18 @@ Framework para agentes: [`METHODOLOGY.md`](../METHODOLOGY.md) na raiz.
 4. **Separar fato de interpretação.** O que o documento diz vs. o que alguém conclui que isso significa.
 5. **Marcar lacunas explicitamente** (“Atualização pendente”, `lacuna_reconhecida`).
 
+## Fontes primárias por trilha
+
+| Trilha | Primária | Secundária aceitável |
+|---|---|---|
+| Rotulagem | Norma de identidade/qualidade + rótulo ou ato de fiscalização | Reportagem que cite a norma/órgão |
+| Regulatório | Texto da decisão/lei/PL + contestação nomeada | Cobertura jurídica que reproduza o texto |
+| Institucional | Dispositivo + fato processual/administrativo datado | Reportagem com documento anexo ou citação inequívoca |
+| Superfaturamento | Valor contratado + referência + órgão de controle | Investigação com notas/editais rastreáveis |
+| Correlação | Dado bruto verificável + formulação da alegação viral | Relatório/observatório citado na alegação |
+
+Operação de issues: [`sla-contribuir.md`](sla-contribuir.md). X Articles: [`x-articles.md`](x-articles.md).
+
 ## Erros a evitar
 
 - Equiparar mudança regulatória pública (Trilha 2) a fraude de rotulagem (Trilha 1).

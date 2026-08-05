@@ -138,6 +138,11 @@ const ENTRY_HEROES: Record<string, HeroRef> = {
     src: '/artigos/in-0013-viviane-barci-hero.png',
     alt: 'Capa — escritório familiar e crescimento de casos nos tribunais superiores',
   },
+  'IN-0014': {
+    src: '/artigos/in-0014-sabor-imprensa-hero.png',
+    alt: 'Capa — sabor imprensa: guia Secom e influenciadores pagos',
+  },
+
   'SF-0001': {
     src: '/artigos/sf-0001-sufotur-caches-hero.png',
     alt: 'Capa — superfaturamento de cachês na Sufotur (Bahia)',

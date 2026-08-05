@@ -11,6 +11,32 @@ Antes de propor: leia [`METHODOLOGY.md`](METHODOLOGY.md) e [`schema/entry-schema
 3. Preencha a trilha (`rotulagem` | `regulatorio` | `institucional` | `superfaturamento` | `correlacao`) e a fonte.
 4. A curadoria confirma a classificação e o status antes de aceitar.
 
+## SLA de triagem
+
+Política completa: [`docs/sla-contribuir.md`](docs/sla-contribuir.md).
+
+| Etapa | Prazo |
+|---|---|
+| Ack (label / confirmação) | ≤ 48 h |
+| Triagem (aceita / pede fonte / fora de escopo) | ≤ 7 dias |
+| Publicação após triagem OK | ≤ 21 dias |
+
+Sem URL de fonte auditável, a sugestão não sobe a `verificado` — no máximo `hipotese`, ou é arquivada.
+
+## Fontes primárias (preferência)
+
+Por trilha, a curadoria privilegia:
+
+| Trilha | Primária típica |
+|---|---|
+| Rotulagem | Norma MAPA / ANVISA / ANP + rótulo ou fiscalização |
+| Regulatório | Texto da lei/resolução + contestação nomeada |
+| Institucional | Dispositivo legal + ato/processo datado |
+| Superfaturamento | Contrato / empenho + referência de preço + órgão de controle |
+| Correlação | Dado oficial ou relatório citado + alegação viral atribuída |
+
+Reportagem serve quando cita essas fontes; sem lastro → hipótese ou rejeição.
+
 ## Fila para o Cursor (`data/_fila/`)
 
 Rascunhos podem ir em `data/_fila/`. Comando no chat: `processar fila data/_fila`. Detalhes em `data/_fila/README.md`.

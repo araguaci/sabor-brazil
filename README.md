@@ -1,23 +1,50 @@
 # 🇧🇷 Sabor Brazil
 
+## 🛡️ Sentinel Status
+- **Status:** 🟢 Produção
+- **Tier:** A
+- **Health:** 88%
+- **Stack:** Astro, TypeScript, Vercel, JSON versionado (`data/`, `catalog.json`)
+- **ROI Potencial:** Impacto editorial / SELVA — catálogo verificável acoplado ao eixo lawfare-investigativo
+
+---
+
 > Um catálogo aberto e verificável de produtos e políticas onde o nome não é a coisa.
 
 **SELVA.** Sabor Brazil documenta, com fonte e denominação oficial cruzadas, os casos em que o que está no rótulo — ou na bomba — não é o que o nome sugere. O projeto nasceu do trabalho investigativo do [lawfare-timeline](https://lawfare-timeline.vercel.app) e segue a mesma disciplina: toda entrada tem fonte, toda fonte é auditável, e hipótese nunca vira fato sem prova.
 
 **Site:** [sabor-brazil.vercel.app](https://sabor-brazil.vercel.app) · **Catálogo JSON:** [`/catalog.json`](https://sabor-brazil.vercel.app/catalog.json)
 
-### Estado atual (jul/2026)
+### Estado atual (ago/2026)
 
 | | |
 |---|---|
-| Entradas publicadas | **34** |
+| Entradas publicadas | **41** |
 | Rotulagem | 13 |
-| Regulatório | 6 |
-| Institucional | 10 |
-| Superfaturamento | 3 |
-| Correlação | 2 |
+| Regulatório | 7 |
+| Institucional | 14 |
+| Superfaturamento | 4 |
+| Correlação | 3 |
+
+Fonte de verdade: `npm run sync` → `data/catalog.json`. Preferência de fontes primárias e SLA de issues: [`docs/metodologia.md`](docs/metodologia.md), [`docs/sla-contribuir.md`](docs/sla-contribuir.md).
 
 Cada entrada da listagem e da página `/entrada/[id]` pode carregar **hero image** (capa editorial) ao lado do título; o mapeamento fica em `src/lib/heroes.ts` e os arquivos em `public/artigos/`.
+
+---
+
+## Ecossistema SELVA
+
+Mesma disciplina: **fonte auditável, hipótese ≠ fato**, deploy público rastreável. Cada hub tem escopo próprio — não misturar categorias.
+
+| Projeto | URL | Papel |
+|---|---|---|
+| **Sabor Brazil** (este) | [sabor-brazil.vercel.app](https://sabor-brazil.vercel.app) | Catálogo — o nome não é a coisa (5 trilhas) |
+| **Série Demográfica** | [serie-demografica.vercel.app](https://serie-demografica.vercel.app) | Observatório de mortalidade 2014–2025 (SIM/DATASUS, RC, dengue, gripe, câncer, miocardite) |
+| **Vítimas do Estado** | [vitimas-do-estado.vercel.app](https://vitimas-do-estado.vercel.app) | Registro open-source de falha estatal com dano irreversível (JSON + taxonomia) |
+| **Lawfare Timeline** | [lawfare-timeline.vercel.app](https://lawfare-timeline.vercel.app) | Linha do tempo — origem metodológica do Sabor Brazil |
+| **República Sequestrada Hub** | [republica-sequestrada-hub.vercel.app](https://republica-sequestrada-hub.vercel.app) | Hub PWA narrativo do eixo |
+
+Eixo Sentinel (portfólio): [`docs/estrategia/SENTINEL-EIXO-SELVA.md`](../docs/estrategia/SENTINEL-EIXO-SELVA.md) na raiz `ai-projects`.
 
 ---
 
@@ -39,15 +66,15 @@ Decisões públicas nomeadas cuja base técnica é contestada ou já judicializa
 
 Caso concreto: procedimento previsto em norma versus o que ocorreu de fato. Status típico: `argumento_juridico_fundamentado`. Ver [`docs/metodologia-trilha3.md`](docs/metodologia-trilha3.md).
 
-Recortes atuais incluem vídeo de IA / despacho (IN-0001), AGU × INSS (IN-0002), acúmulo de funções no Inquérito 4781 (IN-0003), sigilos (IN-0004, IN-0008), soberania Brasil–China (IN-0005–0007), seletividade penal (IN-0009) e CPMI do INSS sem relatório (IN-0010 / padrão P06-B).
+Recortes atuais incluem vídeo de IA / despacho (IN-0001), AGU × INSS (IN-0002), acúmulo de funções no Inquérito 4781 (IN-0003), sigilos (IN-0004, IN-0008), soberania Brasil–China (IN-0005–0007), seletividade penal (IN-0009), CPMI do INSS sem relatório (IN-0010 / P06-B), supersalários (IN-0011), Carbono Oculto (IN-0012) e “sabor imprensa” / Guia Secom (IN-0014).
 
 ### 💰 Trilha 4 — Superfaturamento (`data/superfaturamento/`)
 
-Comparação de preço documentada: valor contratado × referência, com proporção, mecanismo jurídico e órgão de controle. Exemplos: Sufotur/Bahia (SF-0001), merenda Ananindeua (SF-0002), merenda Piritiba com decisão do TCM-BA (SF-0003).
+Comparação de preço documentada: valor contratado × referência, com proporção, mecanismo jurídico e órgão de controle. Exemplos: Sufotur/Bahia (SF-0001), merenda Ananindeua (SF-0002), merenda Piritiba (SF-0003), frota Lexus TST (SF-0004).
 
 ### 📊 Trilha 5 — Correlação (`data/correlacao/`)
 
-Dado real isolado do salto causal da narrativa viral. Status típico da conclusão: `hipotese`. Exemplos: “pão e circo” no Nordeste (CR-0001), emendas × Farmácia Popular (CR-0002).
+Dado real isolado do salto causal da narrativa viral. Status típico da conclusão: `hipotese`. Exemplos: “pão e circo” no Nordeste (CR-0001), emendas × Farmácia Popular (CR-0002), STF × Família Real (CR-0003).
 
 **Regra de ouro:** se não cabe numa das cinco definições, não entra.
 
@@ -57,6 +84,8 @@ Dado real isolado do salto causal da narrativa viral. Status típico da conclus�
 
 Textos longos em markdown para publicação no X Premium (`x.com/compose/article`), com hero share card. Fonte canônica em `artigos/`; capas também em `public/artigos/` para o site.
 
+**Mapa + backlog:** [`docs/x-articles.md`](docs/x-articles.md).
+
 | Arquivo | Entrada / tema | Ângulo |
 |---|---|---|
 | [`sabor-brazil-projeto-xarticle.md`](artigos/sabor-brazil-projeto-xarticle.md) | Projeto | O catálogo onde o nome não é a coisa — apresentação das trilhas |
@@ -64,7 +93,7 @@ Textos longos em markdown para publicação no X Premium (`x.com/compose/article
 | [`loteria-vs-jogo-de-azar-xarticle.md`](artigos/loteria-vs-jogo-de-azar-xarticle.md) | [RG-0002](https://sabor-brazil.vercel.app/entrada/rg-0002) | Cassino × loteria: a lei admite a exceção no próprio texto |
 | [`apostas-bets-bolsa-familia-xarticle.md`](artigos/apostas-bets-bolsa-familia-xarticle.md) | [RG-0003](https://sabor-brazil.vercel.app/entrada/rg-0003) | Bets legalizadas, dano medido pelo BC, freio parcial no STF |
 
-Heroes de capa do catálogo (IN/SF/CR/RG) não são artigos X por si — são imagens de entrada; só os quatro `.md` acima estão formatados como X Article.
+Heroes de capa do catálogo não são X Articles — só os `*-xarticle.md`. Novos artigos seguem o backlog em `docs/x-articles.md` (RG-0007, IN-0014, CR-0003, SF-0004).
 
 ---
 
@@ -87,7 +116,9 @@ sabor-brazil/
 ├── public/artigos/            # heroes servidos pelo site
 ├── docs/
 │   ├── metodologia.md
-│   └── metodologia-trilha3.md
+│   ├── metodologia-trilha3.md
+│   ├── sla-contribuir.md      # SLA de issues /contribuir
+│   └── x-articles.md          # mapa X Article ↔ entrada
 ├── src/                       # site Astro
 └── .github/ISSUE_TEMPLATE/
 ```
@@ -113,7 +144,7 @@ npm run sync           # regenera data/catalog.json + public/catalog.json
 3. Classificação em **uma** das cinco trilhas.
 4. Alegação sem fonte independente = hipótese explícita.
 
-Ver [`docs/metodologia.md`](docs/metodologia.md) e [`schema/entry-schema.md`](schema/entry-schema.md).
+Ver [`docs/metodologia.md`](docs/metodologia.md), [`docs/sla-contribuir.md`](docs/sla-contribuir.md) e [`schema/entry-schema.md`](schema/entry-schema.md).
 
 ## Licença e uso
 

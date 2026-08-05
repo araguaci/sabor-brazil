@@ -2,8 +2,8 @@
 
 ## Sabor Brazil — Framework Analítico para Agentes de IA
 
-**Versão:** 1.1  
-**Última atualização:** 30 de julho de 2026  
+**Versão:** 1.2  
+**Última atualização:** 5 de agosto de 2026  
 **Produção:** https://sabor-brazil.vercel.app  
 **Catálogo JSON:** https://sabor-brazil.vercel.app/catalog.json  
 **Repositório:** https://github.com/araguaci/sabor-brazil  
@@ -15,19 +15,20 @@ Este documento existe para o mesmo propósito do `METHODOLOGY.md` do lawfare-tim
 
 | Métrica | Valor |
 |---|---|
-| Entradas publicadas | **34** |
+| Entradas publicadas | **41** |
 | Rotulagem (`RT-*`) | 13 |
-| Regulatório (`RG-*`) | 6 |
-| Institucional (`IN-*`) | 10 |
-| Superfaturamento (`SF-*`) | 3 |
-| Correlação (`CR-*`) | 2 |
-| Status `verificado` | 18 |
-| Status `argumento_juridico_fundamentado` | 10 |
+| Regulatório (`RG-*`) | 7 |
+| Institucional (`IN-*`) | 14 |
+| Superfaturamento (`SF-*`) | 4 |
+| Correlação (`CR-*`) | 3 |
+| Status `verificado` | 20 |
+| Status `argumento_juridico_fundamentado` | 14 |
 | Status `contestado_judicialmente` | 3 |
-| Status `hipotese` | 3 |
+| Status `hipotese` | 4 |
 | Status `fato_processual` | 0 (previsto no schema; ainda sem entrada) |
-| X Articles (`.md` em `artigos/`) | 4 |
+| X Articles (`.md` em `artigos/`) | 4 — mapa em `docs/x-articles.md` |
 | Heroes de entrada | mapeadas em `src/lib/heroes.ts` → `public/artigos/` |
+| SLA `/contribuir` | `docs/sla-contribuir.md` |
 
 Se o snapshot acima divergir do `catalog.json` gerado por `npm run sync`, **prevalece o JSON**.
 
@@ -124,16 +125,13 @@ Implementação no site: `EntryCard` e home usam `resumo_neutro`.
 | Processados | `data/_fila/processados/` | Rascunhos já convertidos (não republicar) |
 | Schema | `schema/entry-schema.md` | Campos obrigatórios/exclusivos |
 | Metodologia detalhada | `docs/metodologia.md`, `docs/metodologia-trilha3.md` | Checagem de fonte + Trilha 3 |
-| Issues | `.github/ISSUE_TEMPLATE/nova-entrada.md` | Sugestão comunitária |
+| SLA contribuir | `docs/sla-contribuir.md` | Ack 48h · triagem 7d · publicação 21d |
+| X Articles mapa | `docs/x-articles.md` | Publicados + backlog |
+| Issues | `.github/ISSUE_TEMPLATE/nova-entrada.md` | Sugestão comunitária (5 trilhas) |
 
-### X Articles publicados (jul/2026)
+### X Articles publicados
 
-1. `artigos/sabor-brazil-projeto-xarticle.md` — apresentação do projeto  
-2. `artigos/combustivel-e32-xarticle.md` — RG-0001  
-3. `artigos/loteria-vs-jogo-de-azar-xarticle.md` — RG-0002  
-4. `artigos/apostas-bets-bolsa-familia-xarticle.md` — RG-0003  
-
-Heroes de capa de entrada **não** são X Articles; só os `*-xarticle.md` acima.
+Ver tabela viva em [`docs/x-articles.md`](docs/x-articles.md). Em resumo: projeto + RG-0001 + RG-0002 + RG-0003. Heroes de capa de entrada **não** são X Articles.
 
 ---
 
