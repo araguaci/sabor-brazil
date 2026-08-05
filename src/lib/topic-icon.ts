@@ -94,15 +94,25 @@ export const ecosystemLinks = [
   {
     href: 'https://sabor-brazil.vercel.app/',
     title: 'Sabor Brazil',
-    description: 'Catálogo aberto onde o nome não é a coisa — rotulagem, regulatório, institucional, superfaturamento e correlação.',
+    description:
+      'Catálogo aberto onde o nome não é a coisa — rotulagem, regulatório, institucional, superfaturamento e correlação.',
     icon: 'tag' as TopicIconName,
     current: true,
     image: '/artigos/sabor-brazil-projeto-hero.png',
   },
   {
-    href: 'https://republica-sequestrada-hub.vercel.app/',
-    title: 'República Sequestrada',
-    description: 'A extração não muda de lado. Muda de nome.',
+    href: 'https://serie-demografica.vercel.app/',
+    title: 'Série Demográfica',
+    description:
+      'Observatório de mortalidade 2014–2025 — SIM/DATASUS, Registro Civil, dengue, gripe, câncer e miocardite.',
+    icon: 'chart' as TopicIconName,
+    current: false,
+  },
+  {
+    href: 'https://vitimas-do-estado.vercel.app/',
+    title: 'Vítimas do Estado',
+    description:
+      'Registro open-source de falha estatal com dano irreversível — JSON versionado, taxonomia e painel público.',
     icon: 'scale' as TopicIconName,
     current: false,
   },
@@ -111,6 +121,13 @@ export const ecosystemLinks = [
     title: 'Lawfare Timeline',
     description: 'Linha do tempo investigativa de lawfare com fonte auditável.',
     icon: 'scroll' as TopicIconName,
+    current: false,
+  },
+  {
+    href: 'https://republica-sequestrada-hub.vercel.app/',
+    title: 'República Sequestrada',
+    description: 'A extração não muda de lado. Muda de nome.',
+    icon: 'landmark' as TopicIconName,
     current: false,
   },
   {
