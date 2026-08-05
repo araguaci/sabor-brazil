@@ -44,7 +44,7 @@ Mesma disciplina: **fonte auditável, hipótese ≠ fato**, deploy público rast
 | **Lawfare Timeline** | [lawfare-timeline.vercel.app](https://lawfare-timeline.vercel.app) | Linha do tempo — origem metodológica do Sabor Brazil |
 | **República Sequestrada Hub** | [republica-sequestrada-hub.vercel.app](https://republica-sequestrada-hub.vercel.app) | Hub PWA narrativo do eixo |
 
-Eixo Sentinel (portfólio): [`docs/estrategia/SENTINEL-EIXO-SELVA.md`](../docs/estrategia/SENTINEL-EIXO-SELVA.md) na raiz `ai-projects`.
+Eixo Sentinel (portfólio): [`docs/estrategia/SENTINEL-EIXO-SELVA.md`](docs/estrategia/SENTINEL-EIXO-SELVA.md).
 
 ---
 
@@ -118,7 +118,9 @@ sabor-brazil/
 │   ├── metodologia.md
 │   ├── metodologia-trilha3.md
 │   ├── sla-contribuir.md      # SLA de issues /contribuir
-│   └── x-articles.md          # mapa X Article ↔ entrada
+│   ├── x-articles.md          # mapa X Article ↔ entrada
+│   └── estrategia/
+│       └── SENTINEL-EIXO-SELVA.md  # eixo SELVA + eco-grid
 ├── src/                       # site Astro
 └── .github/ISSUE_TEMPLATE/
 ```
