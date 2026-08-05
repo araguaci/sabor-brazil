@@ -119,7 +119,7 @@ Implementação no site: `EntryCard` e home usam `resumo_neutro`.
 | Entradas Markdown | `data/<trilha>/*.md` | Fonte canônica de cada caso |
 | Catálogo gerado | `data/catalog.json` + `public/catalog.json` | API estática; `npm run sync` |
 | Site Astro | `src/` | Listagem, `/trilha/[nome]`, `/entrada/[id]`, `/contribuir` |
-| Heroes | `src/lib/heroes.ts` → `public/artigos/*.png` | Capa ao lado do título + card |
+| Heroes | `src/lib/heroes.ts` → `public/artigos/*.webp` | Capa ao lado do título + card |
 | X Articles | `artigos/*-xarticle.md` | Texto longo para X Premium (+ hero share) |
 | Fila do Cursor | `data/_fila/` | Rascunhos a processar; ver `data/_fila/README.md` |
 | Processados | `data/_fila/processados/` | Rascunhos já convertidos (não republicar) |

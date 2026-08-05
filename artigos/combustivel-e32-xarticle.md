@@ -57,4 +57,4 @@ Quem quiser o cruzamento longo de fontes — estudo, crítica setorial, peça do
 
 *Dossiê técnico: [sabor-brazil.vercel.app/dossies/combustivel-e32.html](https://sabor-brazil.vercel.app/dossies/combustivel-e32.html)*
 
-*Hero share card: `artigos/rg-0001-combustivel-e32-hero.png`*
+*Hero share card: `artigos/rg-0001-combustivel-e32-hero.webp`*

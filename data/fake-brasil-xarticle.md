@@ -77,4 +77,4 @@ O problema não é um lote ruim numa fábrica. É **sistema**: inflação repass
 
 *Painel completo com tabelas, cards e matriz de risco: [gosurf.site/fake-brasil](https://gosurf.site/fake-brasil)*
 
-*Hero 5:2 para capa do artigo: `assets/img/fake_brasil_hero.png`*
+*Hero 5:2 para capa do artigo: `assets/img/fake_brasil_hero.webp`*

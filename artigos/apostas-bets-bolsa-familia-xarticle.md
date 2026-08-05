@@ -53,4 +53,4 @@ Quem mistura bets com “só o governo pode jogar” está misturando duas discu
 
 *Entrada completa, fontes clicáveis e status no catálogo: [sabor-brazil.vercel.app/entrada/rg-0003](https://sabor-brazil.vercel.app/entrada/rg-0003)*
 
-*Hero share card: `artigos/rg-0003-bets-bolsa-familia-hero.png` (redimensionar para 1024×600 se o upload do X exigir)*
+*Hero share card: `artigos/rg-0003-bets-bolsa-familia-hero.webp` (redimensionar para 1024×600 se o upload do X exigir)*

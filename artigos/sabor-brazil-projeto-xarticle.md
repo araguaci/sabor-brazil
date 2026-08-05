@@ -56,4 +56,4 @@ Nada é o que parece. A pergunta seguinte é sempre a mesma: **o que a fonte diz
 - Contribuir: [sabor-brazil.vercel.app/contribuir](https://sabor-brazil.vercel.app/contribuir)
 - Metodologia e schema no repositório do projeto
 
-*Hero share card: `artigos/sabor-brazil-projeto-hero.png`*
+*Hero share card: `artigos/sabor-brazil-projeto-hero.webp`*

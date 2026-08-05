@@ -57,7 +57,7 @@ Atualização pendente na ficha: cruzar jurisprudência recente do STF, mapear e
 
 *Entrada completa, fontes clicáveis e status no catálogo: [sabor-brazil.vercel.app/entrada/rg-0002](https://sabor-brazil.vercel.app/entrada/rg-0002)*
 
-*Hero share card:* `artigos/rg-0002-loteria-jogo-azar-hero.png` *(redimensionar para 1024×600 se o upload do X exigir)*
+*Hero share card:* `artigos/rg-0002-loteria-jogo-azar-hero.webp` *(redimensionar para 1024×600 se o upload do X exigir)*
 
 ---
 

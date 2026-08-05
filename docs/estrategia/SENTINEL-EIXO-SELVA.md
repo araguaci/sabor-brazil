@@ -27,7 +27,7 @@ Manter alinhados os produtos de **jornalismo investigativo com fonte auditável*
 | 9 | O Dragão e a Onça | [odragaoeaonca.vercel.app](https://odragaoeaonca.vercel.app/) | `dragon` | — | Série Brasil × China: dossiês, timelines e X Articles sobre soberania, minerais e capítulos estaduais. |
 | 10 | Abuso Supremo | [abusosupremo.vercel.app](https://abusosupremo.vercel.app/) | `shield` | — | Censura no Brasil (2019–2025): documentação e cronologia do regime de restrições. |
 
-Campos opcionais no JSON: `image` (capa local, ex. Sabor Brazil → `/artigos/sabor-brazil-projeto-hero.png`).
+Campos opcionais no JSON: `image` (capa local, ex. Sabor Brazil → `/artigos/sabor-brazil-projeto-hero.webp`).
 
 ## Núcleo SELVA (estratégia)
 
