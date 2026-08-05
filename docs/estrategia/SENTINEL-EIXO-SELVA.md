@@ -1,6 +1,6 @@
 # Eixo SELVA — Sentinel (investigativo verificável)
 
-Documento de estratégia **deste repositório** (Sabor Brazil) e do eixo SELVA. Cópia de referência no monorepo: `ai-projects/docs/estrategia/SENTINEL-EIXO-SELVA.md` (não sobrescrito pela pipeline de specs).
+Documento de estratégia **deste repositório** (Sabor Brazil) e do eixo SELVA. Cópia de referência `SENTINEL-EIXO-SELVA.md` (não sobrescrito pela pipeline de specs).
 
 ## Objetivo
 
